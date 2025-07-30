@@ -3,15 +3,12 @@ import type { Link } from './types';
 import Desktop from './Desktop.astro';
 import Mobile from './Mobile';
 
+const links: Link[] = [{ href: '/cart', label: 'Cart' }];
+
 interface Props {
   title: string;
 }
 const { title } = Astro.props;
-
-const links: Link[] = [
-  { href: '/', label: 'Home' },
-  { href: '/About', label: 'About' },
-];
 ---
 
 <nav
