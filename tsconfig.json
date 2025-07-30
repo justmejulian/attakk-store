@@ -19,7 +19,8 @@
       "@preact/*": ["./src/components/preact/*"],
       "@utils/*": ["./src/utils/*"],
       "@content/*": ["./src/content/*"],
-      "@images/*": ["./src/images/*"]
+      "@images/*": ["./src/images/*"],
+      "@stores/*": ["./src/stores/*"]
     }
   }
 }

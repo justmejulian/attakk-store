@@ -1,5 +1,5 @@
 ---
-import Button from '@components/preact/Button';
+import AddProductButton from '@components/preact/AddProductButton.tsx';
 
 interface Props {
   id: string;
@@ -38,7 +38,7 @@ const { id, title, price, imageUrls } = Astro.props as Props;
     </p>
 
     <div class="flex w-full justify-center">
-      <Button title="Add to Cart" client:visible />
+      <AddProductButton client:visible />
     </div>
   </div>
 </div>
