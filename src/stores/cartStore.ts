@@ -38,3 +38,11 @@ export function addToCart(id: string) {
 export function getCartItems(): Record<string, CartItem> {
   return cartItems.get();
 }
+
+export function removeFromCart(id: string) {
+  const currentItems = cartItems.get();
+  if (currentItems[id]) {
+    const { [id]: _, ...updatedItems } = currentItems;
+    cartItems.set(updatedItems);
+  }
+}
