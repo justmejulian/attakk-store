@@ -1,4 +1,4 @@
-import Button from '@components/preact/Button';
+import Button from '@preact/Button';
 
 import { addToCart } from '@stores/cartStore';
 
