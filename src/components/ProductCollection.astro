@@ -5,34 +5,14 @@ const products = getProducts();
 ---
 
 <div class="mt-8 flex w-full max-w-5xl flex-wrap justify-center gap-8">
-  <Product
-    id={products[0].id}
-    imageUrls={products[0].imageUrls}
-    title={products[0].title}
-    price={products[0].price}
-  />
-  <Product
-    id={products[0].id}
-    imageUrls={products[0].imageUrls}
-    title={products[0].title}
-    price={products[0].price}
-  />
-  <Product
-    id={products[0].id}
-    imageUrls={products[0].imageUrls}
-    title={products[0].title}
-    price={products[0].price}
-  />
-  <Product
-    id={products[0].id}
-    imageUrls={products[0].imageUrls}
-    title={products[0].title}
-    price={products[0].price}
-  />
-  <Product
-    id={products[0].id}
-    imageUrls={products[0].imageUrls}
-    title={products[0].title}
-    price={products[0].price}
-  />
+  {
+    products.map((product) => (
+      <Product
+        id={product.id}
+        imageUrls={product.imageUrls}
+        title={product.title}
+        price={product.price}
+      />
+    ))
+  }
 </div>

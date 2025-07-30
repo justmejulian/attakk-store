@@ -1,13 +1,18 @@
+import type { Product } from '@content/products';
+
 interface Props {
-  id: string;
   quantity: number;
-  imageUrl: string;
+  product: Product;
 }
 
-function CartItem({ id, quantity, imageUrl }: Props) {
+function CartItem({ quantity, product }: Props) {
   return (
     <li class="flex items-center gap-4">
-      <img src={imageUrl} alt="" class="size-16 rounded-sm object-cover" />
+      <img
+        src={product.imageUrls[0]}
+        alt=""
+        class="size-16 rounded-sm object-cover"
+      />
 
       <div>
         <h3 class="text-sm text-gray-900">Basic Tee 6-Pack</h3>
@@ -27,17 +32,12 @@ function CartItem({ id, quantity, imageUrl }: Props) {
 
       <div class="flex flex-1 items-center justify-end gap-2">
         <label for="Line1Qty" class="sr-only">
-          {' '}
-          Quantity{' '}
+          Quantity
         </label>
 
-        <input
-          type="number"
-          min="1"
-          value="1"
-          id="Line1Qty"
-          class="h-8 w-12 rounded-sm border-gray-200 bg-gray-50 p-0 text-center text-xs text-gray-600 [-moz-appearance:_textfield] focus:outline-hidden [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none"
-        />
+        <div class="flex h-8 w-12 items-center justify-center rounded-sm border-gray-200 bg-gray-50 p-0 text-xs text-gray-600">
+          {quantity}
+        </div>
 
         <button class="text-gray-600 transition hover:text-red-600">
           <span class="sr-only">Remove item</span>

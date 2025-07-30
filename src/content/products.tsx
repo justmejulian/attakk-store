@@ -1,3 +1,13 @@
+// Todo: better naming for the images
+
+import RaceSuitImage from '@images/racesuit.jpg';
+import BibshortsImage from '@images/bibshorts.jpg';
+import JerseyImage from '@images/jersey.jpg';
+
+import Marc from '@images/PHOTO-2025-07-30-12-57-35.jpg';
+import Sam from '@images/PHOTO-2025-07-30-11-51-06.jpg';
+import Ramon from '@images/PHOTO-2025-07-30-11-51-05.jpg';
+
 export type Product = {
   id: string;
   imageUrls: [string, string];
@@ -8,15 +18,35 @@ export type Product = {
 const products: Product[] = [
   {
     id: '1',
-    imageUrls: [
-      'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
-      'https://images.unsplash.com/photo-1523381140794-a1eef18a37c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MjQ2fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60',
-    ],
-    title: 'Basic Tee',
+    imageUrls: [RaceSuitImage.src, Ramon.src],
+    title: 'Race Suit',
     price: 40,
+  },
+  {
+    id: '2',
+    imageUrls: [BibshortsImage.src, Marc.src],
+    title: 'Bib Shorts',
+    price: 30,
+  },
+  {
+    id: '3',
+    imageUrls: [JerseyImage.src, Sam.src],
+    title: 'Jersey',
+    price: 25,
   },
 ];
 
 export function getProducts(): Product[] {
   return products;
+}
+
+export function getProductById(id: string): Product {
+  if (!id) {
+    throw new Error('Product ID is required');
+  }
+  const product = products.find((product) => product.id === id);
+  if (!product) {
+    throw new Error(`Product with ID ${id} not found`);
+  }
+  return product;
 }
