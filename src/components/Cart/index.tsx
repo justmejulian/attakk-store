@@ -2,16 +2,13 @@ import { useStore } from '@nanostores/preact';
 
 import { cartItems } from '@stores/cartStore';
 
-import { useEffect, useState } from 'preact/hooks';
+import useIsHydrated from '@utils/hooks/useIsHydrated';
+
 import CartItem from './CartItem';
 
 function Cart() {
-  const [isHydrated, setIsHydrated] = useState(false);
+  const isHydrated = useIsHydrated();
   const $cartItems = useStore(cartItems);
-
-  useEffect(() => {
-    setIsHydrated(true);
-  }, []);
 
   if (!isHydrated) return null;
 
