@@ -1,9 +1,9 @@
-interface ButtonProps {
+interface Props {
   title: string;
   onClick: () => void;
 }
 
-function Button({ title, onClick }: ButtonProps) {
+function Button({ title, onClick }: Props) {
   return (
     <button
       className="inline-block cursor-pointer rounded-sm border border-indigo-600 px-12 py-3 text-sm font-medium text-indigo-600 hover:bg-indigo-600 hover:text-white"

@@ -1,10 +1,10 @@
-interface CartItem {
+interface Props {
   id: string;
   quantity: number;
   imageUrl: string;
 }
 
-function CartItem({ id, quantity, imageUrl }: CartItem) {
+function CartItem({ id, quantity, imageUrl }: Props) {
   return (
     <li class="flex items-center gap-4">
       <img src={imageUrl} alt="" class="size-16 rounded-sm object-cover" />
