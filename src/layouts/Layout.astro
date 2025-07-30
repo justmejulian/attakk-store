@@ -2,7 +2,8 @@
 import '@styles/global.css';
 import '@fontsource/fira-sans';
 
-import Nav from '@components/Nav/index.astro';
+import Nav from '@components/Nav.astro';
+import Footer from '@components/Footer.astro';
 
 const title = 'Attakk';
 
@@ -24,5 +25,6 @@ const title = 'Attakk';
     <main class="flex w-full justify-center">
       <slot />
     </main>
+    <Footer />
   </body>
 </html>
