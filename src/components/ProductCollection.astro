@@ -1,44 +1,38 @@
 ---
 import Product from './Product.astro';
+import { getProducts } from '@content/products.tsx';
+const products = getProducts();
 ---
 
 <div class="mt-8 flex w-full max-w-5xl flex-wrap justify-center gap-8">
   <Product
-    href="#"
-    imageSrc="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-    title="Basic Tee"
-    price="£24.00 GBP"
+    id={products[0].id}
+    imageUrls={products[0].imageUrls}
+    title={products[0].title}
+    price={products[0].price}
   />
   <Product
-    href="#"
-    imageSrc="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-    title="Basic Tee"
-    price="£24.00 GBP"
-  />
-
-  <Product
-    href="#"
-    imageSrc="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-    title="Basic Tee"
-    price="£24.00 GBP"
+    id={products[0].id}
+    imageUrls={products[0].imageUrls}
+    title={products[0].title}
+    price={products[0].price}
   />
   <Product
-    href="#"
-    imageSrc="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-    title="Basic Tee"
-    price="£24.00 GBP"
-  />
-
-  <Product
-    href="#"
-    imageSrc="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-    title="Basic Tee"
-    price="£24.00 GBP"
+    id={products[0].id}
+    imageUrls={products[0].imageUrls}
+    title={products[0].title}
+    price={products[0].price}
   />
   <Product
-    href="#"
-    imageSrc="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-    title="Basic Tee"
-    price="£24.00 GBP"
+    id={products[0].id}
+    imageUrls={products[0].imageUrls}
+    title={products[0].title}
+    price={products[0].price}
+  />
+  <Product
+    id={products[0].id}
+    imageUrls={products[0].imageUrls}
+    title={products[0].title}
+    price={products[0].price}
   />
 </div>

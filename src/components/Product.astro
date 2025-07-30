@@ -1,17 +1,26 @@
 ---
 import Button from '@components/preact/Button';
+
+interface Props {
+  id: string;
+  title: string;
+  price: number;
+  imageUrls: [string, string];
+}
+
+const { id, title, price, imageUrls } = Astro.props as Props;
 ---
 
 <div class="group overflow-hiddens block w-full max-w-xs">
   <div class="relative h-[350px] sm:h-[450px]">
     <img
-      src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+      src={imageUrls[0]}
       alt=""
       class="absolute inset-0 h-full w-full object-cover opacity-100 group-hover:opacity-0"
     />
 
     <img
-      src="https://images.unsplash.com/photo-1523381140794-a1eef18a37c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MjQ2fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
+      src={imageUrls[1]}
       alt=""
       class="absolute inset-0 h-full w-full object-cover opacity-0 group-hover:opacity-100"
     />
@@ -21,10 +30,12 @@ import Button from '@components/preact/Button';
     <h3
       class="text-sm text-gray-700 group-hover:underline group-hover:underline-offset-4"
     >
-      Limited Edition Sports Trainer
+      {title}
     </h3>
 
-    <p class="mt-1 pb-3 tracking-wide text-gray-900">$189.99</p>
+    <p class="mt-1 pb-3 tracking-wide text-gray-900">
+      {`${price}.00 CHF`}
+    </p>
 
     <div class="flex w-full justify-center">
       <Button title="Add to Cart" client:visible />
