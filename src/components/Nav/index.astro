@@ -1,0 +1,39 @@
+---
+import type { Link } from './types';
+import Desktop from './Desktop.astro';
+import Mobile from './Mobile';
+
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+
+const links: Link[] = [
+  { href: '/', label: 'Home' },
+  { href: '/About', label: 'About' },
+];
+---
+
+<nav
+  class="mx-auto mb-4 flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8"
+>
+  <div class="flex h-16 items-center justify-between"></div>
+  <div class="flex-1 md:flex md:items-center md:gap-12">
+    <a
+      class="text-white transition hover:text-gray-500/75"
+      href={links[0].href}
+    >
+      {title}
+    </a>
+  </div>
+
+  <div class="md:flex md:items-center md:gap-12">
+    <div aria-label="Global" class="hidden md:block">
+      <Desktop links={links} />
+    </div>
+
+    <div class="block md:hidden">
+      <Mobile links={links} client:visible />
+    </div>
+  </div>
+</nav>
