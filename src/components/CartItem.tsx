@@ -1,5 +1,9 @@
 import type { Product } from '@content/products';
-import { removeFromCart } from '@stores/cartStore';
+import {
+  addToCart,
+  decreaseItemQuantity,
+  removeFromCart,
+} from '@stores/cartStore';
 
 interface Props {
   quantity: number;
@@ -36,9 +40,27 @@ function CartItem({ quantity, product }: Props) {
           Quantity
         </label>
 
+        {quantity > 1 && (
+          <button
+            type="button"
+            class="size-10 leading-10 text-gray-600 transition hover:opacity-75"
+            onClick={() => decreaseItemQuantity(product.id)}
+          >
+            -
+          </button>
+        )}
+
         <div class="flex h-8 w-12 items-center justify-center rounded-sm border-gray-200 bg-gray-50 p-0 text-xs text-gray-600">
           {quantity}
         </div>
+
+        <button
+          type="button"
+          class="size-10 leading-10 text-gray-600 transition hover:opacity-75"
+          onClick={() => addToCart(product.id)}
+        >
+          +
+        </button>
 
         <button
           class="hover:text-secondary text-gray-600 transition"
