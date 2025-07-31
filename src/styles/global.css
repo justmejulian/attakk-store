@@ -2,4 +2,14 @@
 
 @theme {
   --font-sans: 'Fira Sans', 'sans-serif';
+
+  --color-primary: #f5d365;
+  --color-secondary: #d5202e;
+  --color-tertiary: #124483;
+}
+
+@layer base {
+  h2 {
+    @apply text-secondary text-xl font-bold sm:text-3xl;
+  }
 }
