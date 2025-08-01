@@ -18,19 +18,19 @@ export type Product = {
 const products: Product[] = [
   {
     id: '1',
-    imageUrls: [RaceSuitImage.src, Ramon.src],
+    imageUrls: [Ramon.src, RaceSuitImage.src],
     title: 'Race Suit',
     price: 40,
   },
   {
     id: '2',
-    imageUrls: [BibshortsImage.src, Marc.src],
+    imageUrls: [Marc.src, BibshortsImage.src],
     title: 'Bib Shorts',
     price: 30,
   },
   {
     id: '3',
-    imageUrls: [JerseyImage.src, Sam.src],
+    imageUrls: [Sam.src, JerseyImage.src],
     title: 'Jersey',
     price: 25,
   },

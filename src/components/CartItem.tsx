@@ -14,7 +14,7 @@ function CartItem({ quantity, product }: Props) {
   return (
     <li class="flex items-center gap-4">
       <img
-        src={product.imageUrls[0]}
+        src={product.imageUrls[1]}
         alt=""
         class="size-16 rounded-sm object-cover"
       />
@@ -22,7 +22,7 @@ function CartItem({ quantity, product }: Props) {
       <div>
         <h3 class="text-secondary text-sm">{product.title}</h3>
 
-        <dl class="text-tertiary mt-0.5 space-y-px text-[10px]">
+        <dl class="mt-0.5 space-y-px text-[10px]">
           <div>
             <dt class="inline">Size:</dt>
             <dd class="inline">XXS</dd>
@@ -50,7 +50,7 @@ function CartItem({ quantity, product }: Props) {
           </button>
         )}
 
-        <div class="flex h-8 w-12 items-center justify-center rounded-sm border-gray-200 bg-gray-50 p-0 text-xs text-gray-600">
+        <div class="flex h-8 w-12 items-center justify-center rounded-sm border-gray-200 bg-gray-50 p-0 text-xs">
           {quantity}
         </div>
 

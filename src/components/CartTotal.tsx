@@ -14,7 +14,7 @@ function CartTotal() {
   if (!isHydrated) return null;
 
   return (
-    <dl className="text-tertiary space-y-0.5 text-sm">
+    <dl className="space-y-0.5 text-sm">
       <div className="flex justify-between !text-base font-medium">
         <dt>Total</dt>
         <dd>{total.toFixed(2)} CHF</dd>

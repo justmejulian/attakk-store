@@ -3,23 +3,26 @@ import Layout from '@layouts/Layout.astro';
 import CartItemList from '@components/CartItemList';
 import CartTotal from '@components/CartTotal';
 import CheckoutButton from '@components/CheckoutButton';
+import Main from '@components/Main.astro';
 ---
 
 <Layout>
-  <div class="mx-auto flex w-full flex-col items-center justify-center">
-    <header class="w-full max-w-2xl">
-      <h2>Your Cart</h2>
-    </header>
-    <div class="mt-8 w-full max-w-2xl">
-      <CartItemList client:load />
-      <div class="border-primary mt-8 flex justify-end border-t pt-8">
-        <div class="w-screen max-w-lg space-y-4">
-          <CartTotal client:load />
-          <div class="flex justify-end pt-4">
-            <CheckoutButton client:visible />
+  <Main>
+    <div class="mx-auto flex w-full flex-col items-center justify-center">
+      <div class="w-full max-w-2xl">
+        <h2>Your Cart</h2>
+      </div>
+      <div class="mt-8 w-full max-w-2xl">
+        <CartItemList client:load />
+        <div class="border-primary mt-8 flex justify-end border-t pt-8">
+          <div class="w-screen max-w-lg space-y-4">
+            <CartTotal client:load />
+            <div class="flex justify-end pt-4">
+              <CheckoutButton client:visible />
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </Main>
 </Layout>

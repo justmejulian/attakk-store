@@ -6,7 +6,7 @@ interface Props {
 function Button({ title, onClick }: Props) {
   return (
     <button
-      class="hover:bg-primary border-tertiary text-tertiary hover:text-secondary cursor-pointer border-2 px-8 py-3 focus:ring-3 focus:outline-hidden"
+      class="hover:bg-primary hover:text-secondary box-border cursor-pointer border-2 px-8 py-3 text-black"
       onClick={onClick}
     >
       {title}

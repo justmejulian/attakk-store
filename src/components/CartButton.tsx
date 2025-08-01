@@ -1,8 +1,18 @@
 import { useStore } from '@nanostores/preact';
 
-import { cartItems } from '@stores/cartStore';
+import { cartItems, type CartItem } from '@stores/cartStore';
 
 import useIsHydrated from '@utils/hooks/useIsHydrated';
+
+function getCartItemsCount(cartItems: Record<string, CartItem>): number {
+  if (!cartItems) return 0;
+
+  return Object.values(cartItems).reduce(
+    (count, item) => count + item.quantity,
+
+    0,
+  );
+}
 
 function CartButton() {
   const isHydrated = useIsHydrated();
@@ -12,11 +22,12 @@ function CartButton() {
 
   return (
     <a
-      class="hover:bg-primary border-tertiary text-tertiary hover:text-secondary cursor-pointer border-2 px-4 py-1 focus:ring-3 focus:outline-hidden"
+      class="hover:text-tertiary cursor-pointer focus:outline-hidden"
       href="/cart"
       title="View Cart"
     >
-      Cart ({Object.keys($cartItems).length})
+      Cart
+      <sup class="text-secondary"> {getCartItemsCount($cartItems) || ''}</sup>
     </a>
   );
 }
