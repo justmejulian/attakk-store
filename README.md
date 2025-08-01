@@ -42,3 +42,44 @@ To run the project using Docker:
    ```
 
 The application will be accessible at `http://localhost:4321`.
+
+## Deployment
+
+Deployed using Dokku.
+
+### Initial Setup Dokku
+
+On Dokku Host:
+
+```
+dokku apps:create attakk-store
+dokku ports:add attakk-store http:80:4321 https:443:4321
+dokku domains:add attakk-store atk-collective.ch
+dokku letsencrypt:enable attakk-store
+```
+
+On Local Machine:
+```
+git remote add dokku dokku@atk-collective.ch:attakk-store
+```
+
+### Deployment
+
+```
+git push dokku main
+```
+
+Make sure you have your ssh config set up correctly to allow access to the Dokku host. (Use IP address of server as Hostname in your SSH config.)
+
+```
+Host atk-collective.ch
+    HostName 83.228.205.168
+    User ubuntu
+    IdentityFile ~/.ssh/...
+```
+
+Test:
+
+```
+ssh atk-collective.ch
+```
