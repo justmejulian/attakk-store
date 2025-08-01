@@ -1,6 +1,6 @@
 ---
 import Header from '@components/Header.astro';
-import ProductCardWithOverlay from '@components/ProductCardWithOverlay.astro';
+import ProductCardWithoutOverlay from '@components/ProductCardWithoutOverlay.astro';
 import { getProducts } from '@content/products';
 import Layout from '@layouts/Layout.astro';
 
@@ -16,19 +16,12 @@ const products = getProducts();
       praesentium cumque iure dicta incidunt est ipsam, officia dolor fugit
       natus?
     </p>
-
-    <a
-      href="/products"
-      class="hover:bg-primary hover:text-secondary mt-6 inline-block bg-white px-4 py-2 text-center"
-    >
-      View All Products
-    </a>
   </Header>
 
   <div class="flex w-full flex-wrap justify-center">
     {
       products.map((product) => (
-        <ProductCardWithOverlay
+        <ProductCardWithoutOverlay
           id={product.id}
           imageUrls={product.imageUrls}
           title={product.title}

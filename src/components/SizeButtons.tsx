@@ -15,7 +15,7 @@ export default function SizeButtons({ sizes }: Props) {
         <div class="flex items-center" key={size}>
           <label
             for={`Size${size}`}
-            class={`cursor-pointer border-2 px-4 py-2 ${$selectedSize === size && 'bg-primary text-secondary'}`}
+            class={`hover:bg-primary hover:text-secondary cursor-pointer border-2 px-4 py-2 ${$selectedSize === size && 'bg-primary text-secondary'}`}
           >
             <p class="text-gray-700">{size}</p>
 
