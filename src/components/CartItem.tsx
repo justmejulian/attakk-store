@@ -1,4 +1,4 @@
-import type { Product } from '@content/products';
+import { getProductById } from '@content/products';
 import {
   addToCart,
   decreaseItemQuantity,
@@ -6,11 +6,14 @@ import {
 } from '@stores/cartStore';
 
 interface Props {
+  id: string;
   quantity: number;
-  product: Product;
+  size: string;
 }
 
-function CartItem({ quantity, product }: Props) {
+function CartItem({ id, quantity, size }: Props) {
+  const product = getProductById(id);
+
   return (
     <li class="flex items-center gap-4">
       <img
@@ -24,13 +27,12 @@ function CartItem({ quantity, product }: Props) {
 
         <dl class="mt-0.5 space-y-px text-[10px]">
           <div>
-            <dt class="inline">Size:</dt>
-            <dd class="inline">XXS</dd>
+            <dd class="inline">Male</dd>
           </div>
 
           <div>
-            <dt class="inline">Color:</dt>
-            <dd class="inline">White</dd>
+            <dt class="inline">Size:</dt>
+            <dd class="inline">{size}</dd>
           </div>
         </dl>
       </div>
@@ -44,7 +46,7 @@ function CartItem({ quantity, product }: Props) {
           <button
             type="button"
             class="size-10 leading-10 text-gray-600 transition hover:opacity-75"
-            onClick={() => decreaseItemQuantity(product.id)}
+            onClick={() => decreaseItemQuantity(product.id, size)}
           >
             -
           </button>
@@ -57,14 +59,14 @@ function CartItem({ quantity, product }: Props) {
         <button
           type="button"
           class="size-10 leading-10 text-gray-600 transition hover:opacity-75"
-          onClick={() => addToCart(product.id)}
+          onClick={() => addToCart(product.id, size)}
         >
           +
         </button>
 
         <button
           class="hover:text-secondary text-gray-600 transition"
-          onClick={() => removeFromCart(product.id)}
+          onClick={() => removeFromCart(product.id, size)}
         >
           <span class="sr-only">Remove item</span>
 

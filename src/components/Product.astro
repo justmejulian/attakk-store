@@ -1,5 +1,6 @@
 ---
 import AddProductButton from '@components/AddProductButton.tsx';
+import SizeButtons from './SizeButtons';
 
 interface Props {
   id: string;
@@ -21,7 +22,7 @@ const { id, title, price, imageUrls } = Astro.props as Props;
     <img
       src={imageUrls[1]}
       alt=""
-      class="h-full w-full max-w-md object-cover opacity-0 group-hover:opacity-100 group-focus:opacity-100"
+      class="h-full w-full max-w-md object-cover"
     />
 
     <div class="w-full max-w-md p-3">
@@ -35,6 +36,7 @@ const { id, title, price, imageUrls } = Astro.props as Props;
         {`${price}.00 CHF`}
       </p>
     </div>
+    <SizeButtons sizes={['S', 'M', 'L', 'XL']} client:visible />
     <div class="flex w-full max-w-md justify-center">
       <AddProductButton productId={id} client:visible />
     </div>
