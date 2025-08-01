@@ -28,7 +28,7 @@ const { id, title, price, imageUrls } = Astro.props as Props;
       {`${price}.00 CHF`}
     </p>
   </div>
-  <SizeButtons sizes={['S', 'M', 'L', 'XL']} client:visible />
+  <SizeButtons id={id} sizes={['S', 'M', 'L', 'XL']} client:visible />
   <div class="flex w-full max-w-md justify-center">
     <AddProductButton productId={id} client:visible />
   </div>
