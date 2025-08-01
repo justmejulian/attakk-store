@@ -15,11 +15,15 @@ export default function SizeButtons({ id, sizes }: Props) {
         const key = `Size-${size}-${id}`;
         return (
           <div class="flex items-center" key={size}>
-            <label
-              for={key}
-              class={`hover:bg-primary hover:text-secondary cursor-pointer border-2 px-4 py-2 ${$selectedSize === size && 'bg-primary text-secondary'}`}
-            >
-              <p class="text-gray-700">{size}</p>
+            <label for={key} class="px-2">
+              <p
+                class={`cursor-pointer ${
+                  $selectedSize === size &&
+                  'decoration-primary text-tertiary underline underline-offset-4'
+                }`}
+              >
+                {size}
+              </p>
 
               <input
                 type="radio"

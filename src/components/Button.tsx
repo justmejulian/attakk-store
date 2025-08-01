@@ -10,7 +10,7 @@ function Button({ title, onClick, disabled, disabledTooltipText }: Props) {
     <button
       disabled={disabled}
       title={disabled ? disabledTooltipText : ''}
-      class="hover:bg-primary hover:text-secondary box-border cursor-pointer border-2 px-8 py-3 text-black focus:outline-hidden disabled:border-gray-500 disabled:text-gray-500 disabled:hover:bg-white"
+      class="hover:text-tertiary hover:decoration-primary cursor-pointer px-8 py-3 text-black underline-offset-4 hover:underline focus:outline-hidden disabled:text-gray-500 disabled:hover:bg-white"
       onClick={onClick}
     >
       {title}
