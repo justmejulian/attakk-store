@@ -7,7 +7,13 @@ import { cartItems, type CartItem } from '@stores/cartStore';
 import { getStripeProductId } from '@utils/products';
 import { useEffect } from 'preact/hooks';
 
-const PUBLIC_STRIPE_KEY = import.meta.env.PUBLIC_STRIPE_KEY;
+const PUBLIC_STRIPE_KEY =
+  import.meta.env.PUBLIC_STRIPE_KEY || process.env.PUBLIC_STRIPE_KEY;
+
+if (!PUBLIC_STRIPE_KEY) {
+  console.error('Missing Stripe public key');
+  throw new Error('Missing Stripe public key');
+}
 
 const stripePromise = loadStripe(PUBLIC_STRIPE_KEY);
 
@@ -26,8 +32,6 @@ const fetchClientSecret = async ({
     lineItems,
     baseUrl,
   });
-  console.log('🪚 data:', data);
-
   if (error) {
     console.error('Error creating checkout session:', error);
     throw new Error('Failed to create checkout session');

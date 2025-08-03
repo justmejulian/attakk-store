@@ -3,11 +3,14 @@ import { z } from 'astro:schema';
 
 import Stripe from 'stripe';
 
-if (!import.meta.env.STRIPE_SECRET_KEY) {
+const stripeSecretKey =
+  import.meta.env.STRIPE_SECRET_KEY || process.env.STRIPE_SECRET_KEY;
+
+if (!stripeSecretKey) {
   throw new Error('Missing Stripe secret key');
 }
 
-const stripe = new Stripe(import.meta.env.STRIPE_SECRET_KEY);
+const stripe = new Stripe(stripeSecretKey);
 
 export const server = {
   createCheckout: defineAction({
@@ -21,7 +24,6 @@ export const server = {
       baseUrl: z.string().url(),
     }),
     handler: async (input) => {
-      console.log('Creating Stripe checkout session with input:', input);
       const baseUrl = input.baseUrl;
       try {
         const stripeSession = await stripe.checkout.sessions.create({
