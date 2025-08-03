@@ -11,6 +11,8 @@ import node from '@astrojs/node';
 export default defineConfig({
   integrations: [preact()],
 
+  site: 'https://atk-collective.ch/',
+
   vite: {
     plugins: [tailwindcss()],
   },
@@ -19,4 +21,3 @@ export default defineConfig({
     mode: 'standalone',
   }),
 });
-
