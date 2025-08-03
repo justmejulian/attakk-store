@@ -4,7 +4,7 @@ import { useStore } from '@nanostores/preact';
 import { actions } from 'astro:actions';
 
 import { cartItems, type CartItem } from '@stores/cartStore';
-import { getProductById, getStripeProductId } from '@utils/products';
+import { getStripeProductId } from '@utils/products';
 import { useEffect } from 'preact/hooks';
 
 const PUBLIC_STRIPE_KEY = import.meta.env.PUBLIC_STRIPE_KEY;
