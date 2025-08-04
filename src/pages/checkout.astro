@@ -1,9 +1,18 @@
 ---
 import CheckoutEmbeded from '@components/Checkout';
+import CheckoutItemList from '@components/CheckoutItemList';
+import Layout from '@layouts/Layout.astro';
 
 // This gives 'http://localhost:port' in dev and url in production
 // configured in astro.config.mjs
 const { origin } = Astro.url;
 ---
 
-<CheckoutEmbeded baseUrl={origin} client:load />
+<Layout>
+  <div
+    class="mb-6 flex w-full flex-col items-center justify-center px-4 py-0 sm:px-6 md:max-w-screen-xl md:flex-row md:items-stretch lg:px-8"
+  >
+    <CheckoutItemList client:load />
+    <CheckoutEmbeded baseUrl={origin} client:load />
+  </div>
+</Layout>
