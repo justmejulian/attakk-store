@@ -14,6 +14,7 @@ async function fetchSessionStatus(sessionId?: string | null) {
 }
 
 import { useState, useEffect } from 'preact/hooks';
+import { clearCart } from '@stores/cartStore';
 
 export default function PaymentStatus() {
   // todo: fix
@@ -32,6 +33,11 @@ export default function PaymentStatus() {
       const sessionId = searchParams?.get('session_id');
       setLoading(true);
       const result = await fetchSessionStatus(sessionId);
+
+      if (result.status === 'complete') {
+        clearCart();
+      }
+
       setSessionStatus(result);
       setLoading(false);
     };
