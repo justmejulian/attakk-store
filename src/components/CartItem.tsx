@@ -25,14 +25,19 @@ function CartItem({ id, quantity, size }: Props) {
       <div>
         <h3 class="text-secondary text-sm">{product.title}</h3>
 
-        <dl class="mt-0.5 space-y-px text-[10px]">
+        <dl class="mt-0.5 text-[10px]">
           <div>
             <dd class="inline">Male</dd>
           </div>
 
-          <div>
+          <div class="flex items-center gap-2">
             <dt class="inline">Size:</dt>
             <dd class="inline">{size}</dd>
+          </div>
+
+          <div class="flex items-center gap-1">
+            <dt class="inline">Price:</dt>
+            <dd class="inline">{product.price}</dd>
           </div>
         </dl>
       </div>
