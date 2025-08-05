@@ -1,0 +1,14 @@
+---
+import Main from '@components/Main.astro';
+
+import Layout from '@layouts/Layout.astro';
+import PaymentStatus from '@components/PaymentStatus';
+---
+
+<Layout>
+  <Main>
+    <div class="mx-auto flex w-full max-w-sm flex-col flex-wrap justify-center">
+      <PaymentStatus client:only="preact" />
+    </div>
+  </Main>
+</Layout>

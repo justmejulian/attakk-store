@@ -52,6 +52,27 @@ export const server = {
     },
   }),
 
+  getSessionStatus: defineAction({
+    input: z.object({
+      sessionId: z.string(),
+    }),
+    handler: async (input) => {
+      const session = await stripe.checkout.sessions.retrieve(input.sessionId);
+      if (!session) {
+        throw new ActionError({
+          code: 'NOT_FOUND',
+          message: 'Checkout session not found',
+        });
+      }
+      return {
+        status: session.payment_status,
+        total: session.amount_total,
+        sessionId: session.id,
+        customerEmail: session.customer_details?.email,
+      };
+    },
+  }),
+
   getStripeProducts: defineAction({
     input: z.object({}),
     handler: async () => {
