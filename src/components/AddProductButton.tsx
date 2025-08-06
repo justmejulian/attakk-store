@@ -15,7 +15,6 @@ function AddProductButton({ productId }: Props) {
       disabled={!$selectedSize}
       disabledTooltipText="Please select a size"
       onClick={() => {
-        console.log(`Adding product ${productId} to cart...`);
         addToCart(productId, $selectedSize);
       }}
     />
