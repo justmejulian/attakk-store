@@ -28,8 +28,9 @@ export const server = {
       try {
         const stripeSession = await stripe.checkout.sessions.create({
           mode: 'payment',
-          ui_mode: 'embedded',
+          ui_mode: 'custom',
           line_items: input.lineItems,
+          payment_method_types: ['card', 'twint'],
           return_url: `${baseUrl}/return?session_id={CHECKOUT_SESSION_ID}`,
         });
 
