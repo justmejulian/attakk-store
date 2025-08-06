@@ -16,7 +16,6 @@
       "@styles/*": ["./src/styles/*"],
       "@components/*": ["./src/components/*"],
       "@pages/*": ["./src/components/pages/*"],
-      "@preact/*": ["./src/components/preact/*"],
       "@utils/*": ["./src/utils/*"],
       "@content/*": ["./src/content/*"],
       "@images/*": ["./src/images/*"],

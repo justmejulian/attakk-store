@@ -3,6 +3,7 @@ import { useStore } from '@nanostores/preact';
 import { cartItems } from '@stores/cartStore';
 
 import { useEffect, useState } from 'preact/hooks';
+import CartItem from './CartItem';
 
 function Cart() {
   const [isHydrated, setIsHydrated] = useState(false);
@@ -14,17 +15,18 @@ function Cart() {
 
   if (!isHydrated) return null;
 
-  return Object.keys($cartItems).length ? (
-    <ul>
-      {Object.values($cartItems).map((cartItem) => (
-        <li>
-          <h3>{cartItem.id}</h3>
-          <p>Quantity: {cartItem.quantity}</p>
-        </li>
-      ))}
-    </ul>
-  ) : (
-    <p>Your cart is empty!</p>
+  return (
+    <div class="mt-8">
+      {Object.keys($cartItems).length ? (
+        <ul class="space-y-4">
+          {Object.values($cartItems).map((cartItem) => (
+            <CartItem key={cartItem.id} id={cartItem.id} />
+          ))}
+        </ul>
+      ) : (
+        <p>Your cart is empty!</p>
+      )}
+    </div>
   );
 }
 
