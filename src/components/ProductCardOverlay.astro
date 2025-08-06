@@ -32,10 +32,10 @@ const [dropTitle, dropSubtitle] = title.split(' - ');
         </Fragment>
       ) : (
         <Fragment>
-          <h4 class="text-3xl font-light text-white uppercase">
+          <h5 class="text-lg font-bold text-white">{dropTitle}</h5>
+          <h4 class="text-primary text-3xl font-light uppercase">
             {dropSubtitle}
           </h4>
-          <h5 class="text-primary text-lg font-bold">{dropTitle}</h5>
         </Fragment>
       )
     }

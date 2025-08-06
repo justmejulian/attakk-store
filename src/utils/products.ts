@@ -1,7 +1,8 @@
 import products, { type Product } from '@content/products.ts';
 
 export function getProducts(): Product[] {
-  return Object.values(products);
+  const productList = Object.values(products);
+  return [...productList, ...productList];
 }
 
 export function getProductById(id: string): Product {
