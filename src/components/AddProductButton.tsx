@@ -2,11 +2,11 @@ import Button from '@components/Button';
 
 import { addToCart } from '@stores/cartStore';
 
-interface AddProductButton {
+interface Props {
   productId: string;
 }
 
-function AddProductButton({ productId }: AddProductButton) {
+function AddProductButton({ productId }: Props) {
   return <Button title="Add to Cart" onClick={() => addToCart(productId)} />;
 }
 
