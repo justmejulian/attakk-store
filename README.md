@@ -17,6 +17,7 @@ To set up the project locally, follow these steps:
 
 1. Configure environment variables:
    Copy the `.env.example` file to `.env` and fill in the required values:
+
    ```
    STRIPE_SECRET_KEY=<your-stripe-secret-key>
    PUBLIC_STRIPE_KEY=<your-public-stripe-key>
@@ -27,6 +28,7 @@ To set up the project locally, follow these steps:
    ```bash
    npm run dev
    ```
+
 ## Usage
 
 - **Development**: Use `npm run dev` to start the development server.
