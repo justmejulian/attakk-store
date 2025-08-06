@@ -2,7 +2,6 @@
 import Layout from '@layouts/Layout.astro';
 import CartItemList from '@components/CartItemList';
 import CartTotal from '@components/CartTotal';
-import CheckoutButton from '@components/CheckoutButton';
 import Main from '@components/Main.astro';
 ---
 
@@ -18,7 +17,12 @@ import Main from '@components/Main.astro';
           <div class="w-screen max-w-lg space-y-4">
             <CartTotal client:load />
             <div class="flex justify-end pt-4">
-              <CheckoutButton client:visible />
+              <a
+                href="/checkout"
+                class="hover:text-tertiary hover:decoration-primary cursor-pointer py-2 text-black underline-offset-4 hover:underline focus:outline-hidden disabled:text-gray-500 disabled:hover:decoration-white"
+              >
+                Checkout
+              </a>
             </div>
           </div>
         </div>

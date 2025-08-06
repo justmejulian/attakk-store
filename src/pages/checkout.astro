@@ -1,0 +1,9 @@
+---
+import CheckoutEmbeded from '@components/Checkout';
+
+// This gives 'http://localhost:port' in dev and url in production
+// configured in astro.config.mjs
+const { origin } = Astro.url;
+---
+
+<CheckoutEmbeded baseUrl={origin} client:load />

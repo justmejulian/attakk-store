@@ -20,11 +20,13 @@
     "@fontsource/fira-sans": "^5.2.5",
     "@nanostores/persistent": "^1.1.0",
     "@nanostores/preact": "^1.0.0",
+    "@stripe/stripe-js": "^7.8.0",
     "@tailwindcss/vite": "^4.1.8",
     "astro": "^5.10.1",
     "leaflet": "^1.9.4",
     "nanostores": "^1.0.1",
     "preact": "^10.26.8",
+    "stripe": "^18.4.0",
     "tailwindcss": "^4.1.8"
   },
   "devDependencies": {
