@@ -1,7 +1,8 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: 'Fira Sans', 'sans-serif';
+  --font-sans: 'Urbanist Variable', 'sans-serif';
+  --font-cursive: 'Permanent Marker', 'cursive';
 
   --color-primary: #f5d365;
   --color-secondary: #d5202e;

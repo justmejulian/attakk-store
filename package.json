@@ -17,7 +17,8 @@
   "dependencies": {
     "@astrojs/node": "^9.3.3",
     "@astrojs/preact": "^4.1.0",
-    "@fontsource/fira-sans": "^5.2.5",
+    "@fontsource-variable/urbanist": "^5.2.6",
+    "@fontsource/permanent-marker": "^5.2.6",
     "@nanostores/persistent": "^1.1.0",
     "@nanostores/preact": "^1.0.0",
     "@stripe/stripe-js": "^7.8.0",
