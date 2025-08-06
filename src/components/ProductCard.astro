@@ -1,0 +1,35 @@
+---
+import AddProductButton from '@components/AddProductButton.tsx';
+import SizeButtons from './SizeButtons';
+
+interface Props {
+  id: string;
+  title: string;
+  price: number;
+  imageUrls: [string, string];
+}
+
+const { id, title, price, imageUrls } = Astro.props as Props;
+---
+
+<div
+  class="flex h-full w-full flex-col items-center justify-center group-focus-within:visible"
+>
+  <img src={imageUrls[1]} alt="" class="h-full w-full max-w-md object-cover" />
+
+  <div class="w-full max-w-md p-3">
+    <h3
+      class="decoration-primary text-secondary text-sm group-hover:underline group-hover:underline-offset-4"
+    >
+      {title}
+    </h3>
+
+    <p class="mt-1 pb-3 tracking-wide">
+      {`${price}.00 CHF`}
+    </p>
+  </div>
+  <SizeButtons sizes={['S', 'M', 'L', 'XL']} client:visible />
+  <div class="flex w-full max-w-md justify-center">
+    <AddProductButton productId={id} client:visible />
+  </div>
+</div>

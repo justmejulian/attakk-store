@@ -1,0 +1,19 @@
+---
+import ProductCard from './ProductCard.astro';
+
+interface Props {
+  id: string;
+  title: string;
+  price: number;
+  imageUrls: [string, string];
+}
+
+const { id, title, price, imageUrls } = Astro.props as Props;
+---
+
+<div
+  tab-index={0}
+  class="group overflow-hiddens relative block w-full md:w-1/3"
+>
+  <ProductCard id={id} title={title} price={price} imageUrls={imageUrls} />
+</div>
