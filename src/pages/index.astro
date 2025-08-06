@@ -1,19 +1,27 @@
 ---
+import Header from '@components/Header.astro';
 import ProductCollection from '@components/ProductCollection.astro';
 import Layout from '@layouts/Layout.astro';
 ---
 
 <Layout>
-  <div class="mx-auto flex w-full flex-col items-center justify-center">
-    <header class="w-full max-w-5xl">
-      <h2>Product Collection</h2>
+  <Header>
+    <h2>Product Collection</h2>
 
-      <p class="text-tertiary mt-4 max-w-md">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque
-        praesentium cumque iure dicta incidunt est ipsam, officia dolor fugit
-        natus?
-      </p>
-    </header>
+    <p class="mt-4 max-w-md text-white">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque
+      praesentium cumque iure dicta incidunt est ipsam, officia dolor fugit
+      natus?
+    </p>
+
+    <a
+      href="/products"
+      class="hover:bg-primary hover:text-secondary mt-6 inline-block bg-white px-4 py-2 text-center"
+    >
+      View All Products
+    </a>
+  </Header>
+  <div class="flex w-full flex-col items-center">
     <ProductCollection />
   </div>
 </Layout>

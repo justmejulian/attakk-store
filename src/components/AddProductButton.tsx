@@ -7,7 +7,15 @@ interface Props {
 }
 
 function AddProductButton({ productId }: Props) {
-  return <Button title="Add to Cart" onClick={() => addToCart(productId)} />;
+  return (
+    <Button
+      title="Add to Cart"
+      onClick={() => {
+        console.log(`Adding product ${productId} to cart...`);
+        addToCart(productId);
+      }}
+    />
+  );
 }
 
 export default AddProductButton;
