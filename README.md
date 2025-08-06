@@ -65,7 +65,16 @@ dokku apps:create attakk-store
 dokku ports:add attakk-store http:80:4321 https:443:4321
 dokku domains:add attakk-store atk-collective.ch
 dokku letsencrypt:enable attakk-store
+
+
+dokku config:set attakk-store STRIPE_SECRET_KEY=sk_..
+dokku config:set attakk-store PUBLIC_STRIPE_KEY=pk_..
+
+dokku docker-options:add attakk-store build '--build-arg PUBLIC_STRIPE_KEY'
+dokku docker-options:add attakk-store build '--build-arg STRIPE_SECRET_KEY'
 ```
+
+[Build-time configuration variables](https://dokku.com/docs/deployment/builders/dockerfiles/#build-time-configuration-variables)
 
 On Local Machine:
 
