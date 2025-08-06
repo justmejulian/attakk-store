@@ -1,5 +1,6 @@
 ---
 import Header from '@components/Header.astro';
+import Main from '@components/Main.astro';
 import ProductCardWithoutOverlay from '@components/ProductCardWithoutOverlay.astro';
 import { getProducts } from '@content/products';
 import Layout from '@layouts/Layout.astro';
@@ -17,17 +18,18 @@ const products = getProducts();
       natus?
     </p>
   </Header>
-
-  <div class="flex w-full flex-wrap justify-center">
-    {
-      products.map((product) => (
-        <ProductCardWithoutOverlay
-          id={product.id}
-          imageUrls={product.imageUrls}
-          title={product.title}
-          price={product.price}
-        />
-      ))
-    }
-  </div>
+  <Main>
+    <div class="mx-auto flex w-full flex-wrap justify-center">
+      {
+        products.map((product) => (
+          <ProductCardWithoutOverlay
+            id={product.id}
+            imageUrls={product.imageUrls}
+            title={product.title}
+            price={product.price}
+          />
+        ))
+      }
+    </div>
+  </Main>
 </Layout>
