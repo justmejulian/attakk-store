@@ -15,11 +15,18 @@ To set up the project locally, follow these steps:
    npm install
    ```
 
-2. Start the development server:
+1. Configure environment variables:
+   Copy the `.env.example` file to `.env` and fill in the required values:
+   ```
+   STRIPE_SECRET_KEY=<your-stripe-secret-key>
+   PUBLIC_STRIPE_KEY=<your-public-stripe-key>
+   ```
+
+1. Start the development server:
+
    ```bash
    npm run dev
    ```
-
 ## Usage
 
 - **Development**: Use `npm run dev` to start the development server.
@@ -59,6 +66,7 @@ dokku letsencrypt:enable attakk-store
 ```
 
 On Local Machine:
+
 ```
 git remote add dokku dokku@atk-collective.ch:attakk-store
 ```
