@@ -85,7 +85,7 @@ export default function Checkout({ baseUrl }: Props) {
       id="payment-form"
       class="w-1/2 min-w-sm overflow-scroll border-gray-200 bg-white p-6 md:border-l-1"
     >
-      <h3 class="mb-4">Payment</h3>
+      <h2 class="mb-4">Payment</h2>
       <StripeEmailInput
         setHasError={setHasError}
         updateEmail={checkout?.updateEmail}

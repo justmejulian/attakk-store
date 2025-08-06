@@ -30,7 +30,7 @@ const products: Record<string, Product> = {
       L: { stripeProductId: 'price_1RrbasDWqual0M5Be5XOzd3f' },
       XL: { stripeProductId: 'price_1RsIqlDWqual0M5B3GcNsrLh' },
     },
-    title: 'ATTAKK Racing Team RS25 - Invincible Yellow',
+    title: 'ATTAKK Race Suit 25 - Invincible Yellow',
     price: 150,
   },
   2: {
@@ -42,7 +42,7 @@ const products: Record<string, Product> = {
       L: { stripeProductId: 'price_1RrwvbDWqual0M5BlthgseQT' },
       XL: { stripeProductId: 'price_1RrwvnDWqual0M5BdcoKiAFa' },
     },
-    title: 'ATTAKK Bibs 25 – Invincible Yellow',
+    title: 'ATTAKK Bibs 25 - Invincible Yellow',
     price: 105,
   },
   3: {
@@ -54,7 +54,7 @@ const products: Record<string, Product> = {
       L: { stripeProductId: 'price_1RrwqmDWqual0M5Btp1v7whe' },
       XL: { stripeProductId: 'price_1RrwrGDWqual0M5Bm2rbDUUy' },
     },
-    title: 'ATTAKK Jersey 25 – Invincible Yellow',
+    title: 'ATTAKK Jersey 25 - Invincible Yellow',
     price: 75,
   },
 };

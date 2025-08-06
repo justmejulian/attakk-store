@@ -23,7 +23,7 @@ function CartItem({ id, quantity, size }: Props) {
       />
 
       <div>
-        <h3 class="text-secondary text-sm">{product.title}</h3>
+        <h4>{product.title}</h4>
 
         <dl class="mt-0.5 text-[10px]">
           <div>
