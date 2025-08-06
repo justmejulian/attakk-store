@@ -16,9 +16,9 @@ function CartItem({ quantity, product }: Props) {
       />
 
       <div>
-        <h3 class="text-sm text-gray-900">Basic Tee 6-Pack</h3>
+        <h3 class="text-secondary text-sm">{product.title}</h3>
 
-        <dl class="mt-0.5 space-y-px text-[10px] text-gray-600">
+        <dl class="text-tertiary mt-0.5 space-y-px text-[10px]">
           <div>
             <dt class="inline">Size:</dt>
             <dd class="inline">XXS</dd>
@@ -41,7 +41,7 @@ function CartItem({ quantity, product }: Props) {
         </div>
 
         <button
-          class="text-gray-600 transition hover:text-red-600"
+          class="hover:text-secondary text-gray-600 transition"
           onClick={() => removeFromCart(product.id)}
         >
           <span class="sr-only">Remove item</span>

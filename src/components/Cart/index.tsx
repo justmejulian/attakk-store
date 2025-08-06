@@ -4,6 +4,8 @@ import { cartItems } from '@stores/cartStore';
 import useIsHydrated from '@utils/hooks/useIsHydrated';
 import { getProductById } from '@content/products';
 
+import Button from '@components/Button';
+
 import CartItem from './CartItem';
 
 function Cart() {
@@ -38,6 +40,37 @@ function Cart() {
       ) : (
         <p>Your cart is empty!</p>
       )}
+
+      <div className="mt-8 flex justify-end border-t border-gray-100 pt-8">
+        <div className="w-screen max-w-lg space-y-4">
+          <dl className="space-y-0.5 text-sm text-gray-700">
+            <div className="flex justify-between">
+              <dt>Subtotal</dt>
+              <dd>£250</dd>
+            </div>
+
+            <div className="flex justify-between">
+              <dt>VAT</dt>
+              <dd>42.00 CHF</dd>
+            </div>
+
+            <div className="flex justify-between !text-base font-medium">
+              <dt>Total</dt>
+              <dd>£200</dd>
+            </div>
+          </dl>
+
+          <div className="flex justify-end">
+            <Button
+              title="Checkout"
+              onClick={() => {
+                // Handle checkout logic here
+                console.log('Proceeding to checkout...');
+              }}
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
