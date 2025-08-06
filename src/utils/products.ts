@@ -1,17 +1,21 @@
 import products, { type Product } from '@content/products.ts';
+import { clearCart } from '@stores/cartStore';
 
 export function getProducts(): Product[] {
   const productList = Object.values(products);
-  return [...productList, ...productList];
+  // return [...productList, ...productList];
+  return productList;
 }
 
 export function getProductById(id: string): Product {
   if (!id) {
     throw new Error('Product ID is required');
   }
-  const product = products[id];
+  const product = products.find((product) => product.id === id);
 
   if (!product) {
+    console.log('Cart is in broken state, clearing cart');
+    clearCart();
     throw new Error(`Product with ID ${id} not found`);
   }
   return product;

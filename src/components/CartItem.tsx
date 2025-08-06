@@ -27,7 +27,7 @@ function CartItem({ id, quantity, size }: Props) {
 
         <dl class="mt-0.5 text-[10px]">
           <div>
-            <dd class="inline">Male</dd>
+            <dd class="inline">{product.sex}</dd>
           </div>
 
           <div class="flex items-center gap-2">
