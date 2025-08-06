@@ -65,10 +65,11 @@ export const server = {
         });
       }
       return {
-        status: session.payment_status,
+        status: session.status,
         total: session.amount_total,
         sessionId: session.id,
         customerEmail: session.customer_details?.email,
+        paymentIntentId: session.payment_intent,
       };
     },
   }),

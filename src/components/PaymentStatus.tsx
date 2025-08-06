@@ -55,6 +55,26 @@ export default function PaymentStatus() {
     );
   }
 
+  if (sessionStatus.status === 'open') {
+    return (
+      <Fragment>
+        <h1 class="mb-4 text-center">Payment failed</h1>
+        <p class="text-center">
+          Your payment is still open. Please complete the payment process.
+          <br />
+          Please return to the checkout page to complete your payment.
+        </p>
+
+        <a
+          href="/checkout"
+          class="hover:text-tertiary hover:decoration-primary mt-6 cursor-pointer py-2 text-center text-black underline-offset-4 hover:underline focus:outline-hidden disabled:text-gray-500 disabled:hover:decoration-white"
+        >
+          Return to Checkout
+        </a>
+      </Fragment>
+    );
+  }
+
   return (
     <Fragment>
       <h1 class="mb-4 text-center">Payment Successful</h1>
@@ -81,13 +101,17 @@ export default function PaymentStatus() {
         Amount Paid: {(sessionStatus.total / 100).toFixed(2)} CHF
       </p>
 
+      <p class="border-b border-gray-200 py-2 text-center">
+        Payment Id: {sessionStatus.paymentIntentId}
+      </p>
+
       <p class="mt-4 text-center">
         Thank you for your purchase!
         <br />
         Your payment has been successfully processed.
       </p>
 
-      <p class="mt-4">
+      <p class="mt-4 text-center">
         Email confirmation has been sent to{' '}
         <span class="text-tertiary font-thin underline">
           {sessionStatus.customerEmail}
