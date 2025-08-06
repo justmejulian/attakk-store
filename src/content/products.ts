@@ -43,7 +43,7 @@ const products: Record<string, Product> = {
       XL: { stripeProductId: 'price_1RrwvnDWqual0M5BdcoKiAFa' },
     },
     title: 'ATTAKK Bibs 25 – Invincible Yellow',
-    price: 150,
+    price: 105,
   },
   3: {
     id: '3',
@@ -55,7 +55,7 @@ const products: Record<string, Product> = {
       XL: { stripeProductId: 'price_1RrwrGDWqual0M5Bm2rbDUUy' },
     },
     title: 'ATTAKK Jersey 25 – Invincible Yellow',
-    price: 150,
+    price: 75,
   },
 };
 
