@@ -27,7 +27,9 @@ function CartButton() {
       title="View Cart"
     >
       Cart
-      <sup class="text-secondary"> {getCartItemsCount($cartItems) || ''}</sup>
+      <sup class="text-secondary font-cursive ml-1">
+        {getCartItemsCount($cartItems) || ''}
+      </sup>
     </a>
   );
 }
