@@ -1,47 +1,44 @@
-# Astro Starter Kit: Minimal
+# Attakk Store
 
-```sh
-npm create astro@latest -- --template minimal
-```
+## Introduction
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+Attakk Store is an e-commerce platform designed for selling cycling apparel and accessories. Built with Astro, Preact, and TailwindCSS.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Installation
 
-## 🚀 Project Structure
+To set up the project locally, follow these steps:
 
-Inside of your Astro project, you'll see the following folders and files:
+1. Install dependencies:
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+   ```bash
+   nvm install
+   npm install
+   ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Usage
 
-Any static assets, like images, can be placed in the `public/` directory.
+- **Development**: Use `npm run dev` to start the development server.
+- **Build**: Use `npm run build` to create a production build.
+- **Preview**: Use `npm run preview` to preview the production build.
 
-## 🧞 Commands
+## Docker
 
-All commands are run from the root of the project, from a terminal:
+To run the project using Docker:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+1. Build the Docker image:
 
-## 👀 Want to learn more?
+   ```bash
+   docker build -t attakk-store .
+   ```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+2. Run the Docker container:
+   ```bash
+   docker run -p 4321:4321 attakk-store
+   ```
+
+The application will be accessible at `http://localhost:4321`.
