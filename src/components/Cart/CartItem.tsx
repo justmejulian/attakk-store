@@ -1,4 +1,5 @@
 import type { Product } from '@content/products';
+import { removeFromCart } from '@stores/cartStore';
 
 interface Props {
   quantity: number;
@@ -39,7 +40,10 @@ function CartItem({ quantity, product }: Props) {
           {quantity}
         </div>
 
-        <button class="text-gray-600 transition hover:text-red-600">
+        <button
+          class="text-gray-600 transition hover:text-red-600"
+          onClick={() => removeFromCart(product.id)}
+        >
           <span class="sr-only">Remove item</span>
 
           <svg
