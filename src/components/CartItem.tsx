@@ -1,4 +1,4 @@
-import { getProductById } from '@content/products';
+import { getProductById } from '@utils/products';
 import {
   addToCart,
   decreaseItemQuantity,

@@ -1,7 +1,7 @@
 import { useStore } from '@nanostores/preact';
 import { cartItems } from '@stores/cartStore';
 import useIsHydrated from '@utils/hooks/useIsHydrated';
-import { getProductById } from '@content/products';
+import { getProductById } from '@utils/products';
 
 function CartTotal() {
   const isHydrated = useIsHydrated();
