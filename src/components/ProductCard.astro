@@ -10,6 +10,8 @@ interface Props {
 }
 
 const { id, title, price, imageUrls } = Astro.props as Props;
+
+const [dropTitle, dropSubtitle] = title.split(' - ');
 ---
 
 <div
@@ -18,10 +20,11 @@ const { id, title, price, imageUrls } = Astro.props as Props;
   <img src={imageUrls[1]} alt="" class="h-full w-full max-w-md object-cover" />
 
   <div class="w-full max-w-md p-3">
+    <h4 class="text-black">{dropSubtitle}</h4>
     <h3
-      class="decoration-primary text-secondary text-sm group-hover:underline group-hover:underline-offset-4"
+      class="decoration-primary group-hover:underline group-hover:underline-offset-4"
     >
-      {title}
+      {dropTitle}
     </h3>
 
     <p class="mt-1 pb-3 tracking-wide">

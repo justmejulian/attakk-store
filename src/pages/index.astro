@@ -3,6 +3,7 @@ import Header from '@components/Header.astro';
 import ProductCardWithOverlay from '@components/ProductCardWithOverlay.astro';
 import { getProducts } from '@utils/products';
 import Layout from '@layouts/Layout.astro';
+import Button from '@components/Button.astro';
 
 const products = getProducts();
 ---
@@ -10,9 +11,11 @@ const products = getProducts();
 <Layout>
   <Header>
     <h1
-      class="font-cursive text-primary mb-20 -rotate-12 sm:mb-40 xl:-translate-14"
+      class="font-cursive text-primary mb-20 -rotate-12 tracking-widest sm:mb-40 md:mb-30 xl:-translate-14"
     >
-      Product Collection
+      Invincible
+      <br class="hidden md:inline" />
+      Yellow
     </h1>
 
     <h4 class="font-bold text-white">New Drop</h4>
@@ -22,16 +25,19 @@ const products = getProducts();
       praesentium cumque iure dicta incidunt est ipsam, officia dolor fugit
       natus?
     </p>
+    <Button url="/products"> Discover Now </Button>
   </Header>
 
   <div class="flex w-full flex-wrap justify-center">
     {
-      products.map((product) => (
+      products.map((product, index) => (
         <ProductCardWithOverlay
           id={product.id}
           imageUrls={product.imageUrls}
           title={product.title}
           price={product.price}
+          index={index}
+          client:load
         />
       ))
     }

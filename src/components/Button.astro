@@ -1,0 +1,14 @@
+---
+interface Props {
+  url?: string; // No url means do nothing
+}
+
+const { url } = Astro.props as Props;
+---
+
+<a
+  href={url}
+  class="hover:bg-primary mt-6 inline-block bg-white px-4 py-2 text-center font-semibold uppercase"
+>
+  <slot />
+</a>
