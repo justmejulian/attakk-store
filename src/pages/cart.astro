@@ -1,6 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import CartList from '@components/Cart/index';
+import CartItemList from '@components/CartItemList';
+import CheckoutButton from '@components/CheckoutButton';
 ---
 
 <Layout>
@@ -8,6 +9,15 @@ import CartList from '@components/Cart/index';
     <header class="w-full max-w-2xl">
       <h2>Your Cart</h2>
     </header>
-    <CartList client:load />
+    <div class="mt-8 w-full max-w-2xl">
+      <CartItemList client:load />
+      <div class="border-primary mt-8 flex justify-end border-t pt-8">
+        <div class="w-screen max-w-lg space-y-4">
+          <div class="flex justify-end pt-4">
+            <CheckoutButton client:visible />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </Layout>

@@ -42,7 +42,30 @@ export function getCartItems(): Record<string, CartItem> {
 export function removeFromCart(id: string) {
   const currentItems = cartItems.get();
   if (currentItems[id]) {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { [id]: _, ...updatedItems } = currentItems;
     cartItems.set(updatedItems);
+  }
+}
+
+export function clearCart() {
+  cartItems.set({});
+}
+
+export function decreaseItemQuantity(id: string) {
+  const currentItems = cartItems.get();
+  if (currentItems[id]) {
+    const updatedQuantity = currentItems[id].quantity - 1;
+    if (updatedQuantity <= 0) {
+      removeFromCart(id);
+    } else {
+      cartItems.set({
+        ...currentItems,
+        [id]: {
+          ...currentItems[id],
+          quantity: updatedQuantity,
+        },
+      });
+    }
   }
 }
