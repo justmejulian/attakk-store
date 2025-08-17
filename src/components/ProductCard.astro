@@ -21,12 +21,10 @@ const [dropTitle, dropSubtitle] = title.split(' - ');
   <img src={imageUrls[1]} alt="" class="h-full w-full max-w-md object-cover" />
 
   <div class="w-full max-w-md p-3">
-    <h4 class="text-black">{dropSubtitle}</h4>
-    <h3
-      class="decoration-primary group-hover:underline group-hover:underline-offset-4"
-    >
-      {dropTitle}
-    </h3>
+    <h5 class="text-md font-bold tracking-widest text-black uppercase">
+      {dropSubtitle}
+    </h5>
+    <h4 class="text-3xl font-light text-black">{dropTitle}</h4>
 
     <p class="mt-1 pb-1 tracking-wide">
       {sex}

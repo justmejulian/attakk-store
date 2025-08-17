@@ -18,27 +18,16 @@ const [dropTitle, dropSubtitle] = title.split(' - ');
   <img
     src={imageUrl}
     alt={title}
-    class="absolute z-10 h-full w-full object-cover opacity-40"
+    class="absolute z-10 h-full w-full object-cover opacity-60"
   />
 
   <div class="z-10 p-6">
-    {
-      index !== undefined && index % 2 === 0 ? (
-        <Fragment>
-          <h5 class="text-primary text-lg font-bold uppercase">
-            {dropSubtitle}
-          </h5>
-          <h4 class="text-3xl font-light text-white">{dropTitle}</h4>
-        </Fragment>
-      ) : (
-        <Fragment>
-          <h5 class="text-lg font-bold text-white">{dropTitle}</h5>
-          <h4 class="text-primary text-3xl font-light uppercase">
-            {dropSubtitle}
-          </h4>
-        </Fragment>
-      )
-    }
+    <Fragment>
+      <h5 class="text-primary text-md font-bold tracking-widest uppercase">
+        {dropSubtitle}
+      </h5>
+      <h4 class="text-3xl font-light text-white">{dropTitle}</h4>
+    </Fragment>
     <Button> View Product </Button>
   </div>
 </div>

@@ -6,14 +6,21 @@ interface Props {
   title: string;
   price: number;
   imageUrls: [string, string];
+  sex: string;
 }
 
-const { id, title, price, imageUrls } = Astro.props as Props;
+const { id, title, price, imageUrls, sex } = Astro.props as Props;
 ---
 
 <div
   tab-index={0}
-  class="group overflow-hiddens relative block w-full md:w-1/3"
+  class="group overflow-hiddens relative block w-full border-t-1 border-gray-100 md:w-1/3"
 >
-  <ProductCard id={id} title={title} price={price} imageUrls={imageUrls} />
+  <ProductCard
+    id={id}
+    title={title}
+    price={price}
+    imageUrls={imageUrls}
+    sex={sex}
+  />
 </div>

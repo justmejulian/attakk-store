@@ -22,7 +22,7 @@ function CartButton() {
 
   return (
     <a
-      class="hover:text-tertiary cursor-pointer focus:outline-hidden"
+      class="hover:text-tertiary decoration-primary cursor-pointer hover:underline focus:outline-hidden"
       href="/cart"
       title="View Cart"
     >
