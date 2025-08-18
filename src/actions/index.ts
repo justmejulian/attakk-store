@@ -1,16 +1,7 @@
 import { ActionError, defineAction } from 'astro:actions';
 import { z } from 'astro:schema';
 
-import Stripe from 'stripe';
-
-const stripeSecretKey =
-  import.meta.env.STRIPE_SECRET_KEY || process.env.STRIPE_SECRET_KEY;
-
-if (!stripeSecretKey) {
-  throw new Error('Missing Stripe secret key');
-}
-
-const stripe = new Stripe(stripeSecretKey);
+import { createCheckoutSession, getSessionStatus } from '@utils/stripe';
 
 export const server = {
   createCheckout: defineAction({
@@ -26,14 +17,10 @@ export const server = {
     handler: async (input) => {
       const baseUrl = input.baseUrl;
       try {
-        const stripeSession = await stripe.checkout.sessions.create({
-          mode: 'payment',
-          ui_mode: 'custom',
-          line_items: input.lineItems,
-          payment_method_types: ['card', 'twint'],
-          return_url: `${baseUrl}/return?session_id={CHECKOUT_SESSION_ID}`,
-        });
-
+        const stripeSession = await createCheckoutSession(
+          baseUrl,
+          input.lineItems,
+        );
         if (!stripeSession.client_secret) {
           throw new ActionError({
             code: 'NOT_FOUND',
@@ -57,38 +44,14 @@ export const server = {
       sessionId: z.string(),
     }),
     handler: async (input) => {
-      const session = await stripe.checkout.sessions.retrieve(input.sessionId);
+      const session = await getSessionStatus(input.sessionId);
       if (!session) {
         throw new ActionError({
           code: 'NOT_FOUND',
           message: 'Checkout session not found',
         });
       }
-      return {
-        status: session.status,
-        total: session.amount_total,
-        sessionId: session.id,
-        customerEmail: session.customer_details?.email,
-        paymentIntentId: session.payment_intent,
-      };
-    },
-  }),
-
-  getStripeProducts: defineAction({
-    input: z.object({}),
-    handler: async () => {
-      const products = await stripe.products.list({
-        limit: 3,
-      });
-
-      return {
-        products: products.data.map((product) => ({
-          id: product.id,
-          name: product.name,
-          description: product.description,
-          images: product.images,
-        })),
-      };
+      return session;
     },
   }),
 };
