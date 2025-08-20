@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "build:products": "tsx -r tsconfig-paths/register --env-file=.env ./scripts/create-products.ts",
     "preview": "astro preview",
     "astro": "astro",
     "code": "npm run format && npm run lint",
@@ -24,7 +25,6 @@
     "@stripe/stripe-js": "^7.8.0",
     "@tailwindcss/vite": "^4.1.8",
     "astro": "^5.10.1",
-    "leaflet": "^1.9.4",
     "nanostores": "^1.0.1",
     "preact": "^10.26.8",
     "stripe": "^18.4.0",
@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.28.0",
+    "@types/stripe": "^8.0.416",
     "eslint": "^9.28.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-astro": "^1.3.1",
@@ -40,6 +41,8 @@
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.12",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.20.3",
     "typescript-eslint": "^8.33.1"
   }
 }
