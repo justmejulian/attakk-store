@@ -1,5 +1,6 @@
 import { useStore } from '@nanostores/preact';
 import { cartItems } from '@stores/cartStore';
+import { createHumanReadablePrice } from '@utils/currency';
 import useIsHydrated from '@utils/hooks/useIsHydrated';
 import { getProductById } from '@utils/products';
 
@@ -17,7 +18,7 @@ function CartTotal() {
     <dl className="space-y-0.5 text-sm">
       <div className="flex justify-between !text-base font-medium">
         <dt>Total</dt>
-        <dd>{total.toFixed(2)} CHF</dd>
+        <dd>{createHumanReadablePrice(total)}</dd>
       </div>
     </dl>
   );

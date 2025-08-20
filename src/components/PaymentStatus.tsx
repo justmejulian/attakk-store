@@ -15,6 +15,7 @@ async function fetchSessionStatus(sessionId?: string | null) {
 
 import { useState, useEffect } from 'preact/hooks';
 import { clearCart } from '@stores/cartStore';
+import { createHumanReadablePrice } from '@utils/currency';
 
 export default function PaymentStatus() {
   // todo: fix
@@ -104,7 +105,7 @@ export default function PaymentStatus() {
       </div>
 
       <p class="border-b border-gray-200 pb-2 text-center">
-        Amount Paid: {(sessionStatus.total / 100).toFixed(2)} CHF
+        Amount Paid: {createHumanReadablePrice(sessionStatus.total)}
       </p>
 
       <p class="border-b border-gray-200 py-2 text-center">

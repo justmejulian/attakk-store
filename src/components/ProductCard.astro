@@ -1,6 +1,7 @@
 ---
 import AddProductButton from '@components/AddProductButton.tsx';
 import SizeButtons from './SizeButtons';
+import { createHumanReadablePrice } from '@utils/currency';
 
 interface Props {
   id: string;
@@ -30,9 +31,11 @@ const [dropTitle, dropSubtitle] = title.split(' - ');
       {sex}
     </p>
 
-    <p class="mt-1 pb-3 tracking-wide">
-      {`${price}.00 CHF`}
-    </p>
+    {
+      price && (
+        <p class="mt-1 pb-3 tracking-wide">{createHumanReadablePrice(price)}</p>
+      )
+    }
   </div>
   <SizeButtons id={id} sizes={['S', 'M', 'L', 'XL']} client:only="preact" />
   <div class="flex w-full max-w-md justify-center pb-3">
