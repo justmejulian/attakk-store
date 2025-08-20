@@ -2,10 +2,12 @@
 import Header from '@components/Header.astro';
 import Main from '@components/Main.astro';
 import ProductCardWithoutOverlay from '@components/ProductCardWithoutOverlay.astro';
-import { getProducts } from '@utils/products';
+import { getProducts, getPassedProducts } from '@utils/products';
 import Layout from '@layouts/Layout.astro';
+import ProductCardWithOverlay from '@components/ProductCardWithOverlay.astro';
 
 const products = getProducts();
+const passedProducts = getPassedProducts();
 ---
 
 <Layout>
@@ -30,6 +32,22 @@ const products = getProducts();
             imageUrl={product.imageUrls[0]}
             title={product.title}
             price={product.price}
+            sex={product.sex}
+          />
+        ))
+      }
+    </div>
+
+    <h1 class="font-cursive tracking-widestb my-4 border-t-2 pt-4">
+      Passed Drops
+    </h1>
+    <div class="mx-auto flex w-full flex-wrap justify-center">
+      {
+        passedProducts.map((product) => (
+          <ProductCardWithOverlay
+            id={product.id}
+            imageUrls={product.imageUrls}
+            title={product.title}
             sex={product.sex}
           />
         ))

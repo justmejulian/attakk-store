@@ -1,4 +1,5 @@
 import products, { type Product } from '@content/products.ts';
+import passedProducts from '@content/passedProducts.ts';
 import { clearCart } from '@stores/cartStore';
 
 export function getProducts(): Product[] {
@@ -30,4 +31,8 @@ export function getStripeProductId(productId: string, size: string) {
     );
   }
   return stripeProductId;
+}
+
+export function getPassedProducts() {
+  return passedProducts;
 }
