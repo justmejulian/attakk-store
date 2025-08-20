@@ -20,6 +20,7 @@ export type Sex = 'Male' | 'Female' | 'Unisex';
 export type Product = {
   id: string;
   imageUrls: string[];
+  videoUrl?: string;
   sex: Sex;
   sizes?: Record<string, StripProduct>;
   description?: string;
@@ -68,6 +69,7 @@ const products: Product[] = [
   },
   {
     ...currentCollection[4],
+    videoUrl: '/assets/videos/vest-video.mp4',
   },
   {
     ...currentCollection[5],
@@ -75,6 +77,7 @@ const products: Product[] = [
   },
   {
     ...currentCollection[6],
+    videoUrl: '/assets/videos/socks-video.mp4',
   },
   {
     ...currentCollection[7],
@@ -82,6 +85,7 @@ const products: Product[] = [
   },
   {
     ...currentCollection[8],
+    videoUrl: '/assets/videos/socks-video.mp4',
   },
 ];
 
