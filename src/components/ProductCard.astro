@@ -6,12 +6,12 @@ import { createHumanReadablePrice } from '@utils/currency';
 interface Props {
   id: string;
   title: string;
-  price: number;
+  price?: number;
   sex: string;
-  imageUrls: [string, string];
+  imageUrl: string;
 }
 
-const { id, title, price, imageUrls, sex } = Astro.props as Props;
+const { id, title, price, imageUrl, sex } = Astro.props as Props;
 
 const [dropTitle, dropSubtitle] = title.split(' - ');
 ---
@@ -19,7 +19,7 @@ const [dropTitle, dropSubtitle] = title.split(' - ');
 <div
   class="flex h-full w-full flex-col items-center justify-center group-focus-within:visible"
 >
-  <img src={imageUrls[1]} alt="" class="h-full w-full max-w-md object-cover" />
+  <img src={imageUrl} alt="" class="h-full w-full max-w-md object-cover" />
 
   <div class="w-full max-w-md p-3">
     <h5 class="text-md font-bold tracking-widest text-black uppercase">

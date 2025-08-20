@@ -4,12 +4,12 @@ import ProductCard from './ProductCard.astro';
 interface Props {
   id: string;
   title: string;
-  price: number;
-  imageUrls: [string, string];
+  price?: number;
+  imageUrl: string;
   sex: string;
 }
 
-const { id, title, price, imageUrls, sex } = Astro.props as Props;
+const { id, title, price, imageUrl, sex } = Astro.props as Props;
 ---
 
 <div
@@ -20,7 +20,7 @@ const { id, title, price, imageUrls, sex } = Astro.props as Props;
     id={id}
     title={title}
     price={price}
-    imageUrls={imageUrls}
+    imageUrl={imageUrl}
     sex={sex}
   />
 </div>

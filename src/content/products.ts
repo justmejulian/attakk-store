@@ -1,16 +1,15 @@
 // Todo: better naming for the images
 
-import RaceSuitImage from '@images/racesuit.jpg';
-import BibshortsImage from '@images/bibshorts.jpg';
-import JerseyImage from '@images/jersey.jpg';
+import RaceSuitMale from '@images/products/PHOTO-2025-07-30-11-51-06.jpg';
+import RaceSuitFemale from '@images/products/1L5A0132.jpg';
 
-import Marc from '@images/PHOTO-2025-07-30-12-57-35.jpg';
-import Sam from '@images/PHOTO-2025-07-30-11-51-06.jpg';
-import Ramon from '@images/PHOTO-2025-07-30-11-51-05.jpg';
+import JerseyFemale from '@images/products/1L5A0127.jpg';
+import JerseyMale from '@images/products/PHOTO-2025-07-30-11-46-30.jpg';
 
-import AIFemale1 from '@images/ai-female-1.png';
-import AIFemale2 from '@images/ai-female-2.png';
-import AIFemale3 from '@images/ai-female-3.png';
+import BibshortsFemale from '@images/products/1L5A0205.jpg';
+import BibshortsMale from '@images/products/PHOTO-2025-07-30-12-57-35.jpg';
+
+import { importedProducts } from './importedProducts';
 
 export type StripProduct = {
   stripeProductId: string;
@@ -20,91 +19,69 @@ export type Sex = 'Male' | 'Female' | 'Unisex';
 
 export type Product = {
   id: string;
-  imageUrls: [string, string];
+  imageUrls: string[];
   sex: Sex;
   sizes?: Record<string, StripProduct>;
+  description?: string;
   title: string;
   price: number;
 };
 
+function getImportedProductById(id: string): Product {
+  const product = importedProducts[id];
+  if (!product) {
+    throw new Error(`Product with id ${id} not found in imported products`);
+  }
+  return product;
+}
+
+const currentCollection: Product[] = [
+  getImportedProductById('prod_SmUaTbKJd3uWBR-male'),
+  getImportedProductById('prod_SnBdFNjPSXbZJk-female'),
+  getImportedProductById('prod_SmUaTbKJd3uWBR-female'),
+  getImportedProductById('prod_SnBd0mH8WE0TAN-female'),
+  getImportedProductById('prod_SnYEYLnprmArZ1-unisex'),
+  getImportedProductById('prod_SnBd0mH8WE0TAN-male'),
+  getImportedProductById('prod_SnYOKBMkXTLTFV-unisex'),
+  getImportedProductById('prod_SnBdFNjPSXbZJk-male'),
+  getImportedProductById('prod_SnYHhrveP2IQoA-unisex'),
+];
+
+// Current collection with title Images
+// order will be the order used
 const products: Product[] = [
   {
-    id: 'prod_SmUaTbKJd3uWBR-male',
-    imageUrls: [Ramon.src, RaceSuitImage.src],
-    sex: 'Male',
-    sizes: {
-      S: { stripeProductId: 'price_1RrbaFDWqual0M5BJGdzHsoJ' },
-      M: { stripeProductId: 'price_1Rqvb0DWqual0M5BXfbHQqgE' },
-      L: { stripeProductId: 'price_1RrbasDWqual0M5Be5XOzd3f' },
-      XL: { stripeProductId: 'price_1RsIqlDWqual0M5B3GcNsrLh' },
-    },
-    title: 'ATTAKK Race Suit 25 - Invincible Yellow',
-    price: 150,
+    ...currentCollection[0],
+    imageUrls: [currentCollection[0]?.imageUrls[0], RaceSuitMale.src],
   },
   {
-    id: 'prod_SmUaTbKJd3uWBR-female',
-    imageUrls: [AIFemale2.src, RaceSuitImage.src],
-    sex: 'Female',
-    sizes: {
-      XS: { stripeProductId: 'price_1RsIteDWqual0M5BSN2d6a4K' },
-      S: { stripeProductId: 'price_1RsItTDWqual0M5BEfTwSe29' },
-      M: { stripeProductId: 'price_1RsItnDWqual0M5BlNyhJklP' },
-      L: { stripeProductId: 'price_1RsItzDWqual0M5ByD1gvPv1' },
-    },
-    title: 'ATTAKK Race Suit 25 - Invincible Yellow',
-    price: 150,
+    ...currentCollection[1],
+    imageUrls: [currentCollection[1]?.imageUrls[0], JerseyFemale.src],
   },
   {
-    id: '3',
-    imageUrls: [Marc.src, BibshortsImage.src],
-    sex: 'Male',
-    sizes: {
-      S: { stripeProductId: 'price_1RrbGDDWqual0M5BD22C0u21' },
-      M: { stripeProductId: 'price_1RrwvTDWqual0M5Bfym96yl0' },
-      L: { stripeProductId: 'price_1RrwvbDWqual0M5BlthgseQT' },
-      XL: { stripeProductId: 'price_1RrwvnDWqual0M5BdcoKiAFa' },
-    },
-    title: 'ATTAKK Bibs 25 - Invincible Yellow',
-    price: 105,
+    ...currentCollection[2],
+    imageUrls: [currentCollection[2]?.imageUrls[0], RaceSuitFemale.src],
   },
   {
-    id: 'prod_SmUaTbKJd3uWBR-female',
-    imageUrls: [AIFemale3.src, RaceSuitImage.src],
-    sex: 'Female',
-    sizes: {
-      XS: { stripeProductId: 'price_1RsIteDWqual0M5BSN2d6a4K' },
-      S: { stripeProductId: 'price_1RsItTDWqual0M5BEfTwSe29' },
-      M: { stripeProductId: 'price_1RsItnDWqual0M5BlNyhJklP' },
-      L: { stripeProductId: 'price_1RsItzDWqual0M5ByD1gvPv1' },
-    },
-    title: 'ATTAKK Race Suit 25 - Invincible Yellow',
-    price: 150,
+    ...currentCollection[3],
+    imageUrls: [currentCollection[3]?.imageUrls[0], BibshortsFemale.src],
   },
   {
-    id: '4',
-    imageUrls: [Sam.src, JerseyImage.src],
-    sex: 'Male',
-    sizes: {
-      S: { stripeProductId: 'price_1RrbFqDWqual0M5B2mxtGIM1' },
-      M: { stripeProductId: 'price_1RrwqTDWqual0M5BtJRPrXHM' },
-      L: { stripeProductId: 'price_1RrwqmDWqual0M5Btp1v7whe' },
-      XL: { stripeProductId: 'price_1RrwrGDWqual0M5Bm2rbDUUy' },
-    },
-    title: 'ATTAKK Jersey 25 - Invincible Yellow',
-    price: 75,
+    ...currentCollection[4],
   },
   {
-    id: 'prod_SmUaTbKJd3uWBR-female',
-    imageUrls: [AIFemale1.src, RaceSuitImage.src],
-    sex: 'Female',
-    sizes: {
-      XS: { stripeProductId: 'price_1RsIteDWqual0M5BSN2d6a4K' },
-      S: { stripeProductId: 'price_1RsItTDWqual0M5BEfTwSe29' },
-      M: { stripeProductId: 'price_1RsItnDWqual0M5BlNyhJklP' },
-      L: { stripeProductId: 'price_1RsItzDWqual0M5ByD1gvPv1' },
-    },
-    title: 'ATTAKK Race Suit 25 - Invincible Yellow',
-    price: 150,
+    ...currentCollection[5],
+    imageUrls: [currentCollection[5]?.imageUrls[0], BibshortsMale.src],
+  },
+  {
+    ...currentCollection[6],
+  },
+  {
+    ...currentCollection[7],
+    imageUrls: [currentCollection[7]?.imageUrls[0], JerseyMale.src],
+  },
+  {
+    ...currentCollection[8],
   },
 ];
 

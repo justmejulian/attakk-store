@@ -18,7 +18,7 @@ export default function Checkout() {
               <li key={item.id + item.size}>
                 <div class="flex w-full items-center py-2">
                   <img
-                    src={product.imageUrls[1]}
+                    src={product.imageUrls[0]}
                     alt={product.title}
                     class="mr-6 inline-block h-8 w-8"
                   />

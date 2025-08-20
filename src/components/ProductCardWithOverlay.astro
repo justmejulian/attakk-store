@@ -6,8 +6,8 @@ import ProductCard from './ProductCard.astro';
 interface Props {
   id: string;
   title: string;
-  price: number;
-  imageUrls: [string, string];
+  price?: number;
+  imageUrls: string[];
   index?: number;
   sex: string;
 }
@@ -16,12 +16,16 @@ const { id, title, price, imageUrls, index, sex } = Astro.props as Props;
 ---
 
 <div tabindex="0" class="group relative block w-full overflow-hidden md:w-1/3">
-  <ProductCardOverlay title={title} imageUrl={imageUrls[0]} index={index} />
+  {
+    imageUrls.length > 1 && (
+      <ProductCardOverlay title={title} imageUrl={imageUrls[1]} index={index} />
+    )
+  }
   <ProductCard
     id={id}
     title={title}
     price={price}
-    imageUrls={imageUrls}
+    imageUrl={imageUrls[0]}
     sex={sex}
   />
 </div>

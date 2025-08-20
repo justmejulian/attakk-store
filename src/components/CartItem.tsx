@@ -17,7 +17,7 @@ function CartItem({ id, quantity, size }: Props) {
   return (
     <li class="flex items-center gap-4">
       <img
-        src={product.imageUrls[1]}
+        src={product.imageUrls[0]}
         alt=""
         class="size-16 rounded-sm object-cover"
       />

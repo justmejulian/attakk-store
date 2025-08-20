@@ -19,12 +19,15 @@ const products = getProducts();
     </p>
   </Header>
   <Main>
+    <h1 class="font-cursive text-primary my-4 tracking-widest">
+      Invincible Yellow
+    </h1>
     <div class="mx-auto flex w-full flex-wrap justify-center">
       {
         products.map((product) => (
           <ProductCardWithoutOverlay
             id={product.id}
-            imageUrls={product.imageUrls}
+            imageUrl={product.imageUrls[0]}
             title={product.title}
             price={product.price}
             sex={product.sex}
