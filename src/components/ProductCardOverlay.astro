@@ -16,28 +16,11 @@ const [dropTitle, dropSubtitle] = title.split(' - ');
 <div
   class="absolute flex h-full w-full translate-y-0 transform cursor-pointer flex-col items-start justify-end overflow-hidden bg-black transition-transform duration-300 group-focus-within:translate-y-full group-hover:translate-y-full"
 >
-  {
-    videoUrl && (
-      <video
-        class="absolute h-full w-full object-cover opacity-60"
-        src={videoUrl}
-        webkit-playsinline
-        playsinline
-        autoplay
-        loop
-        muted
-      />
-    )
-  }
-  {
-    !videoUrl && imageUrl && (
-      <img
-        src={imageUrl}
-        alt={title}
-        class="absolute h-full w-full object-cover opacity-60"
-      />
-    )
-  }
+  <img
+    src={videoUrl || imageUrl}
+    alt={title}
+    class="absolute h-full w-full bg-white object-cover opacity-60"
+  />
 
   <div class="z-10 p-6">
     <Fragment>

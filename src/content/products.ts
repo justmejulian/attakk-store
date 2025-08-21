@@ -69,7 +69,7 @@ const products: Product[] = [
   },
   {
     ...currentCollection[4],
-    videoUrl: '/assets/videos/vest-video.mp4',
+    videoUrl: '/assets/videos/vest.gif',
   },
   {
     ...currentCollection[5],
@@ -77,7 +77,7 @@ const products: Product[] = [
   },
   {
     ...currentCollection[6],
-    videoUrl: '/assets/videos/socks-video.mp4',
+    videoUrl: '/assets/videos/socks.gif',
   },
   {
     ...currentCollection[7],
@@ -85,7 +85,7 @@ const products: Product[] = [
   },
   {
     ...currentCollection[8],
-    videoUrl: '/assets/videos/socks-video.mp4',
+    videoUrl: '/assets/videos/socks.gif',
   },
 ];
 
