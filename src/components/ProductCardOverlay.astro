@@ -19,7 +19,10 @@ const [dropTitle, dropSubtitle] = title.split(' - ');
   <img
     src={videoUrl || imageUrl}
     alt={title}
-    class="absolute h-full w-full bg-white object-cover opacity-60"
+    class=`absolute h-full w-full bg-white object-cover ${videoUrl ? "opacity-30" : "opacity-60"}`
+    loading="lazy"
+    width="100%"
+    height="100%"
   />
 
   <div class="z-10 p-6">
