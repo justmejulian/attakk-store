@@ -37,8 +37,19 @@ const [dropTitle, dropSubtitle] = title.split(' - ');
       )
     }
   </div>
-  <SizeButtons id={id} sizes={['S', 'M', 'L', 'XL']} client:only="preact" />
-  <div class="flex w-full max-w-md justify-center pb-3">
-    <AddProductButton productId={id} client:only="preact" />
-  </div>
+
+  {
+    price && (
+      <>
+        <SizeButtons
+          id={id}
+          sizes={['S', 'M', 'L', 'XL']}
+          client:only="preact"
+        />
+        <div class="flex w-full max-w-md justify-center pb-3">
+          <AddProductButton productId={id} client:only="preact" />
+        </div>
+      </>
+    )
+  }
 </div>
