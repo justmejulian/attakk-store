@@ -22,8 +22,11 @@ const title = 'Attakk';
     <title>{title}</title>
   </head>
   <body class="m-0 flex min-h-full w-full flex-col items-center">
-    <Nav title={title} />
-    <slot />
-    <Footer />
+    <div class="max-w-screen-2xl">
+      <Nav title={title} />
+      <slot />
+      <Footer />
+      <div></div>
+    </div>
   </body>
 </html>
