@@ -84,6 +84,38 @@ git remote add dokku dokku@atk-collective.ch:attakk-store
 
 ### Deployment
 
+#### Automatic Deployment (GitHub Actions)
+
+Pushing to the `main` branch automatically deploys to Dokku via GitHub Actions.
+
+**Setup:**
+
+1. Generate SSH key on the Dokku server:
+
+   ```bash
+   ssh-keygen -t ed25519 -f dokku_github_actions
+   ```
+
+2. Add public key to authorized_keys:
+
+   ```bash
+   cat dokku_github_actions.pub >> ~/.ssh/authorized_keys
+   ```
+
+3. Add public key to Dokku:
+
+   ```bash
+   cat dokku_github_actions.pub | sudo dokku ssh-keys:add github_actions
+   dokku ssh-keys:list
+   ```
+
+4. Add private key to GitHub repository secrets as `SSH_PRIVATE_KEY`:
+   - Go to repository Settings → Secrets and variables → Actions
+   - Add new repository secret named `SSH_PRIVATE_KEY`
+   - Paste contents of `dokku_github_actions` (private key)
+
+#### Manual Deployment
+
 ```
 git push dokku main
 ```
