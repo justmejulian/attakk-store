@@ -1,13 +1,9 @@
 ---
-import HeaderImage from '@images/PHOTO-2025-07-30-11-51-04.jpg';
+import RotatingHeaderImage from './RotatingHeaderImage';
 ---
 
 <header class="relative h-full min-h-2/3 w-full overflow-scroll bg-black">
-  <img
-    src={HeaderImage.src}
-    alt="Header"
-    class="absolute top-0 h-full w-full object-cover object-right opacity-40"
-  />
+  <RotatingHeaderImage client:load />
   <div class="flex min-h-full w-full items-center justify-center">
     <div
       class="mb-4 w-full max-w-screen-xl translate-0 px-4 py-0 sm:px-6 lg:px-8"
