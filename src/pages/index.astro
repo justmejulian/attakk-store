@@ -11,7 +11,7 @@ const products = getProducts();
 <Layout>
   <Header>
     <h1
-      class="font-cursive text-primary mb-20 -rotate-12 tracking-widest sm:mb-40 md:mb-30 xl:-translate-14"
+      class="font-cursive text-primary mt-4 mb-20 -rotate-12 tracking-widest sm:mb-40 md:mb-30 xl:-translate-14"
     >
       Invincible
       <br class="hidden md:inline" />
@@ -28,7 +28,7 @@ const products = getProducts();
     <Button url="/products"> Discover Now </Button>
   </Header>
 
-  <div class="flex w-full flex-wrap justify-center">
+  <div class="mt-8 flex w-full flex-wrap justify-center gap-8">
     {
       products.map((product, index) => (
         <ProductCardWithOverlay

@@ -4,6 +4,9 @@ const stripeSecretKey =
   import.meta.env?.STRIPE_SECRET_KEY || process.env.STRIPE_SECRET_KEY;
 
 if (!stripeSecretKey) {
+  console.error(
+    'ERROR: Creating Stripe instance failed: Missing Stripe secret key',
+  );
   throw new Error('Missing Stripe secret key');
 }
 

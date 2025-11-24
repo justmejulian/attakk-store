@@ -2,11 +2,11 @@
 import RotatingHeaderImage from './RotatingHeaderImage';
 ---
 
-<header class="relative h-full min-h-2/3 w-full overflow-scroll bg-black">
+<header class="relative h-full min-h-2/3 w-full overflow-hidden bg-black">
   <RotatingHeaderImage client:load />
   <div class="flex min-h-full w-full items-center justify-center">
     <div
-      class="mb-4 w-full max-w-screen-xl translate-0 px-4 py-0 sm:px-6 lg:px-8"
+      class="my-6 w-full max-w-screen-xl translate-0 px-4 py-0 sm:px-6 lg:px-8"
     >
       <slot />
     </div>
