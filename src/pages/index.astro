@@ -1,12 +1,16 @@
 ---
 import Header from '@components/Header.astro';
 import ProductCard from '@components/ProductCard/index.astro';
-import { getProducts } from '@utils/products';
+import { getProducts, getProductOrderCounts } from '@utils/products';
+import { getOrderedQuantities } from '@utils/stripe';
 import Layout from '@layouts/Layout.astro';
 import Button from '@components/Button.astro';
 import Main from '@components/Main.astro';
 
 const products = getProducts();
+
+const priceQuantities = await getOrderedQuantities();
+const orderCounts = getProductOrderCounts(priceQuantities);
 ---
 
 <Layout>
@@ -42,6 +46,7 @@ const products = getProducts();
             price={product.price}
             sex={product.sex}
             sizes={product.sizes}
+            orderCount={orderCounts[product.id]}
           />
         ))
       }

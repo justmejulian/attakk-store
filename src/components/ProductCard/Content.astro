@@ -1,6 +1,7 @@
 ---
 import AddProductButton from '@components/AddProductButton.tsx';
 import SizeButtons from '@components/SizeButtons';
+import OrderProgressBar from '@components/OrderProgressBar.astro';
 import { createHumanReadablePrice } from '@utils/currency';
 
 interface Props {
@@ -9,9 +10,10 @@ interface Props {
   price?: number;
   sex: string;
   sizes?: Record<string, { stripeProductId: string }>;
+  orderCount?: number;
 }
 
-const { id, title, price, sex, sizes } = Astro.props;
+const { id, title, price, sex, sizes, orderCount } = Astro.props;
 
 const [dropTitle, dropSubtitle] = title.split(' - ');
 ---
@@ -25,6 +27,8 @@ const [dropTitle, dropSubtitle] = title.split(' - ');
   <p class="mt-1 pb-1 tracking-wide">
     {sex}
   </p>
+
+  {orderCount !== undefined && <OrderProgressBar orderCount={orderCount} />}
 
   {
     price && (

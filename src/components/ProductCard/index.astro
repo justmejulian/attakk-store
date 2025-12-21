@@ -11,6 +11,7 @@ interface Props {
   videoUrl?: string;
   sex: string;
   sizes?: Record<string, { stripeProductId: string }>;
+  orderCount?: number;
 }
 
 const {
@@ -22,6 +23,7 @@ const {
   videoUrl,
   sex,
   sizes,
+  orderCount,
 } = Astro.props;
 ---
 
@@ -46,6 +48,6 @@ const {
       alt={title}
       class="h-full w-full max-w-md flex-1 object-contain"
     />
-    <Content id={id} title={title} price={price} sex={sex} sizes={sizes} />
+    <Content id={id} title={title} price={price} sex={sex} sizes={sizes} orderCount={orderCount} />
   </div>
 </div>

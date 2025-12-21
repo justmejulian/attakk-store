@@ -36,3 +36,19 @@ export function getStripeProductId(productId: string, size: string) {
 export function getPassedProducts() {
   return passedProducts;
 }
+
+export function getProductOrderCounts(
+  priceQuantities: Record<string, number>,
+): Record<string, number> {
+  const productCounts: Record<string, number> = {};
+
+  for (const product of products) {
+    const total = Object.values(product.sizes ?? {}).reduce(
+      (sum, size) => sum + (priceQuantities[size.stripeProductId] ?? 0),
+      0,
+    );
+    productCounts[product.id] = total;
+  }
+
+  return productCounts;
+}

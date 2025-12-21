@@ -53,3 +53,33 @@ export async function getSessionStatus(sessionId: string) {
     paymentIntentId: session.payment_intent,
   };
 }
+
+export async function getOrderedQuantities(): Promise<Record<string, number>> {
+  const quantities: Record<string, number> = {};
+  let hasMore = true;
+  let startingAfter: string | undefined;
+
+  while (hasMore) {
+    const sessions = await stripe.checkout.sessions.list({
+      status: 'complete',
+      expand: ['data.line_items'],
+      limit: 100,
+      ...(startingAfter && { starting_after: startingAfter }),
+    });
+
+    for (const session of sessions.data) {
+      for (const item of session.line_items?.data ?? []) {
+        const priceId = item.price?.id;
+        if (priceId) {
+          quantities[priceId] =
+            (quantities[priceId] ?? 0) + (item.quantity ?? 0);
+        }
+      }
+    }
+
+    hasMore = sessions.has_more;
+    startingAfter = sessions.data.at(-1)?.id;
+  }
+
+  return quantities;
+}
