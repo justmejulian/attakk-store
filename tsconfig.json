@@ -8,6 +8,7 @@
   ],
   "exclude": ["dist"],
   "compilerOptions": {
+    "module": "esnext",
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
     "baseUrl": ".",

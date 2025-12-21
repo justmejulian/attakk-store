@@ -40,7 +40,10 @@ export default defineConfig([
         project: './tsconfig.json',
       },
     },
-    rules: {},
+    rules: {
+      // Needed to make ProductCard selectable
+      'astro/jsx-a11y/no-noninteractive-tabindex': 'off',
+    },
   },
 
   // Ignore patterns
