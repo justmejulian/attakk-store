@@ -1,0 +1,51 @@
+---
+import OverlayImage from './OverlayImage.astro';
+import Content from './Content.astro';
+
+interface Props {
+  id: string;
+  title: string;
+  price?: number;
+  productImageUrl: string;
+  overlayImageUrl?: string;
+  videoUrl?: string;
+  sex: string;
+  sizes?: Record<string, { stripeProductId: string }>;
+}
+
+const {
+  id,
+  title,
+  price,
+  productImageUrl,
+  overlayImageUrl,
+  videoUrl,
+  sex,
+  sizes,
+} = Astro.props;
+---
+
+<div
+  tabindex="0"
+  class="group relative block aspect-[3/4] w-full overflow-hidden md:max-w-1/2 md:flex-1/3 lg:max-w-1/3 lg:flex-1/4"
+>
+  {
+    (overlayImageUrl || videoUrl) && (
+      <OverlayImage
+        title={title}
+        overlayImageUrl={overlayImageUrl}
+        videoUrl={videoUrl}
+      />
+    )
+  }
+  <div
+    class="flex h-full w-full flex-col items-center justify-center group-focus-within:visible"
+  >
+    <img
+      src={productImageUrl}
+      alt={title}
+      class="h-full w-full max-w-md flex-1 object-contain"
+    />
+    <Content id={id} title={title} price={price} sex={sex} sizes={sizes} />
+  </div>
+</div>

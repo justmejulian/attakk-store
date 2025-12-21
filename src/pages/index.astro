@@ -1,9 +1,10 @@
 ---
 import Header from '@components/Header.astro';
-import ProductCardWithOverlay from '@components/ProductCardWithOverlay.astro';
+import ProductCard from '@components/ProductCard/index.astro';
 import { getProducts } from '@utils/products';
 import Layout from '@layouts/Layout.astro';
 import Button from '@components/Button.astro';
+import Main from '@components/Main.astro';
 
 const products = getProducts();
 ---
@@ -28,19 +29,22 @@ const products = getProducts();
     <Button url="/products"> Discover Now </Button>
   </Header>
 
-  <div class="mt-8 flex w-full flex-wrap justify-center gap-8">
-    {
-      products.map((product, index) => (
-        <ProductCardWithOverlay
-          id={product.id}
-          imageUrls={product.imageUrls}
-          videoUrl={product.videoUrl}
-          title={product.title}
-          price={product.price}
-          sex={product.sex}
-          index={index}
-        />
-      ))
-    }
-  </div>
+  <Main>
+    <div class="mt-8 flex w-full flex-wrap justify-center gap-8">
+      {
+        products.map((product) => (
+          <ProductCard
+            id={product.id}
+            productImageUrl={product.imageUrls[0]}
+            overlayImageUrl={product.imageUrls[1]}
+            videoUrl={product.videoUrl}
+            title={product.title}
+            price={product.price}
+            sex={product.sex}
+            sizes={product.sizes}
+          />
+        ))
+      }
+    </div>
+  </Main>
 </Layout>

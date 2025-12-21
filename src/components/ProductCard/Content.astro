@@ -1,0 +1,45 @@
+---
+import AddProductButton from '@components/AddProductButton.tsx';
+import SizeButtons from '@components/SizeButtons';
+import { createHumanReadablePrice } from '@utils/currency';
+
+interface Props {
+  id: string;
+  title: string;
+  price?: number;
+  sex: string;
+  sizes?: Record<string, { stripeProductId: string }>;
+}
+
+const { id, title, price, sex, sizes } = Astro.props;
+
+const [dropTitle, dropSubtitle] = title.split(' - ');
+---
+
+<div class="max-h-1/2 w-full max-w-md overflow-scroll p-3">
+  <h5 class="text-md font-bold tracking-widest text-black uppercase">
+    {dropSubtitle}
+  </h5>
+  <h4 class="text-3xl font-light text-black">{dropTitle}</h4>
+
+  <p class="mt-1 pb-1 tracking-wide">
+    {sex}
+  </p>
+
+  {
+    price && (
+      <p class="mt-1 pb-3 tracking-wide">{createHumanReadablePrice(price)}</p>
+    )
+  }
+</div>
+
+{
+  price && sizes && (
+    <>
+      <SizeButtons id={id} sizes={Object.keys(sizes)} client:only="preact" />
+      <div class="flex w-full max-w-md justify-center pb-3">
+        <AddProductButton productId={id} client:only="preact" />
+      </div>
+    </>
+  )
+}

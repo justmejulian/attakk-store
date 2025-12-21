@@ -1,14 +1,13 @@
 ---
-import Button from './Button.astro';
+import Button from '@components/Button.astro';
 
 interface Props {
   title: string;
-  imageUrl?: string;
+  overlayImageUrl?: string;
   videoUrl?: string;
-  index?: number;
 }
 
-const { title, imageUrl, videoUrl } = Astro.props as Props;
+const { title, overlayImageUrl, videoUrl } = Astro.props;
 
 const [dropTitle, dropSubtitle] = title.split(' - ');
 ---
@@ -17,21 +16,17 @@ const [dropTitle, dropSubtitle] = title.split(' - ');
   class="absolute flex h-full w-full translate-y-0 transform cursor-pointer flex-col items-start justify-end overflow-hidden bg-black transition-transform duration-300 group-focus-within:translate-y-full group-hover:translate-y-full"
 >
   <img
-    src={videoUrl || imageUrl}
+    src={videoUrl || overlayImageUrl}
     alt={title}
     class=`absolute h-full w-full bg-white object-cover ${videoUrl ? "opacity-30" : "opacity-60"}`
     loading="lazy"
-    width="100%"
-    height="100%"
   />
 
   <div class="z-10 p-6">
-    <Fragment>
-      <h5 class="text-primary text-md font-bold tracking-widest uppercase">
-        {dropSubtitle}
-      </h5>
-      <h4 class="text-3xl font-light text-white">{dropTitle}</h4>
-    </Fragment>
+    <h5 class="text-primary text-md font-bold tracking-widest uppercase">
+      {dropSubtitle}
+    </h5>
+    <h4 class="text-3xl font-light text-white">{dropTitle}</h4>
     <Button> View Product </Button>
   </div>
 </div>

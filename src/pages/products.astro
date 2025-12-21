@@ -1,10 +1,9 @@
 ---
 import Header from '@components/Header.astro';
 import Main from '@components/Main.astro';
-import ProductCardWithoutOverlay from '@components/ProductCardWithoutOverlay.astro';
+import ProductCard from '@components/ProductCard/index.astro';
 import { getProducts, getPassedProducts } from '@utils/products';
 import Layout from '@layouts/Layout.astro';
-import ProductCardWithOverlay from '@components/ProductCardWithOverlay.astro';
 
 const products = getProducts();
 const passedProducts = getPassedProducts();
@@ -24,15 +23,16 @@ const passedProducts = getPassedProducts();
     <h1 class="font-cursive text-primary my-4 tracking-widest">
       Invincible Yellow
     </h1>
-    <div class="mx-auto flex w-full flex-wrap justify-center">
+    <div class="flex w-full flex-wrap justify-center gap-8">
       {
         products.map((product) => (
-          <ProductCardWithoutOverlay
+          <ProductCard
             id={product.id}
-            imageUrl={product.imageUrls[0]}
+            productImageUrl={product.imageUrls[0]}
             title={product.title}
             price={product.price}
             sex={product.sex}
+            sizes={product.sizes}
           />
         ))
       }
@@ -44,9 +44,10 @@ const passedProducts = getPassedProducts();
     <div class="mx-auto flex w-full flex-wrap justify-center">
       {
         passedProducts.map((product) => (
-          <ProductCardWithOverlay
+          <ProductCard
             id={product.id}
-            imageUrls={product.imageUrls}
+            productImageUrl={product.imageUrls[0]}
+            overlayImageUrl={product.imageUrls[1]}
             title={product.title}
             sex={product.sex}
           />
