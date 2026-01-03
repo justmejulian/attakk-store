@@ -9,6 +9,11 @@ export function createHumanReadablePrice(
 
   // insert a dot before the last two digits
   const integerPart = amountString.slice(0, -2);
+
+  if (integerPart === '') {
+    return '-';
+  }
+
   const fractionalPart = amountString.slice(-2);
 
   return `${integerPart}.${fractionalPart} ${currency}`;
