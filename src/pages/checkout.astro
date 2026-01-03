@@ -1,10 +1,16 @@
 ---
+import AlternativeCheckout from '@components/AlternativeCheckout';
 import CheckoutEmbeded from '@components/Checkout';
-import CheckoutItemList from '@components/CheckoutItemList';
+import CheckoutItemListWrapper from '@components/CheckoutItemListWrapper';
 import Layout from '@layouts/Layout.astro';
 
 // This gives 'http://localhost:port' in dev and url in production
 // configured in astro.config.mjs
+const checkoutMethod =
+  import.meta.env?.CHECKOUT_METHOD || process.env.CHECKOUT_METHOD;
+
+const isCustom = checkoutMethod === 'custom';
+
 const { origin } = Astro.url;
 ---
 
@@ -12,7 +18,13 @@ const { origin } = Astro.url;
   <div
     class="mb-6 flex w-full flex-col items-center justify-center px-4 py-0 sm:px-6 md:max-w-screen-xl md:flex-row md:items-stretch lg:px-8"
   >
-    <CheckoutItemList client:load />
-    <CheckoutEmbeded baseUrl={origin} client:load />
+    <CheckoutItemListWrapper client:load />
+    {
+      isCustom ? (
+        <AlternativeCheckout baseUrl={origin} client:load />
+      ) : (
+        <CheckoutEmbeded baseUrl={origin} client:load />
+      )
+    }
   </div>
 </Layout>

@@ -33,6 +33,22 @@ export function getStripeProductId(productId: string, size: string) {
   return stripeProductId;
 }
 
+export function getProductByStripePriceId(priceId: string): {
+  product: Product;
+  size: string;
+} | null {
+  for (const product of products) {
+    if (product.sizes) {
+      for (const [size, sizeData] of Object.entries(product.sizes)) {
+        if (sizeData.stripeProductId === priceId) {
+          return { product, size };
+        }
+      }
+    }
+  }
+  return null;
+}
+
 export function getPassedProducts() {
   return passedProducts;
 }

@@ -6,7 +6,7 @@ async function fetchSessionStatus(sessionId?: string | null) {
   if (!sessionId) {
     throw new Error('Session ID is required to fetch session status');
   }
-  const { data, error } = await actions.getSessionStatus({ sessionId });
+  const { data, error } = await actions.stripe.getSessionStatus({ sessionId });
   if (error) {
     throw new Error(`Error fetching session status: ${error.message}`);
   }

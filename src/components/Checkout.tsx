@@ -31,7 +31,7 @@ const fetchClientSecret = async ({
     price: getStripeProductId(item.id, item.size),
     quantity: item.quantity,
   }));
-  const { data, error } = await actions.createCheckout({
+  const { data, error } = await actions.stripe.createCheckout({
     lineItems,
     baseUrl,
   });

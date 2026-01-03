@@ -25,6 +25,11 @@ export async function getPrices(productId: string) {
   return prices.data;
 }
 
+export async function getPriceById(priceId: string) {
+  const price = await stripe.prices.retrieve(priceId);
+  return price;
+}
+
 export async function createCheckoutSession(
   baseUrl: string,
   lineItems: Stripe.Checkout.SessionCreateParams.LineItem[],

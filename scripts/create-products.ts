@@ -69,8 +69,6 @@ async function createProductObjects() {
       const id = p.id;
       acc[id] = p;
     }
-
-    console.log('🪚 acc:', acc);
   }
 
   return acc;

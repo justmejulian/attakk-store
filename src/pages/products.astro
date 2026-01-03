@@ -2,8 +2,12 @@
 import Header from '@components/Header.astro';
 import Main from '@components/Main.astro';
 import ProductCard from '@components/ProductCard/index.astro';
-import { getProducts, getPassedProducts, getProductOrderCounts } from '@utils/products';
-import { getOrderedQuantities } from '@utils/stripe';
+import {
+  getProducts,
+  getPassedProducts,
+  getProductOrderCounts,
+} from '@utils/products';
+import { getOrderedQuantities } from '@utils/backend';
 import Layout from '@layouts/Layout.astro';
 
 const products = getProducts();
