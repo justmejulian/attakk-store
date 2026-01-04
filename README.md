@@ -70,8 +70,14 @@ dokku letsencrypt:enable attakk-store
 dokku config:set attakk-store STRIPE_SECRET_KEY=sk_..
 dokku config:set attakk-store PUBLIC_STRIPE_KEY=pk_..
 
+dokku config:set attakk-store CHECKOUT_METHOD=custom
+dokku config:set attakk-store ATTAKK_BACKEND_API_URL=backendurl
+
 dokku docker-options:add attakk-store build '--build-arg PUBLIC_STRIPE_KEY'
 dokku docker-options:add attakk-store build '--build-arg STRIPE_SECRET_KEY'
+
+dokku docker-options:add attakk-store build --build-arg ATTAKK_BACKEND_API_URL=backendurl
+dokku docker-options:add attakk-store build --build-arg CHECKOUT_METHOD=custom
 ```
 
 [Build-time configuration variables](https://dokku.com/docs/deployment/builders/dockerfiles/#build-time-configuration-variables)
