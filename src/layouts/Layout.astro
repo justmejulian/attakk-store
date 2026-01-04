@@ -3,6 +3,7 @@ import '@styles/global.css';
 import '@fontsource/permanent-marker';
 import '@fontsource-variable/urbanist';
 
+import AnnouncementBanner from '@components/AnnouncementBanner.astro';
 import Nav from '@components/Nav.astro';
 import Footer from '@components/Footer.astro';
 
@@ -22,6 +23,7 @@ const title = 'Attakk';
     <title>{title}</title>
   </head>
   <body class="m-0 flex min-h-full w-full flex-col items-center">
+    <AnnouncementBanner text="This page is still under construction" />
     <div class="mx-8 max-w-[2400px]">
       <Nav title={title} />
       <slot />
