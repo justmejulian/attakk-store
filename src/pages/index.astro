@@ -8,6 +8,8 @@ import Layout from '@layouts/Layout.astro';
 import Button from '@components/Button.astro';
 import Main from '@components/Main.astro';
 
+export const prerender = false;
+
 const products = getProducts();
 
 await stripeOrdered();
