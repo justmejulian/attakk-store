@@ -8,6 +8,8 @@ import Button from '@components/Button.astro';
 import Main from '@components/Main.astro';
 import DropBanner from '@components/DropBanner/index.astro';
 
+import logo from '@images/attakk_studios_black.svg';
+
 export const prerender = false;
 
 const products = getProducts();
@@ -19,20 +21,15 @@ const orderCounts = getProductOrderCounts(priceQuantities);
 
 <Layout>
   <Header>
-    <h1
-      class="font-cursive text-primary mt-4 mb-20 -rotate-12 tracking-widest sm:mb-40 md:mb-30 xl:ml-12 xl:-translate-14"
-    >
-      Invincible
-      <br class="hidden md:inline" />
-      Yellow
-    </h1>
-
-    <h4 class="font-bold text-white uppercase">New Drop</h4>
+    <img
+      src={logo.src}
+      alt="Attakk Studios Logo"
+      class="m-auto mt-10 mb-20 h-20"
+    />
 
     <p class="z-50 mt-4 max-w-xl text-2xl text-white">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque
-      praesentium cumque iure dicta incidunt est ipsam, officia dolor fugit
-      natus?
+      Where clarity meets pressure, and movement has intent. We build limited
+      drops for those who ride with purpose — and don’t just follow.
     </p>
     <Button url="/products"> Discover Now </Button>
   </Header>
@@ -46,17 +43,21 @@ const orderCounts = getProductOrderCounts(priceQuantities);
       <h1
         class="font-cursive text-primary mt-4 mb-20 -rotate-12 tracking-widest sm:mb-40 md:mb-30 xl:ml-12 xl:-translate-14"
       >
-        Invincible
+        Eternal
         <br class="hidden md:inline" />
-        Yellow
+        Ice
       </h1>
 
       <h4 class="font-bold text-white uppercase">New Drop</h4>
 
-      <p class="z-50 mt-4 max-w-xl text-2xl text-white">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque
-        praesentium cumque iure dicta incidunt est ipsam, officia dolor fugit
-        natus?
+      <p class="z-50 mt-4 min-h-0 max-w-xl text-2xl text-white">
+        Ice cold clarity - no matter the chaos. The Eternal Ice Race Suit is
+        built for moments when vision blurs, legs burn and everything screams
+        for you to slow down. But instead you double-up. You stay sharp. You
+        stay ice cold. You attakk with ice in your veins..
+      </p>
+      <p class="z-50 mt-4 max-w-xl text-xl text-white italic">
+        Limited drop only.
       </p>
       <Button> Discover Now </Button>
     </DropBanner>
@@ -74,12 +75,14 @@ const orderCounts = getProductOrderCounts(priceQuantities);
         Yellow
       </h1>
 
-      <h4 class="font-bold text-white uppercase">New Drop</h4>
+      <h4 class="font-bold text-white uppercase">Same energy. New format.</h4>
 
       <p class="z-50 mt-4 max-w-xl text-2xl text-white">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque
-        praesentium cumque iure dicta incidunt est ipsam, officia dolor fugit
-        natus?
+        The iconic Invincible Yellow is back – this time as a jersey only. No
+        reprint of the RS25 suit. Just the unmistakable color, stripped down for
+        everyday intensity. Built with GoBik’s featherweight race fabric, it’s
+        ready for punchy group rides, solo missions and post-ride espresso
+        stops. Loud, fast, and unapologetically ATTAKK.
       </p>
       <Button> Discover Now </Button>
     </DropBanner>

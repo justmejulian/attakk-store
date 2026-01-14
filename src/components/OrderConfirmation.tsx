@@ -95,18 +95,31 @@ export default function OrderConfirmation() {
         </p>
       )}
 
-      {total !== null && (
-        <p class="mt-4 text-center">
-          Please Twint{' '}
-          <strong class="text-tertiary">
-            {createHumanReadablePrice(total)}
-          </strong>{' '}
-          to <strong>077 666 55 44</strong> and make sure to add your reference
-          number.
-        </p>
-      )}
+      <p class="mt-4 text-center">
+        Thanks for riding with us.
+        <br />
+        To complete your order, please send the full amount via bank transfer to
+        the following IBAN:
+      </p>
+      <code class="mt-4">
+        IBAN: CH00 0000 0000 0000 0000 0 (placeholder)
+        <br />
+        Recipient: ATTAKK
+        <br />
+        Collective Reference: Your Order Number (e.g. #1247)
+      </code>
 
-      <p class="mt-4 text-center">Thank you for your order!</p>
+      <p class="mt-4 text-center">
+        Your order is only confirmed once payment is received. All items are
+        produced on demand and will be ready for pickup at ATTAKK HQ in approx.
+        6–10 weeks.
+      </p>
+
+      <p class="mt-4 text-center">
+        Limited drop. No restocks.
+        <br />
+        Thanks for supporting the crew.
+      </p>
     </Fragment>
   );
 }
