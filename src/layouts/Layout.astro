@@ -24,11 +24,10 @@ const title = 'Attakk';
   </head>
   <body class="m-0 flex min-h-full w-full flex-col items-center">
     <AnnouncementBanner text="This page is still under construction" />
-    <div class="mx-8 max-w-[2400px]">
+    <div class="mx-8 max-w-full lg:max-w-600">
       <Nav title={title} />
       <slot />
       <Footer />
-      <div></div>
     </div>
   </body>
 </html>

@@ -1,12 +1,12 @@
 ---
 import Header from '@components/Header.astro';
-import ProductCard from '@components/ProductCard/index.astro';
 import { getProducts, getProductOrderCounts } from '@utils/products';
 import { getOrderedQuantities } from '@utils/backend';
 import { getOrderedQuantities as stripeOrdered } from '@utils/stripe';
 import Layout from '@layouts/Layout.astro';
 import Button from '@components/Button.astro';
 import Main from '@components/Main.astro';
+import DropBanner from '@components/DropBanner/index.astro';
 
 export const prerender = false;
 
@@ -38,22 +38,50 @@ const orderCounts = getProductOrderCounts(priceQuantities);
   </Header>
 
   <Main>
-    <div class="mt-8 flex w-full flex-wrap justify-center gap-8">
-      {
-        products.map((product) => (
-          <ProductCard
-            id={product.id}
-            productImageUrl={product.imageUrls[0]}
-            overlayImageUrl={product.imageUrls[1]}
-            videoUrl={product.videoUrl}
-            title={product.title}
-            price={product.price}
-            sex={product.sex}
-            sizes={product.sizes}
-            orderCount={orderCounts[product.id]}
-          />
-        ))
-      }
-    </div>
+    <DropBanner
+      products={products}
+      orderCounts={orderCounts}
+      class="bg-blue-500"
+    >
+      <h1
+        class="font-cursive text-primary mt-4 mb-20 -rotate-12 tracking-widest sm:mb-40 md:mb-30 xl:ml-12 xl:-translate-14"
+      >
+        Invincible
+        <br class="hidden md:inline" />
+        Yellow
+      </h1>
+
+      <h4 class="font-bold text-white uppercase">New Drop</h4>
+
+      <p class="z-50 mt-4 max-w-xl text-2xl text-white">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque
+        praesentium cumque iure dicta incidunt est ipsam, officia dolor fugit
+        natus?
+      </p>
+      <Button> Discover Now </Button>
+    </DropBanner>
+
+    <DropBanner
+      products={products}
+      orderCounts={orderCounts}
+      class="bg-primary"
+    >
+      <h1
+        class="font-cursive text-secondary mt-0 mb-20 -rotate-12 tracking-widest sm:mb-40 md:mb-30 xl:ml-12 xl:-translate-14"
+      >
+        Invincible
+        <br class="hidden md:inline" />
+        Yellow
+      </h1>
+
+      <h4 class="font-bold text-white uppercase">New Drop</h4>
+
+      <p class="z-50 mt-4 max-w-xl text-2xl text-white">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque
+        praesentium cumque iure dicta incidunt est ipsam, officia dolor fugit
+        natus?
+      </p>
+      <Button> Discover Now </Button>
+    </DropBanner>
   </Main>
 </Layout>

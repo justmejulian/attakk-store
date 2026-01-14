@@ -4,12 +4,15 @@ import useIsHydrated from '@utils/hooks/useIsHydrated';
 import { useState, useEffect } from 'preact/hooks';
 import { actions } from 'astro:actions';
 import { createHumanReadablePrice } from '@utils/currency';
-import CheckoutItemList, { type LineItem } from '@components/CheckoutItemList';
+
+type LineItem = {
+  price_id: string;
+  quantity: number;
+};
 
 export default function OrderConfirmation() {
   const [referenceNumber, setReferenceNumber] = useState('');
   const [total, setTotal] = useState<number | null>(null);
-  const [lineItems, setLineItems] = useState<LineItem[]>([]);
   const [loading, setLoading] = useState(true);
   const isHydrated = useIsHydrated();
 
@@ -23,11 +26,9 @@ export default function OrderConfirmation() {
 
       if (lineItemsParam) {
         try {
-          const parsedLineItems: LineItem[] = JSON.parse(lineItemsParam);
-          setLineItems(parsedLineItems);
-
+          const lineItems: LineItem[] = JSON.parse(lineItemsParam);
           const { data, error } = await actions.stripe.getLineItemsTotal({
-            lineItems: parsedLineItems,
+            lineItems,
           });
 
           if (error) {
@@ -87,12 +88,6 @@ export default function OrderConfirmation() {
       <p class="border-b border-gray-200 pb-2 text-center">
         Reference Number: <strong>{referenceNumber}</strong>
       </p>
-
-      {lineItems.length > 0 && (
-        <div class="my-4">
-          <CheckoutItemList lineItems={lineItems} />
-        </div>
-      )}
 
       {total !== null && (
         <p class="border-b border-gray-200 py-2 text-center">

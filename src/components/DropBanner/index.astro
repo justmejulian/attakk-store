@@ -1,0 +1,44 @@
+---
+import Banner from '@components/Banner.astro';
+import ProductCard from '@components/ProductCard/index.astro';
+import ViewAllLink from './ViewAllLink.astro';
+import type { Product } from '@content/products';
+import Overlay from './Overlay.astro';
+
+interface Props {
+  products: Product[];
+  orderCounts: Record<string, number>;
+  class?: string;
+}
+
+const { products, orderCounts, class: className } = Astro.props;
+
+const firstTwoProducts = products.slice(0, 2);
+---
+
+<Banner>
+  <div class="group relative mt-8 box-border">
+    <Overlay class={className}>
+      <slot />
+    </Overlay>
+    <div class="relative z-0 h-full p-8">
+      <div class="flex w-full justify-between gap-8 overflow-auto">
+        {
+          firstTwoProducts.map((product) => (
+            <ProductCard
+              id={product.id}
+              productImageUrl={product.imageUrls[0]}
+              title={product.title}
+              price={product.price}
+              sex={product.sex}
+              sizes={product.sizes}
+              orderCount={orderCounts[product.id]}
+            />
+          ))
+        }
+
+        <ViewAllLink products={products} />
+      </div>
+    </div>
+  </div>
+</Banner>
