@@ -8,17 +8,32 @@ import Overlay from './Overlay.astro';
 interface Props {
   products: Product[];
   orderCounts: Record<string, number>;
-  class?: string;
+  colors?: {
+    primary?: string;
+    secondary?: string;
+    tertiary?: string;
+  };
 }
 
-const { products, orderCounts, class: className } = Astro.props;
+const { products, orderCounts, colors } = Astro.props;
 
 const firstTwoProducts = products.slice(0, 2);
+
+const styleVars = [
+  colors?.primary && `--color-primary: ${colors.primary}`,
+  colors?.secondary && `--color-secondary: ${colors.secondary}`,
+  colors?.tertiary && `--color-tertiary: ${colors.tertiary}`,
+]
+  .filter(Boolean)
+  .join('; ');
 ---
 
 <Banner>
-  <div class="group relative mt-8 box-border min-h-180">
-    <Overlay class={className}>
+  <div
+    class="group relative mt-8 box-border flex min-h-180 items-center"
+    style={styleVars || undefined}
+  >
+    <Overlay>
       <slot />
     </Overlay>
     <div class="relative z-0 h-full p-8">

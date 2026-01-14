@@ -1,0 +1,35 @@
+---
+interface Props {
+  title: string;
+  colors?: {
+    primary?: string;
+    secondary?: string;
+    tertiary?: string;
+  };
+  class?: string;
+}
+
+const { title, colors, class: className } = Astro.props;
+
+const id = title.replace(' ', '-');
+
+const styleVars = [
+  colors?.primary && `--color-primary: ${colors.primary}`,
+  colors?.secondary && `--color-secondary: ${colors.secondary}`,
+  colors?.tertiary && `--color-tertiary: ${colors.tertiary}`,
+]
+  .filter(Boolean)
+  .join('; ');
+---
+
+<section style={styleVars || undefined} class={className}>
+  <h1
+    id={id}
+    class="font-cursive text-primary bg-secondary my-8 py-8 text-center tracking-widest"
+  >
+    {title}
+  </h1>
+  <div class="flex w-full flex-wrap justify-center gap-8">
+    <slot />
+  </div>
+</section>

@@ -38,10 +38,10 @@ const orderCounts = getProductOrderCounts(priceQuantities);
     <DropBanner
       products={products}
       orderCounts={orderCounts}
-      class="bg-blue-500"
+      colors={{ primary: '#124483', secondary: '#f5d365', tertiary: '#d5202e' }}
     >
       <h1
-        class="font-cursive text-primary mt-4 mb-20 -rotate-12 tracking-widest sm:mb-40 md:mb-30 xl:ml-12 xl:-translate-14"
+        class="font-cursive text-secondary mt-4 mb-20 -rotate-12 tracking-widest sm:mb-40 md:mb-30 xl:ml-12 xl:-translate-14"
       >
         Eternal
         <br class="hidden md:inline" />
@@ -65,7 +65,7 @@ const orderCounts = getProductOrderCounts(priceQuantities);
     <DropBanner
       products={products}
       orderCounts={orderCounts}
-      class="bg-primary"
+      colors={{ primary: '#f5d365', secondary: '#d5202e', tertiary: '#124483' }}
     >
       <h1
         class="font-cursive text-secondary mt-0 mb-20 -rotate-12 tracking-widest sm:mb-40 md:mb-30 xl:ml-12 xl:-translate-14"

@@ -2,6 +2,7 @@
 import Header from '@components/Header.astro';
 import Main from '@components/Main.astro';
 import ProductCard from '@components/ProductCard/index.astro';
+import Drop from '@components/Drop.astro';
 import {
   getProducts,
   getPassedProducts,
@@ -30,10 +31,10 @@ const orderCounts = getProductOrderCounts(priceQuantities);
     </p>
   </Header>
   <Main>
-    <h1 class="font-cursive text-primary my-4 tracking-widest">
-      Invincible Yellow
-    </h1>
-    <div class="flex w-full flex-wrap justify-center gap-8">
+    <Drop
+      title="Eternal Ice"
+      colors={{ primary: '#124483', secondary: '#f5d365', tertiary: '#d5202e' }}
+    >
       {
         products.map((product) => (
           <ProductCard
@@ -47,12 +48,31 @@ const orderCounts = getProductOrderCounts(priceQuantities);
           />
         ))
       }
-    </div>
+    </Drop>
 
-    <h1 class="font-cursive tracking-widestb my-4 border-t-2 pt-4">
-      Passed Drops
-    </h1>
-    <div class="mx-auto flex w-full flex-wrap justify-center">
+    <Drop
+      title="Invincible Yellow"
+      colors={{ primary: '#f5d365', secondary: '#d5202e', tertiary: '#124483' }}
+    >
+      {
+        products.map((product) => (
+          <ProductCard
+            id={product.id}
+            productImageUrl={product.imageUrls[0]}
+            title={product.title}
+            price={product.price}
+            sex={product.sex}
+            sizes={product.sizes}
+            orderCount={orderCounts[product.id]}
+          />
+        ))
+      }
+    </Drop>
+
+    <Drop
+      title="Passed Drops"
+      colors={{ primary: 'white', secondary: 'black', tertiary: '#d5202e' }}
+    >
       {
         passedProducts.map((product) => (
           <ProductCard
@@ -64,6 +84,6 @@ const orderCounts = getProductOrderCounts(priceQuantities);
           />
         ))
       }
-    </div>
+    </Drop>
   </Main>
 </Layout>
