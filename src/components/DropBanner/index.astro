@@ -4,6 +4,7 @@ import ProductCard from '@components/ProductCard/index.astro';
 import ViewAllLink from './ViewAllLink.astro';
 import type { Product } from '@content/products';
 import Overlay from './Overlay.astro';
+import type { ImageMetadata } from 'astro';
 
 interface Props {
   products: Product[];
@@ -13,9 +14,10 @@ interface Props {
     secondary?: string;
     tertiary?: string;
   };
+  backgroundImage?: ImageMetadata;
 }
 
-const { products, orderCounts, colors } = Astro.props;
+const { products, orderCounts, colors, backgroundImage } = Astro.props;
 
 const firstTwoProducts = products.slice(0, 2);
 
@@ -33,7 +35,7 @@ const styleVars = [
     class="group relative mt-8 box-border flex min-h-180 items-center"
     style={styleVars || undefined}
   >
-    <Overlay>
+    <Overlay backgroundImage={backgroundImage}>
       <slot />
     </Overlay>
     <div class="relative z-0 h-full p-8">

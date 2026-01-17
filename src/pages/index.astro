@@ -9,6 +9,8 @@ import Main from '@components/Main.astro';
 import DropBanner from '@components/DropBanner/index.astro';
 
 import logo from '@images/attakk_studios_black.svg';
+import redlineImg from '@images/drops/redline.jpg';
+import viperImg from '@images/drops/viper.jpg';
 
 export const prerender = false;
 
@@ -39,6 +41,7 @@ const orderCounts = getProductOrderCounts(priceQuantities);
       products={products}
       orderCounts={orderCounts}
       colors={{ primary: '#124483', secondary: '#f5d365', tertiary: '#d5202e' }}
+      backgroundImage={redlineImg}
     >
       <h1
         class="font-cursive text-secondary mt-4 mb-20 -rotate-12 tracking-widest sm:mb-40 md:mb-30 xl:ml-12 xl:-translate-14"
@@ -66,6 +69,7 @@ const orderCounts = getProductOrderCounts(priceQuantities);
       products={products}
       orderCounts={orderCounts}
       colors={{ primary: '#f5d365', secondary: '#d5202e', tertiary: '#124483' }}
+      backgroundImage={viperImg}
     >
       <h1
         class="font-cursive text-secondary mt-0 mb-20 -rotate-12 tracking-widest sm:mb-40 md:mb-30 xl:ml-12 xl:-translate-14"

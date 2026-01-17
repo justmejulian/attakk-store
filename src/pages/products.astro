@@ -11,6 +11,9 @@ import {
 import { getOrderedQuantities } from '@utils/backend';
 import Layout from '@layouts/Layout.astro';
 
+import redlineImg from '@images/drops/redline.jpg';
+import viperImg from '@images/drops/viper.jpg';
+
 export const prerender = false;
 
 const products = getProducts();
@@ -34,6 +37,7 @@ const orderCounts = getProductOrderCounts(priceQuantities);
     <Drop
       title="Eternal Ice"
       colors={{ primary: '#124483', secondary: '#f5d365', tertiary: '#d5202e' }}
+      backgroundImage={redlineImg}
     >
       {
         products.map((product) => (
@@ -53,6 +57,7 @@ const orderCounts = getProductOrderCounts(priceQuantities);
     <Drop
       title="Invincible Yellow"
       colors={{ primary: '#f5d365', secondary: '#d5202e', tertiary: '#124483' }}
+      backgroundImage={viperImg}
     >
       {
         products.map((product) => (
