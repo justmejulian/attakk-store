@@ -23,6 +23,14 @@ To set up the project locally, follow these steps:
    PUBLIC_STRIPE_KEY=<your-public-stripe-key>
    ```
 
+1. Import products from Stripe:
+
+   ```bash
+   npm run build:products
+   ```
+
+   This fetches products and prices from Stripe and generates `src/content/importedProducts.ts`.
+
 1. Start the development server:
 
    ```bash

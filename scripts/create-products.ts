@@ -31,6 +31,8 @@ async function createProductObject(
   sex,
   prices,
 ): Promise<Product> {
+  const drop = product.metadata?.drop;
+
   return {
     id: `${product.id}-${sex.toLowerCase()}`,
     title: product.name,
@@ -38,10 +40,11 @@ async function createProductObject(
     imageUrls: product.images,
     price: prices[0].unit_amount, // in CHF
     sex: sex,
+    drop: drop,
     sizes: prices.reduce(
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (acc: Record<string, SizeProduct>, price: any) => {
-        acc[price.metadata.Size] = {
+        acc[price.nickname] = {
           stripeProductId: price.id,
         };
         return acc;
