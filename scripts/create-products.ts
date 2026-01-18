@@ -1,4 +1,5 @@
 import fs from 'fs';
+import { execSync } from 'child_process';
 
 import { getProducts, getPrices } from '@utils/stripe';
 
@@ -44,7 +45,7 @@ async function createProductObject(
     sizes: prices.reduce(
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (acc: Record<string, SizeProduct>, price: any) => {
-        acc[price.nickname] = {
+        acc[price.nickname || 'One Size'] = {
           stripeProductId: price.id,
         };
         return acc;
@@ -94,6 +95,12 @@ export const importedProducts: Record<string, Product> = ${JSON.stringify(produc
   }
 
   fs.writeFileSync('src/content/importedProducts.ts', fileContent, 'utf8');
+
+  // Format the file with Prettier
+  console.log('Formatting importedProducts.ts with Prettier...');
+  execSync('npx prettier --write src/content/importedProducts.ts', {
+    stdio: 'inherit',
+  });
 }
 
 async function main() {
