@@ -45,7 +45,8 @@ async function createProductObject(
     sizes: prices.reduce(
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (acc: Record<string, SizeProduct>, price: any) => {
-        acc[price.nickname || 'One Size'] = {
+        const size = price.nickname || 'One Size';
+        acc[size] = {
           stripeProductId: price.id,
         };
         return acc;

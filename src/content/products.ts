@@ -18,7 +18,7 @@ export type Product = {
   drop?: string;
 };
 
-function getImportedProductById(id: string): Product {
+export function getImportedProductById(id: string): Product {
   const product = importedProducts[id];
   if (!product) {
     throw new Error(`Product with id ${id} not found in imported products`);
@@ -26,15 +26,6 @@ function getImportedProductById(id: string): Product {
   return product;
 }
 
-export function getDrops(): string[] {
-  const drops = Object.values(importedProducts)
-    .map((product) => product.drop)
-    .filter((drop): drop is string => drop !== undefined);
-  return [...new Set(drops)];
-}
-
-export function getProductsByDrop(drop: string): Product[] {
-  return Object.values(importedProducts).filter(
-    (product) => product.drop === drop,
-  );
+export function getProducts() {
+  return importedProducts;
 }

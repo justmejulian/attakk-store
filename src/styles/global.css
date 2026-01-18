@@ -4,9 +4,9 @@
   --font-sans: 'Urbanist Variable', 'sans-serif';
   --font-cursive: 'Permanent Marker', 'cursive';
 
-  --color-primary: #f5d365;
-  --color-secondary: #d5202e;
-  --color-tertiary: #124483;
+  --color-primary: black;
+  --color-secondary: black;
+  --color-tertiary: black;
 }
 
 @layer base {

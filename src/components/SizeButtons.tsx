@@ -17,9 +17,9 @@ export default function SizeButtons({ id, sizes }: Props) {
           <div class="flex items-center" key={size}>
             <label for={key} class="px-2">
               <p
-                class={`cursor-pointer ${
+                class={`hover:text-tertiary hover:decoration-primary cursor-pointer underline-offset-4 hover:underline ${
                   $selectedSize === size &&
-                  'decoration-primary text-tertiary underline underline-offset-4'
+                  'decoration-primary text-tertiary underline'
                 }`}
               >
                 {size}

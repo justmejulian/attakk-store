@@ -13,16 +13,43 @@ if (!stripeSecretKey) {
 const stripe = new Stripe(stripeSecretKey);
 
 export async function getProducts() {
-  const products = await stripe.products.list({});
-  return products.data;
+  const allProducts: Stripe.Product[] = [];
+  let hasMore = true;
+  let startingAfter: string | undefined;
+
+  while (hasMore) {
+    const products = await stripe.products.list({
+      limit: 100,
+      ...(startingAfter && { starting_after: startingAfter }),
+    });
+
+    allProducts.push(...products.data);
+    hasMore = products.has_more;
+    startingAfter = products.data.at(-1)?.id;
+  }
+
+  return allProducts;
 }
 
 export async function getPrices(productId: string) {
-  const prices = await stripe.prices.list({
-    product: productId,
-    active: true,
-  });
-  return prices.data;
+  const allPrices: Stripe.Price[] = [];
+  let hasMore = true;
+  let startingAfter: string | undefined;
+
+  while (hasMore) {
+    const prices = await stripe.prices.list({
+      product: productId,
+      active: true,
+      limit: 100,
+      ...(startingAfter && { starting_after: startingAfter }),
+    });
+
+    allPrices.push(...prices.data);
+    hasMore = prices.has_more;
+    startingAfter = prices.data.at(-1)?.id;
+  }
+
+  return allPrices;
 }
 
 export async function getPriceById(priceId: string) {

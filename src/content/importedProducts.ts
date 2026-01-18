@@ -1,5 +1,5 @@
 // This file is auto-generated. Do not edit manually.
-// Generated on: 2026-01-18T09:52:28.232Z
+// Generated on: 2026-01-18T11:11:50.070Z
 import type { Product } from '@content/products';
 export const importedProducts: Record<string, Product> = {
   'prod_ToE9N66jy06BJO-unisex': {
@@ -14,7 +14,7 @@ export const importedProducts: Record<string, Product> = {
     sex: 'Unisex',
     drop: 'core-2026',
     sizes: {
-      null: {
+      'One Size': {
         stripeProductId: 'price_1SqbhMDWqual0M5BQMflY1zL',
       },
     },
@@ -31,7 +31,7 @@ export const importedProducts: Record<string, Product> = {
     sex: 'Unisex',
     drop: 'core-2026',
     sizes: {
-      null: {
+      'One Size': {
         stripeProductId: 'price_1SqbfyDWqual0M5BkSVLVtoe',
       },
     },

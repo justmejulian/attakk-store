@@ -1,20 +1,19 @@
 ---
 import Header from '@components/Header.astro';
-import { getProducts, getProductOrderCounts } from '@utils/products';
+import { getProductOrderCounts, getProductsByDrop } from '@utils/products';
 import { getOrderedQuantities } from '@utils/backend';
 import { getOrderedQuantities as stripeOrdered } from '@utils/stripe';
+import { getAllDrops } from '@content/drops';
 import Layout from '@layouts/Layout.astro';
 import Button from '@components/Button.astro';
 import Main from '@components/Main.astro';
 import DropBanner from '@components/DropBanner/index.astro';
 
 import logo from '@images/attakk_studios_white.svg';
-import redlineImg from '@images/drops/redline.jpg';
-import viperImg from '@images/drops/viper.jpg';
 
 export const prerender = false;
 
-const products = getProducts();
+const drops = getAllDrops();
 
 await stripeOrdered();
 const priceQuantities = await getOrderedQuantities();
@@ -37,58 +36,39 @@ const orderCounts = getProductOrderCounts(priceQuantities);
   </Header>
 
   <Main>
-    <DropBanner
-      products={products}
-      orderCounts={orderCounts}
-      colors={{ primary: '#124483', secondary: '#f5d365', tertiary: '#d5202e' }}
-      backgroundImage={redlineImg}
-    >
-      <h1
-        class="font-cursive text-secondary mt-4 mb-20 -rotate-12 tracking-widest sm:mb-40 md:mb-30 xl:ml-12 xl:-translate-14"
-      >
-        Eternal
-        <br class="hidden md:inline" />
-        Ice
-      </h1>
+    {
+      drops.map((drop) => {
+        const products = getProductsByDrop(drop.id);
+        const mtClass = drop.id === 'viper-2026' ? 'mt-4' : 'mt-0';
+        return (
+          <DropBanner
+            products={products}
+            orderCounts={orderCounts}
+            colors={drop.colors}
+            backgroundImage={drop.backgroundImage}
+          >
+            <h1
+              class={`font-cursive text-secondary ${mtClass} mb-20 -rotate-12 tracking-widest sm:mb-40 md:mb-30 xl:ml-12 xl:-translate-14`}
+            >
+              {drop.titleDisplay}
+              <br class="hidden md:inline" />
+              {drop.titleSuffix}
+            </h1>
 
-      <h4 class="font-bold text-white uppercase">New Drop</h4>
+            <h4 class="font-bold text-white uppercase">{drop.badge}</h4>
 
-      <p class="z-50 mt-4 min-h-0 max-w-xl text-2xl text-white">
-        Ice cold clarity - no matter the chaos. The Eternal Ice Race Suit is
-        built for moments when vision blurs, legs burn and everything screams
-        for you to slow down. But instead you double-up. You stay sharp. You
-        stay ice cold. You attakk with ice in your veins..
-      </p>
-      <p class="z-50 mt-4 max-w-xl text-xl text-white italic">
-        Limited drop only.
-      </p>
-      <Button> Discover Now </Button>
-    </DropBanner>
-
-    <DropBanner
-      products={products}
-      orderCounts={orderCounts}
-      colors={{ primary: '#f5d365', secondary: '#d5202e', tertiary: '#124483' }}
-      backgroundImage={viperImg}
-    >
-      <h1
-        class="font-cursive text-secondary mt-0 mb-20 -rotate-12 tracking-widest sm:mb-40 md:mb-30 xl:ml-12 xl:-translate-14"
-      >
-        Invincible
-        <br class="hidden md:inline" />
-        Yellow
-      </h1>
-
-      <h4 class="font-bold text-white uppercase">Same energy. New format.</h4>
-
-      <p class="z-50 mt-4 max-w-xl text-2xl text-white">
-        The iconic Invincible Yellow is back – this time as a jersey only. No
-        reprint of the RS25 suit. Just the unmistakable color, stripped down for
-        everyday intensity. Built with GoBik’s featherweight race fabric, it’s
-        ready for punchy group rides, solo missions and post-ride espresso
-        stops. Loud, fast, and unapologetically ATTAKK.
-      </p>
-      <Button> Discover Now </Button>
-    </DropBanner>
+            <p class="z-50 mt-4 min-h-0 max-w-xl text-2xl text-white">
+              {drop.description}
+            </p>
+            {drop.longDescription && (
+              <p class="z-50 mt-4 max-w-xl text-xl text-white italic">
+                {drop.longDescription}
+              </p>
+            )}
+            <Button> Discover Now </Button>
+          </DropBanner>
+        );
+      })
+    }
   </Main>
 </Layout>

@@ -4,19 +4,17 @@ import Main from '@components/Main.astro';
 import ProductCard from '@components/ProductCard/index.astro';
 import Drop from '@components/Drop.astro';
 import {
-  getProducts,
   getPassedProducts,
   getProductOrderCounts,
+  getProductsByDrop,
 } from '@utils/products';
 import { getOrderedQuantities } from '@utils/backend';
+import { getAllDrops } from '@content/drops';
 import Layout from '@layouts/Layout.astro';
-
-import redlineImg from '@images/drops/redline.jpg';
-import viperImg from '@images/drops/viper.jpg';
 
 export const prerender = false;
 
-const products = getProducts();
+const drops = getAllDrops();
 const passedProducts = getPassedProducts();
 
 const priceQuantities = await getOrderedQuantities();
@@ -34,45 +32,30 @@ const orderCounts = getProductOrderCounts(priceQuantities);
     </p>
   </Header>
   <Main>
-    <Drop
-      title="Eternal Ice"
-      colors={{ primary: '#124483', secondary: '#f5d365', tertiary: '#d5202e' }}
-      backgroundImage={redlineImg}
-    >
-      {
-        products.map((product) => (
-          <ProductCard
-            id={product.id}
-            productImageUrl={product.imageUrls[0]}
-            title={product.title}
-            price={product.price}
-            sex={product.sex}
-            sizes={product.sizes}
-            orderCount={orderCounts[product.id]}
-          />
-        ))
-      }
-    </Drop>
-
-    <Drop
-      title="Invincible Yellow"
-      colors={{ primary: '#f5d365', secondary: '#d5202e', tertiary: '#124483' }}
-      backgroundImage={viperImg}
-    >
-      {
-        products.map((product) => (
-          <ProductCard
-            id={product.id}
-            productImageUrl={product.imageUrls[0]}
-            title={product.title}
-            price={product.price}
-            sex={product.sex}
-            sizes={product.sizes}
-            orderCount={orderCounts[product.id]}
-          />
-        ))
-      }
-    </Drop>
+    {
+      drops.map((drop) => {
+        const products = getProductsByDrop(drop.id);
+        return (
+          <Drop
+            title={drop.title}
+            colors={drop.colors}
+            backgroundImage={drop.backgroundImage}
+          >
+            {products.map((product) => (
+              <ProductCard
+                id={product.id}
+                productImageUrl={product.imageUrls[0]}
+                title={product.title}
+                price={product.price}
+                sex={product.sex}
+                sizes={product.sizes}
+                orderCount={orderCounts[product.id]}
+              />
+            ))}
+          </Drop>
+        );
+      })
+    }
 
     <Drop
       title="Passed Drops"

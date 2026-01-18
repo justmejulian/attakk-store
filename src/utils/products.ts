@@ -1,8 +1,13 @@
-import products, { type Product } from '@content/products.ts';
+import {
+  getImportedProductById,
+  getProducts,
+  type Product,
+} from '@content/products.ts';
 import passedProducts from '@content/passedProducts.ts';
 import { clearCart } from '@stores/cartStore';
 
-export function getProducts(): Product[] {
+export function getProductsArray(): Product[] {
+  const products = getProducts();
   const productList = Object.values(products);
   // return [...productList, ...productList];
   return productList;
@@ -12,7 +17,8 @@ export function getProductById(id: string): Product {
   if (!id) {
     throw new Error('Product ID is required');
   }
-  const product = products.find((product) => product.id === id);
+
+  const product = getImportedProductById(id);
 
   if (!product) {
     console.log('Cart is in broken state, clearing cart');
@@ -37,6 +43,7 @@ export function getProductByStripePriceId(priceId: string): {
   product: Product;
   size: string;
 } | null {
+  const products = getProductsArray();
   for (const product of products) {
     if (product.sizes) {
       for (const [size, sizeData] of Object.entries(product.sizes)) {
@@ -56,6 +63,7 @@ export function getPassedProducts() {
 export function getProductOrderCounts(
   priceQuantities: Record<string, number>,
 ): Record<string, number> {
+  const products = getProductsArray();
   const productCounts: Record<string, number> = {};
 
   for (const product of products) {
@@ -67,4 +75,17 @@ export function getProductOrderCounts(
   }
 
   return productCounts;
+}
+
+export function getDrops(): string[] {
+  const drops = Object.values(getProducts())
+    .map((product) => product.drop)
+    .filter((drop): drop is string => drop !== undefined);
+  return [...new Set(drops)];
+}
+
+export function getProductsByDrop(drop: string): Product[] {
+  return Object.values(getProducts()).filter(
+    (product) => product.drop === drop,
+  );
 }
