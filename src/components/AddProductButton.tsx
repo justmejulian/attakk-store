@@ -5,14 +5,16 @@ import { addToCart, selectedSize } from '@stores/cartStore';
 
 interface Props {
   productId: string;
+  availableSizes: string[];
 }
 
-function AddProductButton({ productId }: Props) {
+function AddProductButton({ productId, availableSizes }: Props) {
   const $selectedSize = useStore(selectedSize);
+  const isValidSize = $selectedSize && availableSizes.includes($selectedSize);
   return (
     <Button
       title="Add to Cart"
-      disabled={!$selectedSize}
+      disabled={!isValidSize}
       disabledTooltipText="Please select a size"
       onClick={() => {
         addToCart(productId, $selectedSize);

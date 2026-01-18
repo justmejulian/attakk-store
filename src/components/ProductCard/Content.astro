@@ -42,7 +42,11 @@ const [dropTitle, dropSubtitle] = title.split(' - ');
     <>
       <SizeButtons id={id} sizes={Object.keys(sizes)} client:only="preact" />
       <div class="flex w-full max-w-md justify-center pb-3">
-        <AddProductButton productId={id} client:only="preact" />
+        <AddProductButton
+          productId={id}
+          availableSizes={Object.keys(sizes)}
+          client:only="preact"
+        />
       </div>
     </>
   )
