@@ -41,7 +41,7 @@ export default function CheckoutItemList({ lineItems }: CheckoutItemListProps) {
               <img
                 src={item.product.imageUrls[0]}
                 alt={item.product.title}
-                class="mr-6 inline-block h-8 w-8"
+                class="mr-6 inline-block h-8 w-8 object-contain"
               />
               <div class="flex flex-col">
                 <h4>{item.product.title}</h4>
