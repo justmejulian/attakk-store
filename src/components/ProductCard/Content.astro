@@ -1,6 +1,7 @@
 ---
 import AddProductButton from '@components/AddProductButton.tsx';
 import SizeButtons from '@components/SizeButtons';
+import SizingGuideLink from '@components/SizingGuideLink.astro';
 import OrderProgressBar from './OrderProgressBar.astro';
 import { createHumanReadablePrice } from '@utils/currency';
 
@@ -11,9 +12,10 @@ interface Props {
   sex: string;
   sizes?: Record<string, { stripeProductId: string }>;
   orderCount?: number;
+  fitUrl?: string;
 }
 
-const { id, title, price, sex, sizes, orderCount } = Astro.props;
+const { id, title, price, sex, sizes, orderCount, fitUrl } = Astro.props;
 
 const [dropTitle, dropSubtitle] = title.split(' - ');
 ---
@@ -41,6 +43,7 @@ const [dropTitle, dropSubtitle] = title.split(' - ');
   price && sizes && (
     <>
       <SizeButtons id={id} sizes={Object.keys(sizes)} client:only="preact" />
+      <SizingGuideLink fitUrl={fitUrl} />
       <div class="flex w-full max-w-md justify-center pb-3">
         <AddProductButton
           productId={id}

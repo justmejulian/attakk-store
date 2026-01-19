@@ -1,0 +1,19 @@
+---
+interface Props {
+  fitUrl?: string;
+}
+
+const { fitUrl } = Astro.props;
+
+// Fallback to Gobik sizing guide if no specific fitUrl provided
+const sizingUrl = fitUrl || 'https://gobik.com/en/pages/fitting-guide';
+---
+
+<a
+  href={sizingUrl}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="text-sm tracking-wide text-gray-600 transition-colors hover:text-black"
+>
+  Sizing Guide
+</a>

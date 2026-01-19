@@ -4,8 +4,6 @@ export type StripProduct = {
   stripeProductId: string;
 };
 
-export type Sex = 'Male' | 'Female' | 'Unisex';
-
 export type Product = {
   id: string;
   imageUrls: string[];
@@ -16,6 +14,7 @@ export type Product = {
   title: string;
   price: number;
   drop?: string;
+  fitUrl?: string;
 };
 
 export function getImportedProductById(id: string): Product {

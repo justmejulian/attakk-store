@@ -9,15 +9,27 @@ type SizeProduct = {
   stripeProductId: string;
 };
 
-export type Sex = 'Male' | 'Female' | 'Unisex';
+export type Sex = 'Male' | 'Female' | 'unisex';
 
-function mapSexToPrices(prices) {
+function getSex(sex: string) {
+  if (sex?.toLowerCase() === 'male') {
+    return 'Male';
+  }
+
+  if (sex?.toLowerCase() === 'female') {
+    return 'Female';
+  }
+
+  return 'Unisex';
+}
+
+function mapSexToPrices(prices): Record<Sex, any> {
   return prices.reduce((acc: Record<string, Product[]>, price) => {
     if (!price.metadata) {
       console.warn('Price metadata is missing:', price);
       return acc;
     }
-    const sex = price.metadata.Sex || 'Unisex';
+    const sex = getSex(price.metadata.sex);
     if (acc[sex]) {
       acc[sex].push(price);
     } else {
@@ -27,12 +39,24 @@ function mapSexToPrices(prices) {
   }, {});
 }
 
+function getFitUrl(product, sex: Sex) {
+  if (sex.toLowerCase() === 'male') {
+    return product.metadata?.['url-male'];
+  }
+  if (sex.toLowerCase() === 'female') {
+    return product.metadata?.['url-female'];
+  }
+
+  return undefined;
+}
+
 async function createProductObject(
   product: Product,
   sex,
   prices,
 ): Promise<Product> {
   const drop = product.metadata?.drop;
+  const fitUrl = getFitUrl(product, sex);
 
   return {
     id: `${product.id}-${sex.toLowerCase()}`,
@@ -41,6 +65,7 @@ async function createProductObject(
     imageUrls: product.images,
     price: prices[0].unit_amount, // in CHF
     sex: sex,
+    fitUrl: fitUrl,
     drop: drop,
     sizes: prices.reduce(
       // eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -1,5 +1,5 @@
 // This file is auto-generated. Do not edit manually.
-// Generated on: 2026-01-18T11:11:50.070Z
+// Generated on: 2026-01-19T20:31:53.514Z
 import type { Product } from '@content/products';
 export const importedProducts: Record<string, Product> = {
   'prod_ToE9N66jy06BJO-unisex': {
@@ -117,8 +117,8 @@ export const importedProducts: Record<string, Product> = {
       },
     },
   },
-  'prod_ToDypHpaVAgqgj-unisex': {
-    id: 'prod_ToDypHpaVAgqgj-unisex',
+  'prod_ToDypHpaVAgqgj-female': {
+    id: 'prod_ToDypHpaVAgqgj-female',
     title: 'REDL/NE WINTER BIB TIGHTS',
     description:
       'Built for dark miles and cold hard sessions. The REDL//NE Bib Tights bring blackout intensity to winter training. No insulation fluff. Just structured pressure, fleece-lined focus, and legs that stay in it when others turn back. Model: https://gobik.com/de/products/bib-tight-absolute-men-custom-26',
@@ -126,7 +126,33 @@ export const importedProducts: Record<string, Product> = {
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3Rfc0FQSWI5UXBGU05vWFZBQTU4dUJRaTlB00mBDPXBI6',
     ],
     price: 11500,
-    sex: 'Unisex',
+    sex: 'Female',
+    drop: 'redline-2026',
+    sizes: {
+      L: {
+        stripeProductId: 'price_1SrMNsDWqual0M5BTtNLnGHD',
+      },
+      M: {
+        stripeProductId: 'price_1SrMNNDWqual0M5B5RPVGcwl',
+      },
+      S: {
+        stripeProductId: 'price_1SrMN9DWqual0M5BcU9X9zxO',
+      },
+      XS: {
+        stripeProductId: 'price_1SrMMzDWqual0M5B4jP2Ftd6',
+      },
+    },
+  },
+  'prod_ToDypHpaVAgqgj-male': {
+    id: 'prod_ToDypHpaVAgqgj-male',
+    title: 'REDL/NE WINTER BIB TIGHTS',
+    description:
+      'Built for dark miles and cold hard sessions. The REDL//NE Bib Tights bring blackout intensity to winter training. No insulation fluff. Just structured pressure, fleece-lined focus, and legs that stay in it when others turn back. Model: https://gobik.com/de/products/bib-tight-absolute-men-custom-26',
+    imageUrls: [
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3Rfc0FQSWI5UXBGU05vWFZBQTU4dUJRaTlB00mBDPXBI6',
+    ],
+    price: 11500,
+    sex: 'Male',
     drop: 'redline-2026',
     sizes: {
       '2XL': {
@@ -149,8 +175,8 @@ export const importedProducts: Record<string, Product> = {
       },
     },
   },
-  'prod_ToDxe2apQeJ7jS-unisex': {
-    id: 'prod_ToDxe2apQeJ7jS-unisex',
+  'prod_ToDxe2apQeJ7jS-female': {
+    id: 'prod_ToDxe2apQeJ7jS-female',
     title: 'REDL/NE SPRING/FALL BIB SHORTS',
     description:
       'Where pressure sits. And stays. The REDL//NE bibs are made for sustained intensity. No fuss, no shift — just grip, hold and hammer. Black base, white ATK. Confidence from the saddle up. Model: https://gobik.com/de/products/bib-short-aboslute-print-men-custom-26',
@@ -158,7 +184,33 @@ export const importedProducts: Record<string, Product> = {
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfSHdRblJYRVAxM1dvM01qdndEM1FKRHlk00D4ybJLDy',
     ],
     price: 11000,
-    sex: 'Unisex',
+    sex: 'Female',
+    drop: 'redline-2026',
+    sizes: {
+      L: {
+        stripeProductId: 'price_1SrMMVDWqual0M5BPe0PQMGf',
+      },
+      M: {
+        stripeProductId: 'price_1SrMMEDWqual0M5BEIuKOQhc',
+      },
+      S: {
+        stripeProductId: 'price_1SrMLuDWqual0M5Br7p8xluD',
+      },
+      XS: {
+        stripeProductId: 'price_1SrMLbDWqual0M5Bb0TYX2nA',
+      },
+    },
+  },
+  'prod_ToDxe2apQeJ7jS-male': {
+    id: 'prod_ToDxe2apQeJ7jS-male',
+    title: 'REDL/NE SPRING/FALL BIB SHORTS',
+    description:
+      'Where pressure sits. And stays. The REDL//NE bibs are made for sustained intensity. No fuss, no shift — just grip, hold and hammer. Black base, white ATK. Confidence from the saddle up. Model: https://gobik.com/de/products/bib-short-aboslute-print-men-custom-26',
+    imageUrls: [
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfSHdRblJYRVAxM1dvM01qdndEM1FKRHlk00D4ybJLDy',
+    ],
+    price: 11000,
+    sex: 'Male',
     drop: 'redline-2026',
     sizes: {
       '2XL': {
@@ -181,8 +233,8 @@ export const importedProducts: Record<string, Product> = {
       },
     },
   },
-  'prod_ToDwgYLPyvIQce-unisex': {
-    id: 'prod_ToDwgYLPyvIQce-unisex',
+  'prod_ToDwgYLPyvIQce-female': {
+    id: 'prod_ToDwgYLPyvIQce-female',
     title: 'REDL/NE SUMMER BIB SHORTS',
     description:
       'Where pressure sits. And stays. The REDL//NE bibs are made for sustained intensity. No fuss, no shift — just grip, hold and hammer. Black base, white ATK. Confidence from the saddle up. Model: https://gobik.com/de/products/bib-short-aboslute-print-men-custom-26',
@@ -190,7 +242,33 @@ export const importedProducts: Record<string, Product> = {
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfcElVT3paVkdSVlNJTDdsN3QxYjl0T1RZ00TZ3aqDk8',
     ],
     price: 10500,
-    sex: 'Unisex',
+    sex: 'Female',
+    drop: 'redline-2026',
+    sizes: {
+      XS: {
+        stripeProductId: 'price_1SrMJeDWqual0M5BIygLYw1X',
+      },
+      L: {
+        stripeProductId: 'price_1SrMIwDWqual0M5BfcHnwvOy',
+      },
+      M: {
+        stripeProductId: 'price_1SrMImDWqual0M5BjorDiEyl',
+      },
+      S: {
+        stripeProductId: 'price_1SrMIcDWqual0M5BxXWLQkOZ',
+      },
+    },
+  },
+  'prod_ToDwgYLPyvIQce-male': {
+    id: 'prod_ToDwgYLPyvIQce-male',
+    title: 'REDL/NE SUMMER BIB SHORTS',
+    description:
+      'Where pressure sits. And stays. The REDL//NE bibs are made for sustained intensity. No fuss, no shift — just grip, hold and hammer. Black base, white ATK. Confidence from the saddle up. Model: https://gobik.com/de/products/bib-short-aboslute-print-men-custom-26',
+    imageUrls: [
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfcElVT3paVkdSVlNJTDdsN3QxYjl0T1RZ00TZ3aqDk8',
+    ],
+    price: 10500,
+    sex: 'Male',
     drop: 'redline-2026',
     sizes: {
       '2XL': {
@@ -416,8 +494,8 @@ export const importedProducts: Record<string, Product> = {
       },
     },
   },
-  'prod_ToDiQ7LB6zijfj-unisex': {
-    id: 'prod_ToDiQ7LB6zijfj-unisex',
+  'prod_ToDiQ7LB6zijfj-female': {
+    id: 'prod_ToDiQ7LB6zijfj-female',
     title: 'REDL/NE LONG SLEEVE WARM JERSEY',
     description:
       'Stay sharp when the season turns grey.The long sleeve REDL//NE holds the line through cold tempo days and dark-zone efforts. Clean style, aggressive warmth — no softness, no fluff, no fade. Model: https://gobik.com/de/products/long-sleeve-jersey-hyder-men-custom-26',
@@ -425,7 +503,33 @@ export const importedProducts: Record<string, Product> = {
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfTldXYXA2b2tSbEhoanB4OXJHUmdrVGVO00ys3YkweM',
     ],
     price: 8000,
-    sex: 'Unisex',
+    sex: 'Female',
+    drop: 'redline-2026',
+    sizes: {
+      L: {
+        stripeProductId: 'price_1SrMGYDWqual0M5BVjDc8yu9',
+      },
+      M: {
+        stripeProductId: 'price_1SrMFlDWqual0M5B3DPDkia1',
+      },
+      S: {
+        stripeProductId: 'price_1SrMFQDWqual0M5BulCvlKo4',
+      },
+      XS: {
+        stripeProductId: 'price_1SrMEiDWqual0M5BzgqAq94k',
+      },
+    },
+  },
+  'prod_ToDiQ7LB6zijfj-male': {
+    id: 'prod_ToDiQ7LB6zijfj-male',
+    title: 'REDL/NE LONG SLEEVE WARM JERSEY',
+    description:
+      'Stay sharp when the season turns grey.The long sleeve REDL//NE holds the line through cold tempo days and dark-zone efforts. Clean style, aggressive warmth — no softness, no fluff, no fade. Model: https://gobik.com/de/products/long-sleeve-jersey-hyder-men-custom-26',
+    imageUrls: [
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfTldXYXA2b2tSbEhoanB4OXJHUmdrVGVO00ys3YkweM',
+    ],
+    price: 8000,
+    sex: 'Male',
     drop: 'redline-2026',
     sizes: {
       XL: {
@@ -445,8 +549,8 @@ export const importedProducts: Record<string, Product> = {
       },
     },
   },
-  'prod_ToDfVolsUxACME-unisex': {
-    id: 'prod_ToDfVolsUxACME-unisex',
+  'prod_ToDfVolsUxACME-female': {
+    id: 'prod_ToDfVolsUxACME-female',
     title: 'REDL/NE RACESUIT 2026',
     description:
       'System maxed. Vision narrowing. You hold. The REDL//NE race suit is for all-in efforts only — no margin for error, no plan B. Lightweight, aero and lethal. When your legs scream but the line demands more, this is what you wear.',
@@ -454,7 +558,36 @@ export const importedProducts: Record<string, Product> = {
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfNmdMcG9LdGpxU0t5dlV6VUhmWEFsWXN000cZgQDsGd',
     ],
     price: 16500,
-    sex: 'Unisex',
+    sex: 'Female',
+    fitUrl:
+      'https://gobik.com/de/products/cycling-suit-madison-women-custom-26',
+    drop: 'redline-2026',
+    sizes: {
+      L: {
+        stripeProductId: 'price_1SrMSjDWqual0M5BxHZHjCDZ',
+      },
+      M: {
+        stripeProductId: 'price_1SrMSaDWqual0M5B4eRm05Th',
+      },
+      S: {
+        stripeProductId: 'price_1SrMSRDWqual0M5BlMupclrM',
+      },
+      XS: {
+        stripeProductId: 'price_1SrMSJDWqual0M5BnHn5OyQN',
+      },
+    },
+  },
+  'prod_ToDfVolsUxACME-male': {
+    id: 'prod_ToDfVolsUxACME-male',
+    title: 'REDL/NE RACESUIT 2026',
+    description:
+      'System maxed. Vision narrowing. You hold. The REDL//NE race suit is for all-in efforts only — no margin for error, no plan B. Lightweight, aero and lethal. When your legs scream but the line demands more, this is what you wear.',
+    imageUrls: [
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfNmdMcG9LdGpxU0t5dlV6VUhmWEFsWXN000cZgQDsGd',
+    ],
+    price: 16500,
+    sex: 'Male',
+    fitUrl: 'https://gobik.com/de/products/cycling-suit-madison-men-custom-26',
     drop: 'redline-2026',
     sizes: {
       XL: {
@@ -521,8 +654,8 @@ export const importedProducts: Record<string, Product> = {
       },
     },
   },
-  'prod_SnBd0mH8WE0TAN-female': {
-    id: 'prod_SnBd0mH8WE0TAN-female',
+  'prod_SnBd0mH8WE0TAN-unisex': {
+    id: 'prod_SnBd0mH8WE0TAN-unisex',
     title: 'ATTAKK Bibs 25 - Invincible Yellow',
     description:
       'Quiet. Precise. Committed. The Invincible Bibs are built for focus – from zone 4 intervals to Sunday base rides. Supportive, sharp and stripped of distraction, they’re made to match your mindset: ride hard, ride long, ride clean.',
@@ -530,7 +663,7 @@ export const importedProducts: Record<string, Product> = {
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfZG5ZdmRqa1NqM3NwV0ZycThhTmlxU0Jw00G1X7mUyc',
     ],
     price: 10500,
-    sex: 'Female',
+    sex: 'Unisex',
     sizes: {
       'Female - XS': {
         stripeProductId: 'price_1RyAJFDWqual0M5BNRA81Qpo',
@@ -544,19 +677,6 @@ export const importedProducts: Record<string, Product> = {
       'Female - L': {
         stripeProductId: 'price_1RyAHFDWqual0M5BR5DOuSha',
       },
-    },
-  },
-  'prod_SnBd0mH8WE0TAN-male': {
-    id: 'prod_SnBd0mH8WE0TAN-male',
-    title: 'ATTAKK Bibs 25 - Invincible Yellow',
-    description:
-      'Quiet. Precise. Committed. The Invincible Bibs are built for focus – from zone 4 intervals to Sunday base rides. Supportive, sharp and stripped of distraction, they’re made to match your mindset: ride hard, ride long, ride clean.',
-    imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfZG5ZdmRqa1NqM3NwV0ZycThhTmlxU0Jw00G1X7mUyc',
-    ],
-    price: 10500,
-    sex: 'Male',
-    sizes: {
       'Male - XL': {
         stripeProductId: 'price_1RrwvnDWqual0M5BdcoKiAFa',
       },
@@ -586,61 +706,17 @@ export const importedProducts: Record<string, Product> = {
       XL: {
         stripeProductId: 'price_1Sqb9FDWqual0M5B7K1XBVTf',
       },
-    },
-  },
-  'prod_SnBdFNjPSXbZJk-female': {
-    id: 'prod_SnBdFNjPSXbZJk-female',
-    title: 'ATTAKK Jersey 25 - Invincible Yellow',
-    description:
-      'The return of a classic — with new intent. Back by demand, the Invincible Yellow jersey brings race-day energy to the everyday ride. No suit. No ceremony. Just the same sharp attitude in a more versatile cut. Limited reissue.',
-    imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfSUM4Zm8xdFFpUWVDdjdaZFpFNmJJSFlV00CEViuJkU',
-    ],
-    price: 6000,
-    sex: 'Female',
-    drop: 'invincible-2025',
-    sizes: {
       XS: {
         stripeProductId: 'price_1RyAP0DWqual0M5B1BqBjLok',
       },
       S: {
         stripeProductId: 'price_1RyAOgDWqual0M5BjZKCCEF1',
       },
-    },
-  },
-  'prod_SnBdFNjPSXbZJk-male': {
-    id: 'prod_SnBdFNjPSXbZJk-male',
-    title: 'ATTAKK Jersey 25 - Invincible Yellow',
-    description:
-      'The return of a classic — with new intent. Back by demand, the Invincible Yellow jersey brings race-day energy to the everyday ride. No suit. No ceremony. Just the same sharp attitude in a more versatile cut. Limited reissue.',
-    imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfSUM4Zm8xdFFpUWVDdjdaZFpFNmJJSFlV00CEViuJkU',
-    ],
-    price: 6000,
-    sex: 'Male',
-    drop: 'invincible-2025',
-    sizes: {
       M: {
         stripeProductId: 'price_1RrwrGDWqual0M5Bm2rbDUUy',
       },
       L: {
         stripeProductId: 'price_1RrbFqDWqual0M5B2mxtGIM1',
-      },
-    },
-  },
-  'prod_SmUaTbKJd3uWBR-female': {
-    id: 'prod_SmUaTbKJd3uWBR-female',
-    title: 'ATTAKK Race Suit 25 - Invincible Yellow',
-    description:
-      'Fast. Focused. Unbreakable. The RS25 – Invincible Yellow is built for those who rise when it hurts most. When the pack fades and the night sets in, we don’t fold — we attack. This isn’t just a suit. It’s a mindset.',
-    imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfU0lOUVhnazFmSFVZVzhrQU9VdjRaWXBp00qPDXgrEP',
-    ],
-    price: 14300,
-    sex: 'Female',
-    sizes: {
-      'Female - L': {
-        stripeProductId: 'price_1RsItzDWqual0M5ByD1gvPv1',
       },
     },
   },
@@ -655,6 +731,9 @@ export const importedProducts: Record<string, Product> = {
     price: 14300,
     sex: 'Unisex',
     sizes: {
+      'Female - L': {
+        stripeProductId: 'price_1RsItzDWqual0M5ByD1gvPv1',
+      },
       'Female - M': {
         stripeProductId: 'price_1RsItnDWqual0M5BlNyhJklP',
       },
@@ -673,19 +752,6 @@ export const importedProducts: Record<string, Product> = {
       'Male - S': {
         stripeProductId: 'price_1RrbaFDWqual0M5BJGdzHsoJ',
       },
-    },
-  },
-  'prod_SmUaTbKJd3uWBR-male': {
-    id: 'prod_SmUaTbKJd3uWBR-male',
-    title: 'ATTAKK Race Suit 25 - Invincible Yellow',
-    description:
-      'Fast. Focused. Unbreakable. The RS25 – Invincible Yellow is built for those who rise when it hurts most. When the pack fades and the night sets in, we don’t fold — we attack. This isn’t just a suit. It’s a mindset.',
-    imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfU0lOUVhnazFmSFVZVzhrQU9VdjRaWXBp00qPDXgrEP',
-    ],
-    price: 14300,
-    sex: 'Male',
-    sizes: {
       'Male - M': {
         stripeProductId: 'price_1Rqvb0DWqual0M5BXfbHQqgE',
       },

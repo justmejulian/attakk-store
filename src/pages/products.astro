@@ -50,6 +50,7 @@ const orderCounts = getProductOrderCounts(priceQuantities);
                 sex={product.sex}
                 sizes={product.sizes}
                 orderCount={orderCounts[product.id]}
+                fitUrl={product.fitUrl}
               />
             ))}
           </Drop>
