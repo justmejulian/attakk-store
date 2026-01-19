@@ -39,7 +39,6 @@ const orderCounts = getProductOrderCounts(priceQuantities);
     {
       drops.map((drop) => {
         const products = getProductsByDrop(drop.id);
-        const mtClass = drop.id === 'viper-2026' ? 'mt-4' : 'mt-0';
         return (
           <DropBanner
             products={products}
@@ -47,11 +46,8 @@ const orderCounts = getProductOrderCounts(priceQuantities);
             colors={drop.colors}
             backgroundImage={drop.backgroundImage}
           >
-            <h1
-              class={`font-cursive text-secondary ${mtClass} mb-20 -rotate-12 tracking-widest sm:mb-40 md:mb-30 xl:ml-12 xl:-translate-14`}
-            >
+            <h1 class="font-cursive text-secondary mb-20 tracking-widest sm:mb-40 md:mb-30 xl:ml-12">
               {drop.titleDisplay}
-              <br class="hidden md:inline" />
               {drop.titleSuffix}
             </h1>
 
