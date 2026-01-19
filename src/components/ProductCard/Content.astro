@@ -24,7 +24,12 @@ const [dropTitle, dropSubtitle] = title.split(' - ');
   <h5 class="text-md font-bold tracking-widest text-black uppercase">
     {dropSubtitle}
   </h5>
-  <h4 class="text-3xl font-light text-black">{dropTitle}</h4>
+  <h4
+    class="overflow-hidden text-3xl font-light text-nowrap text-ellipsis text-black"
+    title={dropTitle}
+  >
+    {dropTitle}
+  </h4>
 
   <p class="mt-1 pb-1 tracking-wide">
     {sex}
