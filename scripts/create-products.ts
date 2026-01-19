@@ -47,7 +47,7 @@ function getFitUrl(product, sex: Sex) {
     return product.metadata?.['url-female'];
   }
 
-  return undefined;
+  return product.metadata?.['url-uni'];
 }
 
 async function createProductObject(
