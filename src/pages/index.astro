@@ -44,20 +44,21 @@ const orderCounts = getProductOrderCounts(priceQuantities);
             products={products}
             orderCounts={orderCounts}
             colors={drop.colors}
+            bannerTextColor={drop.bannerTextColor}
             backgroundImage={drop.backgroundImage}
           >
-            <h1 class="font-cursive text-secondary mb-20 tracking-widest sm:mb-40 md:mb-30 xl:ml-12">
+            <h1 class="font-cursive mb-20 tracking-widest sm:mb-40 md:mb-30 xl:ml-12">
               {drop.titleDisplay}
               {drop.titleSuffix}
             </h1>
 
-            <h4 class="font-bold text-white uppercase">{drop.badge}</h4>
+            <h4 class="font-bold uppercase">{drop.badge}</h4>
 
-            <p class="z-50 mt-4 min-h-0 max-w-xl text-2xl text-white">
+            <p class="z-50 mt-4 min-h-0 max-w-xl text-2xl">
               {drop.description}
             </p>
             {drop.longDescription && (
-              <p class="z-50 mt-4 max-w-xl text-xl text-white italic">
+              <p class="z-50 mt-4 max-w-xl text-xl italic">
                 {drop.longDescription}
               </p>
             )}

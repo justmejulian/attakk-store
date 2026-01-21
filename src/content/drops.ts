@@ -14,6 +14,7 @@ export type Drop = {
   titleDisplay: string;
   titleSuffix?: string;
   colors: DropColors;
+  bannerTextColor: string;
   backgroundImage?: ImageMetadata;
   badge: string;
   description: string;
@@ -27,6 +28,7 @@ const drops: Record<string, Drop> = {
     titleDisplay: 'V/PER',
     titleSuffix: '2026',
     colors: { primary: '#8B6B8B', secondary: '#9AFF4A', tertiary: '#9AFF4A' },
+    bannerTextColor: '#9AFF4A',
     backgroundImage: viperImg,
     badge: 'New Drop',
     description:
@@ -39,6 +41,7 @@ const drops: Record<string, Drop> = {
     titleDisplay: 'REDL/NE',
     titleSuffix: '2026',
     colors: { primary: '#8AD4E8', secondary: '#C8382A', tertiary: '#d5202e' },
+    bannerTextColor: '#C8382A',
     backgroundImage: redlineImg,
     badge: 'Core Collection',
     description:
@@ -50,6 +53,7 @@ const drops: Record<string, Drop> = {
     titleDisplay: 'Invincible',
     titleSuffix: 'Yellow',
     colors: { primary: '#f5d365', secondary: '#d5202e', tertiary: '#124483' },
+    bannerTextColor: '#d5202e',
     badge: 'Classic Reissue',
     description:
       'The return of a classic — with new intent. Back by demand, the Invincible Yellow brings race-day energy to the everyday ride. No suit. No ceremony. Just the same sharp attitude in a more versatile cut. Limited reissue.',
@@ -60,6 +64,7 @@ const drops: Record<string, Drop> = {
     titleDisplay: 'ATTAKK',
     titleSuffix: 'CORE',
     colors: { primary: '#3D3D3D' },
+    bannerTextColor: '#FFFFFF',
     badge: 'Essential Collection',
     description:
       "This is ATTAKK CORE. Not only a logo – a mindset. Built for the ones who show up when it's heavy, hot and hard. From the PVL grind to 30k trail runs and Hyrox chaos — it moves like you do.",

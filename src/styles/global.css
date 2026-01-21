@@ -17,10 +17,10 @@
     @apply text-xl font-bold sm:text-3xl;
   }
   h3 {
-    @apply text-secondary text-lg font-bold sm:text-2xl;
+    @apply text-lg font-bold sm:text-2xl;
   }
   h4 {
-    @apply text-secondary text-base font-bold sm:text-lg;
+    @apply text-base font-bold sm:text-lg;
   }
 }
 

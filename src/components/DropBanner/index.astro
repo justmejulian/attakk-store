@@ -14,10 +14,11 @@ interface Props {
     secondary?: string;
     tertiary?: string;
   };
+  bannerTextColor?: string;
   backgroundImage?: ImageMetadata;
 }
 
-const { products, orderCounts, colors, backgroundImage } = Astro.props;
+const { products, orderCounts, colors, bannerTextColor, backgroundImage } = Astro.props;
 
 const firstTwoProducts = products.slice(0, 2);
 
@@ -35,7 +36,7 @@ const styleVars = [
     class="group relative mt-8 box-border flex min-h-180 items-center"
     style={styleVars || undefined}
   >
-    <Overlay backgroundImage={backgroundImage}>
+    <Overlay backgroundImage={backgroundImage} textColor={bannerTextColor}>
       <slot />
     </Overlay>
     <div class="relative z-0 h-full w-full p-8">
