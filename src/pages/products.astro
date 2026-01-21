@@ -34,6 +34,7 @@ const orderCounts = getProductOrderCounts(priceQuantities);
             id={drop.id}
             title={drop.title}
             colors={drop.colors}
+            bannerTextColor={drop.bannerTextColor}
             backgroundImage={drop.backgroundImage}
           >
             {products.map((product) => (
@@ -54,8 +55,10 @@ const orderCounts = getProductOrderCounts(priceQuantities);
     }
 
     <Drop
+      id="passed-drops"
       title="Passed Drops"
       colors={{ primary: 'white', secondary: 'black', tertiary: '#d5202e' }}
+      bannerTextColor="white"
     >
       {
         passedProducts.map((product) => (

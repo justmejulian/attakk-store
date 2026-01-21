@@ -37,6 +37,10 @@ const styleVars = [
 ]
   .filter(Boolean)
   .join('; ');
+
+const backgroundStyle = backgroundImage
+  ? `background-image: url(${backgroundImage.src}); background-size: cover; background-position: center; background-repeat: no-repeat;`
+  : '';
 ---
 
 <Banner>

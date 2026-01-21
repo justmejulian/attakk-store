@@ -10,10 +10,18 @@ interface Props {
     tertiary?: string;
   };
   class?: string;
+  bannerTextColor?: string;
   backgroundImage?: ImageMetadata;
 }
 
-const { id, title, colors, class: className, backgroundImage } = Astro.props;
+const {
+  id,
+  title,
+  colors,
+  class: className,
+  bannerTextColor,
+  backgroundImage,
+} = Astro.props;
 
 const styleVars = [
   colors?.primary && `--color-primary: ${colors.primary}`,
@@ -26,16 +34,23 @@ const styleVars = [
 const backgroundStyle = backgroundImage
   ? `background-image: url(${backgroundImage.src}); background-size: cover; background-position: center; background-repeat: no-repeat;`
   : '';
+
+const overlayStyle = [
+  backgroundStyle,
+  bannerTextColor && `color: ${bannerTextColor}`,
+]
+  .filter(Boolean)
+  .join('; ');
 ---
 
 <section style={styleVars || undefined} class={className}>
   <h1
     id={id}
     class:list={[
-      'font-cursive text-secondary my-8 py-8 text-center tracking-widest',
+      'font-cursive my-8 py-8 text-center tracking-widest',
       { 'bg-primary': !backgroundImage },
     ]}
-    style={backgroundStyle}
+    style={overlayStyle}
   >
     {title}
   </h1>
