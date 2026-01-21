@@ -32,7 +32,9 @@ const orderCounts = getProductOrderCounts(priceQuantities);
       Where clarity meets pressure, and movement has intent. We build limited
       drops for those who ride with purpose — and don’t just follow.
     </p>
-    <Button url="/products"> Discover Now </Button>
+    <div class="mt-8">
+      <Button url="/products"> Shop All </Button>
+    </div>
   </Header>
 
   <Main>
@@ -41,6 +43,7 @@ const orderCounts = getProductOrderCounts(priceQuantities);
         const products = getProductsByDrop(drop.id);
         return (
           <DropBanner
+            dropId={drop.id}
             products={products}
             orderCounts={orderCounts}
             colors={drop.colors}
@@ -56,7 +59,7 @@ const orderCounts = getProductOrderCounts(priceQuantities);
             ))}
 
             <div class="mt-8 flex items-center gap-4">
-              <Button> Discover Now </Button>
+              <Button> Shop the Drop </Button>
               {drop.isLimited && <div class="italic">Limited drop only.</div>}
             </div>
           </DropBanner>

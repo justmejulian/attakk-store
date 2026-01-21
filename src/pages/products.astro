@@ -31,6 +31,7 @@ const orderCounts = getProductOrderCounts(priceQuantities);
         const products = getProductsByDrop(drop.id);
         return (
           <Drop
+            id={drop.id}
             title={drop.title}
             colors={drop.colors}
             backgroundImage={drop.backgroundImage}

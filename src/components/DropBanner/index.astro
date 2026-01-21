@@ -7,6 +7,7 @@ import Overlay from './Overlay.astro';
 import type { ImageMetadata } from 'astro';
 
 interface Props {
+  dropId: string;
   products: Product[];
   orderCounts: Record<string, number>;
   colors?: {
@@ -18,7 +19,14 @@ interface Props {
   backgroundImage?: ImageMetadata;
 }
 
-const { products, orderCounts, colors, bannerTextColor, backgroundImage } = Astro.props;
+const {
+  dropId,
+  products,
+  orderCounts,
+  colors,
+  bannerTextColor,
+  backgroundImage,
+} = Astro.props;
 
 const firstTwoProducts = products.slice(0, 2);
 
@@ -56,7 +64,7 @@ const styleVars = [
           ))
         }
 
-        <ViewAllLink products={products} />
+        <ViewAllLink dropId={dropId} products={products} />
       </div>
     </div>
   </div>
