@@ -47,22 +47,18 @@ const orderCounts = getProductOrderCounts(priceQuantities);
             bannerTextColor={drop.bannerTextColor}
             backgroundImage={drop.backgroundImage}
           >
-            <h1 class="font-cursive mb-20 tracking-widest sm:mb-40 md:mb-30 xl:ml-12">
-              {drop.titleDisplay}
-              {drop.titleSuffix}
+            <h1 class="font-cursive mb-20 text-4xl tracking-widest sm:mb-40 md:mb-30 xl:ml-12">
+              {drop.title}
             </h1>
 
-            <h4 class="font-bold uppercase">{drop.badge}</h4>
+            {drop.descriptions.map((description) => (
+              <p class="z-50 mt-4 min-h-0 max-w-xl text-2xl">{description}</p>
+            ))}
 
-            <p class="z-50 mt-4 min-h-0 max-w-xl text-2xl">
-              {drop.description}
-            </p>
-            {drop.longDescription && (
-              <p class="z-50 mt-4 max-w-xl text-xl italic">
-                {drop.longDescription}
-              </p>
-            )}
-            <Button> Discover Now </Button>
+            <div class="mt-8 flex items-center gap-4">
+              <Button> Discover Now </Button>
+              {drop.isLimited && <div class="italic">Limited drop only.</div>}
+            </div>
           </DropBanner>
         );
       })
