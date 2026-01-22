@@ -102,7 +102,7 @@ export default function OrderConfirmation() {
         the following IBAN:
       </p>
       <code class="mt-4">
-        IBAN: CH00 0000 0000 0000 0000 0 (placeholder)
+        IBAN: CH03 0070 0114 8043 3916 5
         <br />
         Recipient: ATTAKK
         <br />
