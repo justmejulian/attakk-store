@@ -1,37 +1,115 @@
 // This file is auto-generated. Do not edit manually.
-// Generated on: 2026-01-23T06:24:35.026Z
+// Generated on: 2026-01-23T19:15:23.167Z
 import type { Product } from '@content/products';
 export const importedProducts: Record<string, Product> = {
-  'prod_ToE9N66jy06BJO-unisex': {
-    id: 'prod_ToE9N66jy06BJO-unisex',
+  'prod_ToE9N66jy06BJO-female': {
+    id: 'prod_ToE9N66jy06BJO-female',
     title: 'ATTAKK CORE TANK',
     description:
       'Sleeves off. Switch on. The ATTAKK CORE Tank is pure ATTAKK: unapologetic function, forged for full-send sessions. Built to breathe under heavy bars, long runs, and sweaty circuits — whether you’re racing time or chasing fire. Model: https://gobik.com/de/products/sleeveless-t-shirt-energy-men-custom',
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfcXNQS01jNndhVEpDZFR6UTJjV2FSOEha00PkmtNgNs',
     ],
-    price: 4000,
-    sex: 'Unisex',
+    price: 3500,
+    sex: 'Female',
+    fitUrl:
+      'https://gobik.com/de/products/sleeveless-t-shirt-energy-women-custom-26',
     drop: 'core-2026',
     sizes: {
-      'One Size': {
+      L: {
+        stripeProductId: 'price_1SsnPPDWqual0M5B7Ui3GYlY',
+      },
+      M: {
+        stripeProductId: 'price_1SsnPIDWqual0M5B3CFthg2d',
+      },
+      S: {
+        stripeProductId: 'price_1SsnP9DWqual0M5BqwBekapx',
+      },
+      XS: {
+        stripeProductId: 'price_1SsnP2DWqual0M5BYCSNWUCQ',
+      },
+    },
+  },
+  'prod_ToE9N66jy06BJO-male': {
+    id: 'prod_ToE9N66jy06BJO-male',
+    title: 'ATTAKK CORE TANK',
+    description:
+      'Sleeves off. Switch on. The ATTAKK CORE Tank is pure ATTAKK: unapologetic function, forged for full-send sessions. Built to breathe under heavy bars, long runs, and sweaty circuits — whether you’re racing time or chasing fire. Model: https://gobik.com/de/products/sleeveless-t-shirt-energy-men-custom',
+    imageUrls: [
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfcXNQS01jNndhVEpDZFR6UTJjV2FSOEha00PkmtNgNs',
+    ],
+    price: 3500,
+    sex: 'Male',
+    fitUrl:
+      'https://gobik.com/de/products/sleeveless-t-shirt-energy-men-custom',
+    drop: 'core-2026',
+    sizes: {
+      XL: {
+        stripeProductId: 'price_1SsnOvDWqual0M5BgvsRckQP',
+      },
+      L: {
+        stripeProductId: 'price_1SsnOlDWqual0M5BonuJoZmL',
+      },
+      S: {
+        stripeProductId: 'price_1SsnOeDWqual0M5B31ia7TUk',
+      },
+      M: {
         stripeProductId: 'price_1SqbhMDWqual0M5BQMflY1zL',
       },
     },
   },
-  'prod_ToE8jfLbrptDQI-unisex': {
-    id: 'prod_ToE8jfLbrptDQI-unisex',
+  'prod_ToE8jfLbrptDQI-female': {
+    id: 'prod_ToE8jfLbrptDQI-female',
     title: 'ATTAKK CORE RUNNING JERSEY',
     description:
       'This is ATTAKK CORE. Not only a logo – a mindset. The ATTAKK CORE SHIRT is built for the ones who show up when it’s heavy, hot and hard. From the PVL grind to 30k trail runs and Hyrox chaos — it moves like you do. Model: https://gobik.com/de/products/short-sleeve-t-shirt-prism-men-custom-26',
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfY21NN291d25vWldzckRrMjliT1RaaTd000WwEggqU6',
     ],
-    price: 4000,
-    sex: 'Unisex',
+    price: 3500,
+    sex: 'Female',
+    fitUrl:
+      'https://gobik.com/de/products/short-sleeve-t-shirt-prism-women-custom-26',
     drop: 'core-2026',
     sizes: {
-      'One Size': {
+      L: {
+        stripeProductId: 'price_1SsnLfDWqual0M5Bh85Ft83J',
+      },
+      M: {
+        stripeProductId: 'price_1SsnLWDWqual0M5BXXgMggbB',
+      },
+      S: {
+        stripeProductId: 'price_1SsnLLDWqual0M5B9qINIerj',
+      },
+      XS: {
+        stripeProductId: 'price_1SsnLCDWqual0M5Bi6N4hvY8',
+      },
+    },
+  },
+  'prod_ToE8jfLbrptDQI-male': {
+    id: 'prod_ToE8jfLbrptDQI-male',
+    title: 'ATTAKK CORE RUNNING JERSEY',
+    description:
+      'This is ATTAKK CORE. Not only a logo – a mindset. The ATTAKK CORE SHIRT is built for the ones who show up when it’s heavy, hot and hard. From the PVL grind to 30k trail runs and Hyrox chaos — it moves like you do. Model: https://gobik.com/de/products/short-sleeve-t-shirt-prism-men-custom-26',
+    imageUrls: [
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfY21NN291d25vWldzckRrMjliT1RaaTd000WwEggqU6',
+    ],
+    price: 3500,
+    sex: 'Male',
+    fitUrl:
+      'https://gobik.com/de/products/short-sleeve-t-shirt-prism-men-custom-26',
+    drop: 'core-2026',
+    sizes: {
+      XL: {
+        stripeProductId: 'price_1SsnKIDWqual0M5BLgMCCXsa',
+      },
+      L: {
+        stripeProductId: 'price_1SsnKADWqual0M5BGPrBlaFy',
+      },
+      S: {
+        stripeProductId: 'price_1SsnK0DWqual0M5BA16roMtV',
+      },
+      M: {
         stripeProductId: 'price_1SqbfyDWqual0M5BkSVLVtoe',
       },
     },
@@ -438,8 +516,7 @@ export const importedProducts: Record<string, Product> = {
     ],
     price: 6500,
     sex: 'Unisex',
-    fitUrl:
-      'https://gobik.com/de/products/rain-jacket-long-sleeve-selkie-unisex-custom',
+    fitUrl: 'long-sleeve-windproof-jacket-windpeak-2-0-unisex-custom-26',
     drop: 'redline-2026',
     sizes: {
       XL: {
@@ -470,7 +547,7 @@ export const importedProducts: Record<string, Product> = {
     price: 9500,
     sex: 'Unisex',
     fitUrl:
-      'https://gobik.com/de/products/long-sleeve-windproof-jacket-windpeak-2-0-unisex-custom-26',
+      'https://gobik.com/de/products/rain-jacket-long-sleeve-selkie-unisex-custom',
     drop: 'redline-2026',
     sizes: {
       XL: {
