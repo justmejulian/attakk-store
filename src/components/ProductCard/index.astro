@@ -31,7 +31,7 @@ const {
 
 <div
   tabindex="0"
-  class="group relative block w-full max-w-2/3 min-w-2/3 overflow-hidden md:max-w-1/2 md:min-w-0 md:flex-1/3 lg:max-w-1/3 lg:flex-1/4"
+  class="group relative block w-full min-w-2/3 overflow-hidden md:max-w-1/2 md:min-w-0 md:flex-1/3 lg:max-w-1/3 lg:flex-1/4"
 >
   {
     (overlayImageUrl || videoUrl) && (
@@ -45,13 +45,11 @@ const {
   <div
     class="flex w-full flex-col items-center justify-center group-focus-within:visible"
   >
-    <div class="flex aspect-4/5 w-full max-w-50 items-center justify-center">
-      <img
-        src={productImageUrl}
-        alt={title}
-        class="h-full w-full object-contain"
-      />
-    </div>
+    <img
+      src={productImageUrl}
+      alt={title}
+      class="h-60 w-80 object-cover md:h-90 md:w-100"
+    />
     <Content
       id={id}
       title={title}

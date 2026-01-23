@@ -20,7 +20,7 @@ const { id, title, price, sex, sizes, orderCount, fitUrl } = Astro.props;
 const [dropTitle, dropSubtitle] = title.split(' - ');
 ---
 
-<div class="w-full max-w-md shrink-0 overflow-scroll p-3">
+<div class="max-w-l w-full overflow-scroll p-3">
   <h5 class="text-md font-bold tracking-widest text-black uppercase">
     {dropSubtitle}
   </h5>
