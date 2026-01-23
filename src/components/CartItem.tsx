@@ -4,6 +4,7 @@ import {
   decreaseItemQuantity,
   removeFromCart,
 } from '@stores/cartStore';
+import { createHumanReadablePrice } from '@utils/currency';
 
 interface Props {
   id: string;
@@ -37,7 +38,7 @@ function CartItem({ id, quantity, size }: Props) {
 
           <div class="flex items-center gap-1">
             <dt class="inline">Price:</dt>
-            <dd class="inline">{product.price}</dd>
+            <dd class="inline">{createHumanReadablePrice(product.price)}</dd>
           </div>
         </dl>
       </div>
