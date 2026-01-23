@@ -6,6 +6,7 @@ import '@fontsource-variable/urbanist';
 import AnnouncementBanner from '@components/AnnouncementBanner.astro';
 import Nav from '@components/Nav.astro';
 import Footer from '@components/Footer.astro';
+import Toast from '@components/Toast';
 
 const title = 'Attakk';
 
@@ -23,6 +24,7 @@ const title = 'Attakk';
     <title>{title}</title>
   </head>
   <body class="m-0 flex min-h-full w-full flex-col items-center">
+    <Toast client:load />
     <AnnouncementBanner text="This page is still under construction" />
     <div class="max-w-full px-4 md:px-8 lg:max-w-600">
       <Nav title={title} />

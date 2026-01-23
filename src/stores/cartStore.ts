@@ -1,5 +1,6 @@
 import { persistentAtom } from '@nanostores/persistent';
 import { atom } from 'nanostores';
+import { showToast } from './toastStore';
 
 export const selectedSize = atom('');
 
@@ -39,6 +40,7 @@ export function addToCart(id: string, size: string) {
       },
     });
   }
+  showToast('Added to cart');
 }
 
 export function getCartItem(id: string, size: string) {
