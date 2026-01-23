@@ -1,5 +1,5 @@
 // This file is auto-generated. Do not edit manually.
-// Generated on: 2026-01-19T20:31:53.514Z
+// Generated on: 2026-01-23T06:24:35.026Z
 import type { Product } from '@content/products';
 export const importedProducts: Record<string, Product> = {
   'prod_ToE9N66jy06BJO-unisex': {
@@ -8,7 +8,7 @@ export const importedProducts: Record<string, Product> = {
     description:
       'Sleeves off. Switch on. The ATTAKK CORE Tank is pure ATTAKK: unapologetic function, forged for full-send sessions. Built to breathe under heavy bars, long runs, and sweaty circuits — whether you’re racing time or chasing fire. Model: https://gobik.com/de/products/sleeveless-t-shirt-energy-men-custom',
     imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfcXB2cWxJbFVJZTRnVktHUW1VSG8xYTBN00BtwpCDLs',
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfcXNQS01jNndhVEpDZFR6UTJjV2FSOEha00PkmtNgNs',
     ],
     price: 4000,
     sex: 'Unisex',
@@ -25,7 +25,7 @@ export const importedProducts: Record<string, Product> = {
     description:
       'This is ATTAKK CORE. Not only a logo – a mindset. The ATTAKK CORE SHIRT is built for the ones who show up when it’s heavy, hot and hard. From the PVL grind to 30k trail runs and Hyrox chaos — it moves like you do. Model: https://gobik.com/de/products/short-sleeve-t-shirt-prism-men-custom-26',
     imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfQnFna2JQTExocUdIY2kwQ0JkVU1GWVFz00l5HEp6Ex',
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfY21NN291d25vWldzckRrMjliT1RaaTd000WwEggqU6',
     ],
     price: 4000,
     sex: 'Unisex',
@@ -38,14 +38,15 @@ export const importedProducts: Record<string, Product> = {
   },
   'prod_ToE4YVGelxkUc1-unisex': {
     id: 'prod_ToE4YVGelxkUc1-unisex',
-    title: 'REDL/NE SOCKS',
+    title: 'ATTAKK SOCKS',
     description:
       'Quiet detail. Max intention. Whiteout tech with black-letter ATTAKK punch. These socks aren’t flair — they’re part of the build. Engineered to hold shape and momentum. No fade. No drag. Model: https://gobik.com/de/products/socks-chrome-2-0-unisex-length-24',
     imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfMDVEcDVFcU5HczROdTlzdWdKa2ZWb1ZP00YesCnzin',
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfbkxwSVpQbXRQN0xLalJHYm1pT29sRERN00w5ftUkF1',
     ],
     price: 1300,
     sex: 'Unisex',
+    fitUrl: 'https://gobik.com/de/products/socks-chrome-2-0-unisex-length-24',
     drop: 'redline-2026',
     sizes: {
       'L-XL': {
@@ -61,14 +62,16 @@ export const importedProducts: Record<string, Product> = {
   },
   'prod_ToE1pFx25Kk3wm-unisex': {
     id: 'prod_ToE1pFx25Kk3wm-unisex',
-    title: 'REDL/NE KNEE WARMERS',
+    title: 'KNEE WARMERS',
     description:
       'Cover the joints. Expose the effort. When the chill sets in but you’re still going long, REDL//NE knee warmers stay locked and ready. Tension where it counts. Nothing flaps. Nothing fails. Model: https://gobik.com/de/products/thermal-knee-warmer-kaba-unisex-custom',
     imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfTW82WTY3OVFZMHZRaUdlRTB6WXcySVpk00h6fzBJoM',
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3Rfc2ZUVm9xSlRZeng4cnN2VkZrSGVOWVRH00lXJSBw4I',
     ],
     price: 3500,
     sex: 'Unisex',
+    fitUrl:
+      'https://gobik.com/de/products/thermal-knee-warmer-kaba-unisex-custom',
     drop: 'redline-2026',
     sizes: {
       '2XL': {
@@ -90,14 +93,16 @@ export const importedProducts: Record<string, Product> = {
   },
   'prod_ToE04SXs83wsoH-unisex': {
     id: 'prod_ToE04SXs83wsoH-unisex',
-    title: 'REDL/NE ARM WARMERS',
+    title: 'ARM WARMERS',
     description:
       'Hold heat. Hold tension. These aren’t just layers — they’re extensions of intent. Built for sharp mornings, cold corners, and that first hour of no words. Minimal seams, full commitment. Model: https://gobik.com/de/products/thermal-arms-warmer-kaba-unisex-custom',
     imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfOWU0Y0M4Y2duRDQxS0lhMGJrQXNiRU4z00r5Rr7Gat',
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfRFFEZGtZazl5OXMwZ3VjWnFLVTdXUWVt00A5xVUbih',
     ],
     price: 3000,
     sex: 'Unisex',
+    fitUrl:
+      'https://gobik.com/de/products/thermal-arms-warmer-kaba-unisex-custom',
     drop: 'redline-2026',
     sizes: {
       '2XL': {
@@ -119,14 +124,15 @@ export const importedProducts: Record<string, Product> = {
   },
   'prod_ToDypHpaVAgqgj-female': {
     id: 'prod_ToDypHpaVAgqgj-female',
-    title: 'REDL/NE WINTER BIB TIGHTS',
+    title: 'WINTER BIB TIGHTS',
     description:
       'Built for dark miles and cold hard sessions. The REDL//NE Bib Tights bring blackout intensity to winter training. No insulation fluff. Just structured pressure, fleece-lined focus, and legs that stay in it when others turn back. Model: https://gobik.com/de/products/bib-tight-absolute-men-custom-26',
     imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3Rfc0FQSWI5UXBGU05vWFZBQTU4dUJRaTlB00mBDPXBI6',
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfV3RCR2VtaVlIY09rYnVqUXp4SDlOaHNp000Ez9CY8E',
     ],
     price: 11500,
     sex: 'Female',
+    fitUrl: 'https://gobik.com/de/products/bib-tight-absolute-woman-custom-26',
     drop: 'redline-2026',
     sizes: {
       L: {
@@ -145,14 +151,15 @@ export const importedProducts: Record<string, Product> = {
   },
   'prod_ToDypHpaVAgqgj-male': {
     id: 'prod_ToDypHpaVAgqgj-male',
-    title: 'REDL/NE WINTER BIB TIGHTS',
+    title: 'WINTER BIB TIGHTS',
     description:
       'Built for dark miles and cold hard sessions. The REDL//NE Bib Tights bring blackout intensity to winter training. No insulation fluff. Just structured pressure, fleece-lined focus, and legs that stay in it when others turn back. Model: https://gobik.com/de/products/bib-tight-absolute-men-custom-26',
     imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3Rfc0FQSWI5UXBGU05vWFZBQTU4dUJRaTlB00mBDPXBI6',
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfV3RCR2VtaVlIY09rYnVqUXp4SDlOaHNp000Ez9CY8E',
     ],
     price: 11500,
     sex: 'Male',
+    fitUrl: 'https://gobik.com/de/products/bib-tight-absolute-men-custom-26',
     drop: 'redline-2026',
     sizes: {
       '2XL': {
@@ -177,14 +184,16 @@ export const importedProducts: Record<string, Product> = {
   },
   'prod_ToDxe2apQeJ7jS-female': {
     id: 'prod_ToDxe2apQeJ7jS-female',
-    title: 'REDL/NE SPRING/FALL BIB SHORTS',
+    title: 'SPRING/FALL BIB SHORTS',
     description:
       'Where pressure sits. And stays. The REDL//NE bibs are made for sustained intensity. No fuss, no shift — just grip, hold and hammer. Black base, white ATK. Confidence from the saddle up. Model: https://gobik.com/de/products/bib-short-aboslute-print-men-custom-26',
     imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfSHdRblJYRVAxM1dvM01qdndEM1FKRHlk00D4ybJLDy',
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfQmF3SThleFVVSHA3YnRoZ21WQWlTU0Zl00xhdfDZ0N',
     ],
     price: 11000,
     sex: 'Female',
+    fitUrl:
+      'https://gobik.com/de/products/bib-short-absolute-winter-women-custom-26',
     drop: 'redline-2026',
     sizes: {
       L: {
@@ -203,14 +212,16 @@ export const importedProducts: Record<string, Product> = {
   },
   'prod_ToDxe2apQeJ7jS-male': {
     id: 'prod_ToDxe2apQeJ7jS-male',
-    title: 'REDL/NE SPRING/FALL BIB SHORTS',
+    title: 'SPRING/FALL BIB SHORTS',
     description:
       'Where pressure sits. And stays. The REDL//NE bibs are made for sustained intensity. No fuss, no shift — just grip, hold and hammer. Black base, white ATK. Confidence from the saddle up. Model: https://gobik.com/de/products/bib-short-aboslute-print-men-custom-26',
     imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfSHdRblJYRVAxM1dvM01qdndEM1FKRHlk00D4ybJLDy',
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfQmF3SThleFVVSHA3YnRoZ21WQWlTU0Zl00xhdfDZ0N',
     ],
     price: 11000,
     sex: 'Male',
+    fitUrl:
+      'https://gobik.com/de/products/bib-short-absolute-winter-men-custom-26',
     drop: 'redline-2026',
     sizes: {
       '2XL': {
@@ -235,14 +246,15 @@ export const importedProducts: Record<string, Product> = {
   },
   'prod_ToDwgYLPyvIQce-female': {
     id: 'prod_ToDwgYLPyvIQce-female',
-    title: 'REDL/NE SUMMER BIB SHORTS',
+    title: 'SUMMER BIB SHORTS',
     description:
       'Where pressure sits. And stays. The REDL//NE bibs are made for sustained intensity. No fuss, no shift — just grip, hold and hammer. Black base, white ATK. Confidence from the saddle up. Model: https://gobik.com/de/products/bib-short-aboslute-print-men-custom-26',
     imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfcElVT3paVkdSVlNJTDdsN3QxYjl0T1RZ00TZ3aqDk8',
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfWnBTSEZmMTVXcEh0aEFVYWhsSkx3bWRR00A4hvwVAA',
     ],
     price: 10500,
     sex: 'Female',
+    fitUrl: 'https://gobik.com/de/products/bib-short-absolute-women-custom-26',
     drop: 'redline-2026',
     sizes: {
       XS: {
@@ -261,14 +273,16 @@ export const importedProducts: Record<string, Product> = {
   },
   'prod_ToDwgYLPyvIQce-male': {
     id: 'prod_ToDwgYLPyvIQce-male',
-    title: 'REDL/NE SUMMER BIB SHORTS',
+    title: 'SUMMER BIB SHORTS',
     description:
       'Where pressure sits. And stays. The REDL//NE bibs are made for sustained intensity. No fuss, no shift — just grip, hold and hammer. Black base, white ATK. Confidence from the saddle up. Model: https://gobik.com/de/products/bib-short-aboslute-print-men-custom-26',
     imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfcElVT3paVkdSVlNJTDdsN3QxYjl0T1RZ00TZ3aqDk8',
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfWnBTSEZmMTVXcEh0aEFVYWhsSkx3bWRR00A4hvwVAA',
     ],
     price: 10500,
     sex: 'Male',
+    fitUrl:
+      'https://gobik.com/de/products/bib-short-aboslute-print-men-custom-26',
     drop: 'redline-2026',
     sizes: {
       '2XL': {
@@ -293,14 +307,15 @@ export const importedProducts: Record<string, Product> = {
   },
   'prod_ToDugXcG0Xdbb5-unisex': {
     id: 'prod_ToDugXcG0Xdbb5-unisex',
-    title: 'REDL/NE WIND VEST',
+    title: 'WIND VEST',
     description:
       'The calm between surges. Your shield on descent. The REDL//NE vest is stripped to the essentials. Zero flapping, zero compromise. Blackout style, white-hot detail. Layer it when the storm brews. Model: https://gobik.com/de/products/vest-basic-unisex-custom-26',
     imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfQ0s5czJPcjBSYk1XMWJ3THdKUEt1U0Qw00mNurajfu',
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfempQQmlaY0hCUHhRNDg1V05tZzFhOUZV00xmMxMbmG',
     ],
     price: 5000,
     sex: 'Unisex',
+    fitUrl: 'https://gobik.com/de/products/vest-basic-unisex-custom-26',
     drop: 'redline-2026',
     sizes: {
       XL: {
@@ -326,10 +341,12 @@ export const importedProducts: Record<string, Product> = {
     description:
       'Your everyday weapon. For not-so-everyday moves.The REDL//NE jersey delivers the same intent as the suit, in a versatile cut. Built for intervals, drop rides and solo missions with something to prove. Calm fade. Loud letters. Always forward. Model: https://gobik.com/de/products/short-sleeve-jersey-cx-pro-4-0-unisex-custom',
     imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfZUdscnFBaTdlV3VXZFFJVVIwS2ZwYjRy00cyMmtxAb',
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfYU1TbE5laVQ1TFBKSEVld2RodGFtNHpl00fa5oAqmP',
     ],
     price: 6000,
     sex: 'Unisex',
+    fitUrl:
+      'https://gobik.com/de/products/short-sleeve-jersey-cx-pro-4-0-unisex-custom',
     drop: 'redline-2026',
     sizes: {
       XL: {
@@ -355,10 +372,12 @@ export const importedProducts: Record<string, Product> = {
     description:
       'Your everyday weapon. For not-so-everyday moves. Forged in the shadows, V//PER is the result of long work and perfect timing. A single-strike jersey built for athletes who work in the dark, sharpen their teeth patiently and then ATTAKK without warning. This is one is loud but even more lethal. Model: https://gobik.com/de/products/short-sleeve-jersey-reactive-unisex-custom-26',
     imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfYXBkMVFlWWZQWmlJanU2Q09EV3c0b1ZS00gSdcEegp',
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfWEw5ZWJlb0FwVVFhRTJUR095aE1aTFZa008joa9g7g',
     ],
     price: 8000,
     sex: 'Unisex',
+    fitUrl:
+      'https://gobik.com/de/products/short-sleeve-jersey-reactive-unisex-custom-26',
     drop: 'viper-2026',
     sizes: {
       XL: {
@@ -384,10 +403,12 @@ export const importedProducts: Record<string, Product> = {
     description:
       'Your everyday weapon. For not-so-everyday moves. The REDL//NE jersey delivers the same intent as the suit, in a versatile cut. Built for intervals, drop rides and solo missions with something to prove. Calm fade. Loud letters. Always forward. Model: https://gobik.com/de/products/short-sleeve-jersey-reactive-unisex-custom-26',
     imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfdWVwTUJxVFZTN3JkakFkalhHeEp3anIx006DGYtqNd',
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfTUVLaGdNZUpUMEpuUnlZVnU3WWp1TG5i00QFxoNTh8',
     ],
     price: 8000,
     sex: 'Unisex',
+    fitUrl:
+      'https://gobik.com/de/products/short-sleeve-jersey-reactive-unisex-custom-26',
     drop: 'redline-2026',
     sizes: {
       XL: {
@@ -409,14 +430,16 @@ export const importedProducts: Record<string, Product> = {
   },
   'prod_ToDnJZDgI9CPi1-unisex': {
     id: 'prod_ToDnJZDgI9CPi1-unisex',
-    title: 'REDL/NE WIND JACKET',
+    title: 'WIND JACKET',
     description:
       'Push through headwinds, hold in breakaways.This jacket brings ATTAKK DNA into full weather mode. For sessions that don’t cancel, efforts that don’t stop, and riders who don’t step down. Model: https://gobik.com/de/products/long-sleeve-windproof-jacket-windpeak-2-0-unisex-custom-26',
     imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3Rfbm5qUEFKM2lKczZ2azREcVVUU0gzTDla00Ok1OWXSd',
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfbldHZjlmNlc0b210SGVDM3BnZ0c1OGRs006oURuemm',
     ],
     price: 6500,
     sex: 'Unisex',
+    fitUrl:
+      'https://gobik.com/de/products/rain-jacket-long-sleeve-selkie-unisex-custom',
     drop: 'redline-2026',
     sizes: {
       XL: {
@@ -438,14 +461,16 @@ export const importedProducts: Record<string, Product> = {
   },
   'prod_ToDmwiTK1Y3x18-unisex': {
     id: 'prod_ToDmwiTK1Y3x18-unisex',
-    title: 'REDL/NE RAIN JACKET',
+    title: 'RAIN JACKET',
     description:
       'Push through headwinds, hold in breakaways.This jacket brings ATTAKK DNA into full weather mode. For sessions that don’t cancel, efforts that don’t stop and riders who don’t step down. Model: https://gobik.com/de/products/rain-jacket-long-sleeve-selkie-unisex-custom',
     imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfUlFrNTBIQklpd3F3TFdkSFI0MTROVTE2004e7NRsHQ',
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfSFVva1R4YUlacXpIZ05kR1RlU1IxTG53007x7EBYNt',
     ],
     price: 9500,
     sex: 'Unisex',
+    fitUrl:
+      'https://gobik.com/de/products/long-sleeve-windproof-jacket-windpeak-2-0-unisex-custom-26',
     drop: 'redline-2026',
     sizes: {
       XL: {
@@ -467,14 +492,16 @@ export const importedProducts: Record<string, Product> = {
   },
   'prod_ToDk5VZ8olnHMn-unisex': {
     id: 'prod_ToDk5VZ8olnHMn-unisex',
-    title: 'REDL/NE LONG SLEEVE LIGHT JERSEY',
+    title: 'LONG SLEEVE LIGHT JERSEY',
     description:
       'Stay sharp when the season turns grey. The long sleeve REDL//NE holds the line through cold tempo days and dark-zone efforts. Clean style, aggressive warmth — no softness, no fluff, no fade. Model: https://gobik.com/de/products/long-sleeve-jersey-vanquish-unisex-custom',
     imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfVUI3eTdMdmhTcnlQQnBYUGVFUnh0VWxa00Ug5H8xHK',
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfN0VwMTFGbEhpNHl0N1dRQnhEZENNenpW00zy1t0Nt1',
     ],
     price: 7000,
     sex: 'Unisex',
+    fitUrl:
+      'https://gobik.com/de/products/long-sleeve-jersey-vanquish-unisex-custom',
     drop: 'redline-2026',
     sizes: {
       XL: {
@@ -496,14 +523,16 @@ export const importedProducts: Record<string, Product> = {
   },
   'prod_ToDiQ7LB6zijfj-female': {
     id: 'prod_ToDiQ7LB6zijfj-female',
-    title: 'REDL/NE LONG SLEEVE WARM JERSEY',
+    title: 'LONG SLEEVE WARM JERSEY',
     description:
       'Stay sharp when the season turns grey.The long sleeve REDL//NE holds the line through cold tempo days and dark-zone efforts. Clean style, aggressive warmth — no softness, no fluff, no fade. Model: https://gobik.com/de/products/long-sleeve-jersey-hyder-men-custom-26',
     imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfTldXYXA2b2tSbEhoanB4OXJHUmdrVGVO00ys3YkweM',
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfR2NONWlQd3pFOTlrWGJJaFB6Z1FyeEFu004i2VUXmq',
     ],
     price: 8000,
     sex: 'Female',
+    fitUrl:
+      'https://gobik.com/de/products/long-sleeve-jersey-hyder-women-custom-25',
     drop: 'redline-2026',
     sizes: {
       L: {
@@ -522,14 +551,16 @@ export const importedProducts: Record<string, Product> = {
   },
   'prod_ToDiQ7LB6zijfj-male': {
     id: 'prod_ToDiQ7LB6zijfj-male',
-    title: 'REDL/NE LONG SLEEVE WARM JERSEY',
+    title: 'LONG SLEEVE WARM JERSEY',
     description:
       'Stay sharp when the season turns grey.The long sleeve REDL//NE holds the line through cold tempo days and dark-zone efforts. Clean style, aggressive warmth — no softness, no fluff, no fade. Model: https://gobik.com/de/products/long-sleeve-jersey-hyder-men-custom-26',
     imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfTldXYXA2b2tSbEhoanB4OXJHUmdrVGVO00ys3YkweM',
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfR2NONWlQd3pFOTlrWGJJaFB6Z1FyeEFu004i2VUXmq',
     ],
     price: 8000,
     sex: 'Male',
+    fitUrl:
+      'https://gobik.com/de/products/long-sleeve-jersey-hyder-men-custom-26',
     drop: 'redline-2026',
     sizes: {
       XL: {
@@ -551,11 +582,11 @@ export const importedProducts: Record<string, Product> = {
   },
   'prod_ToDfVolsUxACME-female': {
     id: 'prod_ToDfVolsUxACME-female',
-    title: 'REDL/NE RACESUIT 2026',
+    title: 'RACESUIT 2026',
     description:
       'System maxed. Vision narrowing. You hold. The REDL//NE race suit is for all-in efforts only — no margin for error, no plan B. Lightweight, aero and lethal. When your legs scream but the line demands more, this is what you wear.',
     imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfNmdMcG9LdGpxU0t5dlV6VUhmWEFsWXN000cZgQDsGd',
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfNFp4U3JIdU5ZbTkwc2lTSmdJVkpsY3F500UYcsej8m',
     ],
     price: 16500,
     sex: 'Female',
@@ -579,11 +610,11 @@ export const importedProducts: Record<string, Product> = {
   },
   'prod_ToDfVolsUxACME-male': {
     id: 'prod_ToDfVolsUxACME-male',
-    title: 'REDL/NE RACESUIT 2026',
+    title: 'RACESUIT 2026',
     description:
       'System maxed. Vision narrowing. You hold. The REDL//NE race suit is for all-in efforts only — no margin for error, no plan B. Lightweight, aero and lethal. When your legs scream but the line demands more, this is what you wear.',
     imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfNmdMcG9LdGpxU0t5dlV6VUhmWEFsWXN000cZgQDsGd',
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfNFp4U3JIdU5ZbTkwc2lTSmdJVkpsY3F500UYcsej8m',
     ],
     price: 16500,
     sex: 'Male',
@@ -693,14 +724,16 @@ export const importedProducts: Record<string, Product> = {
   },
   'prod_SnBdFNjPSXbZJk-unisex': {
     id: 'prod_SnBdFNjPSXbZJk-unisex',
-    title: 'ATTAKK Jersey 25 - Invincible Yellow',
+    title: 'Invincible Yellow Jersey 2025',
     description:
       'The return of a classic — with new intent. Back by demand, the Invincible Yellow jersey brings race-day energy to the everyday ride. No suit. No ceremony. Just the same sharp attitude in a more versatile cut. Limited reissue.',
     imageUrls: [
-      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfSUM4Zm8xdFFpUWVDdjdaZFpFNmJJSFlV00CEViuJkU',
+      'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfNGxlQ21ZY2N2eFpaZWg1NWNkWGNTMFdE00r8iuBy3M',
     ],
     price: 6000,
     sex: 'Unisex',
+    fitUrl:
+      'https://gobik.com/de/products/short-sleeve-jersey-cx-pro-4-0-unisex-custom',
     drop: 'invincible-2025',
     sizes: {
       XL: {
