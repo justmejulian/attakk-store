@@ -1,5 +1,5 @@
 // This file is auto-generated. Do not edit manually.
-// Generated on: 2026-01-25T18:04:37.231Z
+// Generated on: 2026-01-25T20:25:19.498Z
 import type { Product } from '@content/products';
 export const importedProducts: Record<string, Product> = {
   'prod_ToE9N66jy06BJO-female': {
@@ -211,7 +211,7 @@ export const importedProducts: Record<string, Product> = {
     price: 11500,
     sex: 'Female',
     fitUrl:
-      'ttps://gobik.com/de/products/bib-short-absolute-solid-winter-women-custom-26?_pos=1&_fid=89a565585&_ss=c',
+      'https://gobik.com/de/products/bib-short-absolute-solid-winter-women-custom-26?_pos=1&_fid=89a565585&_ss=c',
     drop: 'redline-2026',
     sizes: {
       L: {
