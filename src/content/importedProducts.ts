@@ -1,5 +1,5 @@
 // This file is auto-generated. Do not edit manually.
-// Generated on: 2026-01-23T19:15:23.167Z
+// Generated on: 2026-01-25T18:04:37.231Z
 import type { Product } from '@content/products';
 export const importedProducts: Record<string, Product> = {
   'prod_ToE9N66jy06BJO-female': {
@@ -210,7 +210,8 @@ export const importedProducts: Record<string, Product> = {
     ],
     price: 11500,
     sex: 'Female',
-    fitUrl: 'https://gobik.com/de/products/bib-tight-absolute-woman-custom-26',
+    fitUrl:
+      'ttps://gobik.com/de/products/bib-short-absolute-solid-winter-women-custom-26?_pos=1&_fid=89a565585&_ss=c',
     drop: 'redline-2026',
     sizes: {
       L: {
@@ -271,7 +272,7 @@ export const importedProducts: Record<string, Product> = {
     price: 11000,
     sex: 'Female',
     fitUrl:
-      'https://gobik.com/de/products/bib-short-absolute-winter-women-custom-26',
+      'https://gobik.com/de/products/bib-short-absolute-solid-winter-women-custom-26',
     drop: 'redline-2026',
     sizes: {
       L: {
@@ -299,7 +300,7 @@ export const importedProducts: Record<string, Product> = {
     price: 11000,
     sex: 'Male',
     fitUrl:
-      'https://gobik.com/de/products/bib-short-absolute-winter-men-custom-26',
+      'https://gobik.com/de/products/bib-short-absolute-solid-winter-men-custom-26',
     drop: 'redline-2026',
     sizes: {
       '2XL': {
@@ -516,7 +517,8 @@ export const importedProducts: Record<string, Product> = {
     ],
     price: 6500,
     sex: 'Unisex',
-    fitUrl: 'long-sleeve-windproof-jacket-windpeak-2-0-unisex-custom-26',
+    fitUrl:
+      'https://gobik.com/de/products/long-sleeve-windproof-jacket-windpeak-2-0-unisex-custom-26',
     drop: 'redline-2026',
     sizes: {
       XL: {
