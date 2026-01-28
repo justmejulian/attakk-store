@@ -18,6 +18,8 @@ function CartButton() {
   const isHydrated = useIsHydrated();
   const $cartItems = useStore(cartItems);
 
+  return;
+
   if (!isHydrated) return;
 
   return (

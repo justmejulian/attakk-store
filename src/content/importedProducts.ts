@@ -10,7 +10,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfcXNQS01jNndhVEpDZFR6UTJjV2FSOEha00PkmtNgNs',
     ],
-    price: 3500,
+    // price: 3500,
     sex: 'Female',
     fitUrl:
       'https://gobik.com/de/products/sleeveless-t-shirt-energy-women-custom-26',
@@ -38,7 +38,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfcXNQS01jNndhVEpDZFR6UTJjV2FSOEha00PkmtNgNs',
     ],
-    price: 3500,
+    // price: 3500,
     sex: 'Male',
     fitUrl:
       'https://gobik.com/de/products/sleeveless-t-shirt-energy-men-custom',
@@ -66,7 +66,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfY21NN291d25vWldzckRrMjliT1RaaTd000WwEggqU6',
     ],
-    price: 3500,
+    // price: 3500,
     sex: 'Female',
     fitUrl:
       'https://gobik.com/de/products/short-sleeve-t-shirt-prism-women-custom-26',
@@ -94,7 +94,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfY21NN291d25vWldzckRrMjliT1RaaTd000WwEggqU6',
     ],
-    price: 3500,
+    // price: 3500,
     sex: 'Male',
     fitUrl:
       'https://gobik.com/de/products/short-sleeve-t-shirt-prism-men-custom-26',
@@ -122,7 +122,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfbkxwSVpQbXRQN0xLalJHYm1pT29sRERN00w5ftUkF1',
     ],
-    price: 1300,
+    // price: 1300,
     sex: 'Unisex',
     fitUrl: 'https://gobik.com/de/products/socks-chrome-2-0-unisex-length-24',
     drop: 'redline-2026',
@@ -146,7 +146,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3Rfc2ZUVm9xSlRZeng4cnN2VkZrSGVOWVRH00lXJSBw4I',
     ],
-    price: 3500,
+    // price: 3500,
     sex: 'Unisex',
     fitUrl:
       'https://gobik.com/de/products/thermal-knee-warmer-kaba-unisex-custom',
@@ -177,7 +177,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfRFFEZGtZazl5OXMwZ3VjWnFLVTdXUWVt00A5xVUbih',
     ],
-    price: 3000,
+    // price: 3000,
     sex: 'Unisex',
     fitUrl:
       'https://gobik.com/de/products/thermal-arms-warmer-kaba-unisex-custom',
@@ -208,7 +208,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfV3RCR2VtaVlIY09rYnVqUXp4SDlOaHNp000Ez9CY8E',
     ],
-    price: 11500,
+    // price: 11500,
     sex: 'Female',
     fitUrl:
       'https://gobik.com/de/products/bib-short-absolute-solid-winter-women-custom-26?_pos=1&_fid=89a565585&_ss=c',
@@ -236,7 +236,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfV3RCR2VtaVlIY09rYnVqUXp4SDlOaHNp000Ez9CY8E',
     ],
-    price: 11500,
+    // price: 11500,
     sex: 'Male',
     fitUrl: 'https://gobik.com/de/products/bib-tight-absolute-men-custom-26',
     drop: 'redline-2026',
@@ -269,7 +269,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfQmF3SThleFVVSHA3YnRoZ21WQWlTU0Zl00xhdfDZ0N',
     ],
-    price: 11000,
+    // price: 11000,
     sex: 'Female',
     fitUrl:
       'https://gobik.com/de/products/bib-short-absolute-solid-winter-women-custom-26',
@@ -297,7 +297,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfQmF3SThleFVVSHA3YnRoZ21WQWlTU0Zl00xhdfDZ0N',
     ],
-    price: 11000,
+    // price: 11000,
     sex: 'Male',
     fitUrl:
       'https://gobik.com/de/products/bib-short-absolute-solid-winter-men-custom-26',
@@ -331,7 +331,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfWnBTSEZmMTVXcEh0aEFVYWhsSkx3bWRR00A4hvwVAA',
     ],
-    price: 10500,
+    // price: 10500,
     sex: 'Female',
     fitUrl: 'https://gobik.com/de/products/bib-short-absolute-women-custom-26',
     drop: 'redline-2026',
@@ -358,7 +358,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfWnBTSEZmMTVXcEh0aEFVYWhsSkx3bWRR00A4hvwVAA',
     ],
-    price: 10500,
+    // price: 10500,
     sex: 'Male',
     fitUrl:
       'https://gobik.com/de/products/bib-short-aboslute-print-men-custom-26',
@@ -392,7 +392,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfempQQmlaY0hCUHhRNDg1V05tZzFhOUZV00xmMxMbmG',
     ],
-    price: 5000,
+    // price: 5000,
     sex: 'Unisex',
     fitUrl: 'https://gobik.com/de/products/vest-basic-unisex-custom-26',
     drop: 'redline-2026',
@@ -422,7 +422,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfYU1TbE5laVQ1TFBKSEVld2RodGFtNHpl00fa5oAqmP',
     ],
-    price: 6000,
+    // price: 6000,
     sex: 'Unisex',
     fitUrl:
       'https://gobik.com/de/products/short-sleeve-jersey-cx-pro-4-0-unisex-custom',
@@ -453,7 +453,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfWEw5ZWJlb0FwVVFhRTJUR095aE1aTFZa008joa9g7g',
     ],
-    price: 8000,
+    // price: 8000,
     sex: 'Unisex',
     fitUrl:
       'https://gobik.com/de/products/short-sleeve-jersey-reactive-unisex-custom-26',
@@ -484,7 +484,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfTUVLaGdNZUpUMEpuUnlZVnU3WWp1TG5i00QFxoNTh8',
     ],
-    price: 8000,
+    // price: 8000,
     sex: 'Unisex',
     fitUrl:
       'https://gobik.com/de/products/short-sleeve-jersey-reactive-unisex-custom-26',
@@ -515,7 +515,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfbldHZjlmNlc0b210SGVDM3BnZ0c1OGRs006oURuemm',
     ],
-    price: 6500,
+    // price: 6500,
     sex: 'Unisex',
     fitUrl:
       'https://gobik.com/de/products/long-sleeve-windproof-jacket-windpeak-2-0-unisex-custom-26',
@@ -546,7 +546,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfSFVva1R4YUlacXpIZ05kR1RlU1IxTG53007x7EBYNt',
     ],
-    price: 9500,
+    // price: 9500,
     sex: 'Unisex',
     fitUrl:
       'https://gobik.com/de/products/rain-jacket-long-sleeve-selkie-unisex-custom',
@@ -577,7 +577,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfN0VwMTFGbEhpNHl0N1dRQnhEZENNenpW00zy1t0Nt1',
     ],
-    price: 7000,
+    // price: 7000,
     sex: 'Unisex',
     fitUrl:
       'https://gobik.com/de/products/long-sleeve-jersey-vanquish-unisex-custom',
@@ -608,7 +608,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfR2NONWlQd3pFOTlrWGJJaFB6Z1FyeEFu004i2VUXmq',
     ],
-    price: 8000,
+    // price: 8000,
     sex: 'Female',
     fitUrl:
       'https://gobik.com/de/products/long-sleeve-jersey-hyder-women-custom-25',
@@ -636,7 +636,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfR2NONWlQd3pFOTlrWGJJaFB6Z1FyeEFu004i2VUXmq',
     ],
-    price: 8000,
+    // price: 8000,
     sex: 'Male',
     fitUrl:
       'https://gobik.com/de/products/long-sleeve-jersey-hyder-men-custom-26',
@@ -667,7 +667,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfNFp4U3JIdU5ZbTkwc2lTSmdJVkpsY3F500UYcsej8m',
     ],
-    price: 16500,
+    // price: 16500,
     sex: 'Female',
     fitUrl:
       'https://gobik.com/de/products/cycling-suit-madison-women-custom-26',
@@ -695,7 +695,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfNFp4U3JIdU5ZbTkwc2lTSmdJVkpsY3F500UYcsej8m',
     ],
-    price: 16500,
+    // price: 16500,
     sex: 'Male',
     fitUrl: 'https://gobik.com/de/products/cycling-suit-madison-men-custom-26',
     drop: 'redline-2026',
@@ -725,7 +725,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfbVEyMzdxN1dhQ0VGQzhTdlJMbjgyRTRY00mv8w5xt8',
     ],
-    price: 1350,
+    // price: 1350,
     sex: 'Unisex',
     sizes: {
       'L - XL': {
@@ -747,7 +747,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfYk9hY1NkWjk2UmROUjh0VlZaUE9iWkRS008Z5hYel3',
     ],
-    price: 6100,
+    // price: 6100,
     sex: 'Unisex',
     sizes: {
       XL: {
@@ -772,7 +772,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfZG5ZdmRqa1NqM3NwV0ZycThhTmlxU0Jw00G1X7mUyc',
     ],
-    price: 10500,
+    // price: 10500,
     sex: 'Unisex',
     sizes: {
       'Female - XS': {
@@ -809,7 +809,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfNGxlQ21ZY2N2eFpaZWg1NWNkWGNTMFdE00r8iuBy3M',
     ],
-    price: 6000,
+    // price: 6000,
     sex: 'Unisex',
     fitUrl:
       'https://gobik.com/de/products/short-sleeve-jersey-cx-pro-4-0-unisex-custom',
@@ -840,7 +840,7 @@ export const importedProducts: Record<string, Product> = {
     imageUrls: [
       'https://files.stripe.com/links/MDB8YWNjdF8xUnF2VjZEV3F1YWwwTTVCfGZsX3Rlc3RfU0lOUVhnazFmSFVZVzhrQU9VdjRaWXBp00qPDXgrEP',
     ],
-    price: 14300,
+    // price: 14300,
     sex: 'Unisex',
     sizes: {
       'Female - L': {

@@ -12,7 +12,7 @@ export type Product = {
   sizes?: Record<string, StripProduct>;
   description?: string;
   title: string;
-  price: number;
+  price?: number;
   drop?: string;
   fitUrl?: string;
 };
