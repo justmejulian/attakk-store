@@ -9,16 +9,19 @@ function getCartItemsCount(cartItems: Record<string, CartItem>): number {
 
   return Object.values(cartItems).reduce(
     (count, item) => count + item.quantity,
-
     0,
   );
 }
 
-function CartButton() {
+interface Props {
+  enabled?: boolean;
+}
+
+function CartButton({ enabled = true }: Props) {
   const isHydrated = useIsHydrated();
   const $cartItems = useStore(cartItems);
 
-  if (!isHydrated) return;
+  if (!enabled || !isHydrated) return null;
 
   return (
     <a

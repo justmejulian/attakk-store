@@ -14,11 +14,14 @@ import Layout from '@layouts/Layout.astro';
 
 export const prerender = false;
 
+const orderingEnabled = import.meta.env.ORDERING_ENABLED !== 'false';
+
 const drops = getAllDrops();
 const passedProducts = getPassedProducts();
 
-const priceQuantities = await getOrderedQuantities();
-const orderCounts = getProductOrderCounts(priceQuantities);
+const orderCounts = orderingEnabled
+  ? getProductOrderCounts(await getOrderedQuantities())
+  : {};
 ---
 
 <Layout>
@@ -42,11 +45,13 @@ const orderCounts = getProductOrderCounts(priceQuantities);
                 id={product.id}
                 productImageUrl={product.imageUrls[0]}
                 title={product.title}
-                price={product.price}
+                price={orderingEnabled ? product.price : undefined}
                 sex={product.sex}
-                sizes={product.sizes}
-                orderCount={orderCounts[product.id]}
-                fitUrl={product.fitUrl}
+                sizes={orderingEnabled ? product.sizes : undefined}
+                orderCount={
+                  orderingEnabled ? orderCounts[product.id] : undefined
+                }
+                fitUrl={orderingEnabled ? product.fitUrl : undefined}
               />
             ))}
           </Drop>
