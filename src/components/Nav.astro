@@ -1,6 +1,8 @@
 ---
 import logo from '@images/attakk_studios_black.svg';
 import CartButton from '@components/CartButton';
+
+const orderingEnabled = import.meta.env.ORDERING_ENABLED !== 'true';
 ---
 
 <nav
@@ -10,5 +12,5 @@ import CartButton from '@components/CartButton';
     <img src={logo.src} alt="Attakk Studios Logo" class="h-8" />
   </a>
 
-  <CartButton client:load />
+  <CartButton enabled={orderingEnabled} client:load />
 </nav>

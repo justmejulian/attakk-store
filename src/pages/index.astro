@@ -13,58 +13,76 @@ import logo from '@images/attakk_studios_white.svg';
 
 export const prerender = false;
 
-const drops = getAllDrops();
+const orderingEnabled = import.meta.env.ORDERING_ENABLED !== 'false';
 
-await stripeOrdered();
-const priceQuantities = await getOrderedQuantities();
-const orderCounts = getProductOrderCounts(priceQuantities);
+const drops = orderingEnabled ? getAllDrops() : [];
+const orderCounts = orderingEnabled
+  ? (await stripeOrdered(), getProductOrderCounts(await getOrderedQuantities()))
+  : {};
 ---
 
 <Layout>
-  <Header>
-    <img
-      src={logo.src}
-      alt="Attakk Studios Logo"
-      class="m-auto mt-10 mb-20 h-25"
-    />
+  {
+    orderingEnabled ? (
+      <>
+        <Header>
+          <img
+            src={logo.src}
+            alt="Attakk Studios Logo"
+            class="m-auto mt-10 mb-20 h-25"
+          />
 
-    <p class="z-50 mt-4 max-w-xl text-2xl text-white">
-      Where clarity meets pressure, and movement has intent. We build limited
-      drops for those who ride with purpose — and don’t just follow.
-    </p>
-    <div class="mt-8">
-      <Button url="/products"> Shop All </Button>
-    </div>
-  </Header>
+          <p class="z-50 mt-4 max-w-xl text-2xl text-white">
+            Where clarity meets pressure, and movement has intent. We build
+            limited drops for those who ride with purpose — and don't just
+            follow.
+          </p>
+          <div class="mt-8">
+            <Button url="/products"> Shop All </Button>
+          </div>
+        </Header>
 
-  <Main>
-    {
-      drops.map((drop) => {
-        const products = getProductsByDrop(drop.id);
-        return (
-          <DropBanner
-            dropId={drop.id}
-            products={products}
-            orderCounts={orderCounts}
-            colors={drop.colors}
-            bannerTextColor={drop.bannerTextColor}
-            backgroundImage={drop.backgroundImage}
-          >
-            <h1 class="font-cursive mb-20 text-4xl tracking-widest sm:mb-40 md:mb-30 xl:ml-12">
-              {drop.title}
-            </h1>
+        <Main>
+          {drops.map((drop) => {
+            const products = getProductsByDrop(drop.id);
+            return (
+              <DropBanner
+                dropId={drop.id}
+                products={products}
+                orderCounts={orderCounts}
+                colors={drop.colors}
+                bannerTextColor={drop.bannerTextColor}
+                backgroundImage={drop.backgroundImage}
+              >
+                <h1 class="font-cursive mb-20 text-4xl tracking-widest sm:mb-40 md:mb-30 xl:ml-12">
+                  {drop.title}
+                </h1>
 
-            {drop.descriptions.map((description) => (
-              <p class="z-50 mt-4 min-h-0 max-w-xl text-2xl">{description}</p>
-            ))}
+                {drop.descriptions.map((description) => (
+                  <p class="z-50 mt-4 min-h-0 max-w-xl text-2xl">
+                    {description}
+                  </p>
+                ))}
 
-            <div class="mt-8 flex items-center gap-4">
-              <Button> Shop the Drop </Button>
-              {drop.isLimited && <div class="italic">Limited drop only.</div>}
-            </div>
-          </DropBanner>
-        );
-      })
-    }
-  </Main>
+                <div class="mt-8 flex items-center gap-4">
+                  <Button> Shop the Drop </Button>
+                  {drop.isLimited && (
+                    <div class="italic">Limited drop only.</div>
+                  )}
+                </div>
+              </DropBanner>
+            );
+          })}
+        </Main>
+      </>
+    ) : (
+      <div class="bg-primary -mx-4 flex min-h-screen w-screen flex-col items-center justify-center px-4 text-center text-white md:-mx-8">
+        <img src={logo.src} alt="Attakk Studios Logo" class="mb-12 h-25" />
+        <h1 class="font-cursive mb-6 text-5xl tracking-widest">Drop Over</h1>
+        <p class="max-w-xl text-2xl">
+          Thanks for ordering. Your order will be with you soon.
+        </p>
+      </div>
+    )
+  }
 </Layout>
